@@ -25,11 +25,13 @@ public class Message : AuditBase
     [Ref(Model = nameof(Partner), RefId = nameof(Partner.Id), RefLabel = nameof(Partner.PartnerCode))]
     [References(typeof(Partner))]
     public int PartnerId { get; set; }
+
     [Reference] public Partner Partner { get; set; }
 
     [Ref(Model = nameof(Provider), RefId = nameof(Provider.Id), RefLabel = nameof(Provider.ProviderCode))]
     [References(typeof(Provider))]
     public int ProviderId { get; set; }
+
     [Reference] public Provider Provider { get; set; }
 
     public DateTime RequestDate { get; set; }
@@ -52,12 +54,12 @@ public enum MessageStatus : byte
 [Tag("messages"), Description("Find Message")]
 [Route("/messages", "GET")]
 [Route("/messages/{Id}", "GET")]
-[ValidateHasRole(Roles.Partner)]
+[ValidateHasRole(Roles.Manager)]
 [AutoApply(Behavior.AuditQuery)]
 public class QueryMessages : QueryDb<Message>
 {
     public long? Id { get; set; }
-    public MessageStatus Status { get; set; }
+    public MessageStatus? Status { get; set; }
     public string Receiver { get; set; }
     public string Telco { get; set; }
     public DateTime? FromDate { get; set; }

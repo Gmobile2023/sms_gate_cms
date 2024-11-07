@@ -1,0 +1,11 @@
+﻿@inherits ServiceStack.Mvc.ViewPage
+@{
+    ViewData["Title"] = "Quản lý nhà cung cấp";
+}
+
+<div class="mt-8 mb-20 mx-auto max-w-fit">
+
+    <h1 class="@Html.ClassNames(Css.H1, "my-8")">@ViewData["Title"]</h1>
+
+    <div id="providers" data-component="pages/Home/Providers.mjs"></div>
+</div>

@@ -1,0 +1,240 @@
+2023-08-29 17:17:42.469 +07:00 [INF] [Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.] User profile is available. Using '"C:\Users\letie\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-29 17:17:42.796 +07:00 [INF] [MassTransit.] Configured endpoint "cancel-payment", Consumer: "iZota.Core.Balance.Components.Consumers.CancelPaymentConsumer"
+2023-08-29 17:17:43.241 +07:00 [INF] [Orleans.Runtime.Silo.] Silo starting with GC settings: ServerGC=True GCLatencyMode="Interactive"
+2023-08-29 17:17:43.243 +07:00 [WRN] [Orleans.Runtime.Silo.] A verbose logging level ("Debug") is configured. This will impact performance. The recommended log level is Information.
+2023-08-29 17:17:43.247 +07:00 [INF] [Orleans.Runtime.Silo.] -------------- Initializing silo on host "GUNNER" MachineName "GUNNER" at "10.8.0.10:11126", gen 52309063 --------------
+2023-08-29 17:17:43.247 +07:00 [INF] [Orleans.Runtime.Silo.] Starting silo "Silo_b1c1a"
+2023-08-29 17:17:43.916 +07:00 [INF] [Orleans.Runtime.Silo.] -------------- Started silo "S10.8.0.10:11126:52309063", ConsistentHashCode "D46AF5A3" --------------
+2023-08-29 17:17:44.190 +07:00 [INF] [Quartz.Core.SchedulerSignalerImpl.] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2023-08-29 17:17:44.190 +07:00 [INF] [Quartz.Core.QuartzScheduler.] Quartz Scheduler created
+2023-08-29 17:17:44.191 +07:00 [INF] [Quartz.Core.QuartzScheduler.] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2023-08-29 17:17:44.249 +07:00 [INF] [Quartz.Simpl.RAMJobStore.] RAMJobStore initialized.
+2023-08-29 17:17:44.262 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Quartz Scheduler 3.6.2.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2023-08-29 17:17:44.262 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2023-08-29 17:17:44.263 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2023-08-29 17:17:44.336 +07:00 [INF] [Orleans.Hosting.SiloHostedService.] Starting Orleans Silo.
+2023-08-29 17:17:44.374 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ActivationCountBasedPlacementOptions: 
+ChooseOutOf: 2
+
+2023-08-29 17:17:44.376 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ClusterMembershipOptions: 
+NumMissedTableIAmAliveLimit: 2
+LivenessEnabled: True
+ProbeTimeout: 00:00:05
+TableRefreshTimeout: 00:01:00
+DeathVoteExpirationTimeout: 00:02:00
+IAmAliveTablePublishTimeout: 00:05:00
+MaxJoinAttemptTime: 00:05:00
+UseLivenessGossip: True
+NumProbedSilos: 3
+NumMissedProbesLimit: 3
+NumVotesForDeathDeclaration: 2
+DefunctSiloExpiration: 7.00:00:00
+DefunctSiloCleanupPeriod: 01:00:00
+LocalHealthDegradationMonitoringPeriod: 00:00:10
+ExtendProbeTimeoutDuringDegradation: True
+EnableIndirectProbes: True
+
+2023-08-29 17:17:44.377 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ClusterOptions: 
+ClusterId: zota_balance_dev
+ServiceId: zota_balance_dev
+
+2023-08-29 17:17:44.378 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ConnectionOptions: 
+ProtocolVersion: Version1
+ConnectionsPerEndpoint: 1
+ConnectionRetryDelay: 00:00:01
+OpenConnectionTimeout: 00:00:05
+
+2023-08-29 17:17:44.378 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ConsistentRingOptions: 
+NumVirtualBucketsConsistentRing: 30
+UseVirtualBucketsConsistentRing: True
+
+2023-08-29 17:17:44.379 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.DevelopmentClusterMembershipOptions: 
+PrimarySiloEndpoint: 10.8.0.10:11126
+
+2023-08-29 17:17:44.379 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.EndpointOptions: 
+AdvertisedIPAddress: 10.8.0.10
+SiloPort: 11126
+GatewayPort: 30016
+SiloListeningEndpoint: 
+GatewayListeningEndpoint: 
+
+2023-08-29 17:17:44.380 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainCollectionOptions: 
+CollectionQuantum: 00:01:00
+CollectionAge: 00:15:00
+ActivationTimeout: 00:00:30
+DeactivationTimeout: 00:00:30
+
+2023-08-29 17:17:44.381 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainDirectoryOptions: 
+CachingStrategy: Adaptive
+CacheSize: 1000000
+InitialCacheTTL: 00:00:30
+MaximumCacheTTL: 00:04:00
+CacheTTLExtensionFactor: 2
+LazyDeregistrationDelay: 00:01:00
+
+2023-08-29 17:17:44.381 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainVersioningOptions: 
+DefaultCompatibilityStrategy: BackwardCompatible
+DefaultVersionSelectorStrategy: AllCompatibleVersions
+
+2023-08-29 17:17:44.382 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.LoadSheddingOptions: 
+LoadSheddingEnabled: False
+LoadSheddingLimit: 95
+
+2023-08-29 17:17:44.382 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-balance-grains-storage: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-08-29 17:17:44.383 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-Default: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-08-29 17:17:44.384 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SchedulingOptions: 
+DelayWarningThreshold: 00:00:10
+ActivationSchedulingQuantum: 00:00:00.1000000
+TurnWarningLengthThreshold: 00:00:01
+MaxPendingWorkItemsSoftLimit: 0
+StoppedActivationWarningInterval: 00:01:00
+
+2023-08-29 17:17:44.385 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SiloMessagingOptions: 
+SiloSenderQueues: 0
+GatewaySenderQueues: 0
+MaxForwardCount: 2
+ClientDropTimeout: 00:01:00
+ClientRegistrationRefresh: 00:05:00
+ClientGatewayShutdownNotificationTimeout: 00:00:05
+MaxEnqueuedRequestsSoftLimit: 0
+MaxEnqueuedRequestsHardLimit: 0
+MaxEnqueuedRequestsSoftLimit_StatelessWorker: 0
+MaxEnqueuedRequestsHardLimit_StatelessWorker: 0
+MaxRequestProcessingTime: 02:00:00
+AssumeHomogenousSilosForTesting: False
+ShutdownRerouteTimeout: 00:00:10
+SystemResponseTimeout: 00:30:00
+GrainWorkloadAnalysisPeriod: 00:00:05
+RequestProcessingWarningTime: 00:00:05
+RequestQueueDelayWarningTime: 00:00:10
+WaitForMessageToBeQueuedForOutboundTime: 00:00:02
+ResponseTimeout: 00:30:00
+ResponseTimeoutWithDebugger: 00:30:00
+DropExpiredMessages: True
+MaxMessageHeaderSize: 10485760
+MaxMessageBodySize: 104857600
+
+2023-08-29 17:17:44.386 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SiloOptions: 
+SiloName: Silo_b1c1a
+
+2023-08-29 17:17:44.398 +07:00 [INF] [Orleans.Runtime.InsideRuntimeClient.] Start InsideRuntimeClient took 1 milliseconds
+2023-08-29 17:17:44.404 +07:00 [INF] [Orleans.Runtime.Silo.] Silo Start()
+2023-08-29 17:17:44.419 +07:00 [INF] [Orleans.Runtime.GrainDirectory.LocalGrainDirectory.] Start
+2023-08-29 17:17:44.421 +07:00 [INF] [Orleans.Runtime.Silo.] "Start local grain directory" took 2 milliseconds to finish
+2023-08-29 17:17:44.434 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipTableManager.] MembershipOracle starting on host "GUNNER" with SiloAddress "S10.8.0.10:11126:52309063" at "2023-08-29 10:17:43.416 GMT"
+2023-08-29 17:17:44.442 +07:00 [INF] [Orleans.Runtime.MembershipService.SystemTargetBasedMembershipTable.] Creating in-memory membership table
+2023-08-29 17:17:44.448 +07:00 [INF] [Orleans.Runtime.Silo.] Grain Service "OrleansDashboard.SiloGrainService" registered successfully.
+2023-08-29 17:17:44.449 +07:00 [INF] [Orleans.Runtime.Silo.] "Init grain services" took 6 milliseconds to finish
+2023-08-29 17:17:44.450 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipTableSystemTarget.] GrainBasedMembershipTable Activated.
+2023-08-29 17:17:44.463 +07:00 [INF] [Orleans.Runtime.Silo.] "Start deployment load collector" took 14 milliseconds to finish
+2023-08-29 17:17:44.464 +07:00 [INF] [Orleans.Runtime.Watchdog.] Starting Silo Watchdog.
+2023-08-29 17:17:44.479 +07:00 [INF] [MassTransit.] Bus started: rabbitmq://172.16.0.124/zota
+2023-08-29 17:17:44.612 +07:00 [INF] [Orleans.Runtime.MembershipService.SystemTargetBasedMembershipTable.] Connected to membership table provider.
+2023-08-29 17:17:44.648 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] Joining
+2023-08-29 17:17:44.673 +07:00 [INF] [Orleans.Storage.MemoryGrainStorage.] Init: Name="Default" NumStorageGrains=10
+2023-08-29 17:17:44.677 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] -BecomeActive
+2023-08-29 17:17:44.687 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] -Finished BecomeActive.
+2023-08-29 17:17:44.714 +07:00 [INF] [Orleans.Runtime.ReminderService.LocalReminderService.] Starting "Orleans.Runtime.ReminderService.LocalReminderService" grain service on: "S10.8.0.10:11126:52309063" x"D46AF5A3", with range "<(0 0], Size=x100000000, %Ring=100%>"
+2023-08-29 17:17:44.803 +07:00 [INF] [OrleansDashboard.Dashboard.] Dashboard listening on 8080
+2023-08-29 17:17:44.840 +07:00 [INF] [Orleans.Runtime.ReminderService.ReminderTableGrain.] Activated
+2023-08-29 17:17:44.852 +07:00 [INF] [Orleans.Runtime.ReminderService.LocalReminderService.] My range changed from "<(0 0], Size=x100000000, %Ring=100%>" to "<(0 0], Size=x100000000, %Ring=100%>" increased = True
+2023-08-29 17:17:44.991 +07:00 [INF] [OrleansDashboard.SiloGrainService.] Starting "OrleansDashboard.SiloGrainService" grain service on: "S10.8.0.10:11126:52309063" x"D46AF5A3", with range "<(0 0], Size=x100000000, %Ring=100%>"
+2023-08-29 17:17:44.992 +07:00 [INF] [OrleansDashboard.SiloGrainService.] My range changed from "<(0 0], Size=x100000000, %Ring=100%>" to "<(0 0], Size=x100000000, %Ring=100%>" increased = True
+2023-08-29 17:17:44.992 +07:00 [INF] [Orleans.Runtime.Silo.] Grain Service "OrleansDashboard.SiloGrainService" started successfully.
+2023-08-29 17:17:44.994 +07:00 [INF] [Orleans.Hosting.SiloHostedService.] Orleans Silo started.
+2023-08-29 17:17:47.082 +07:00 [INF] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider.] RPC services being provided by "GrpcServices": 17
+2023-08-29 17:17:47.122 +07:00 [INF] [ServiceStack.ServiceStackHost.] Initializing Application "iZOTA_Balance" took 2124.4249ms. No errors detected.
+2023-08-29 17:17:47.156 +07:00 [WRN] [Microsoft.AspNetCore.Server.Kestrel.] Overriding address(es) '"https://localhost:5002, http://localhost:5003"'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2023-08-29 17:17:47.159 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Now listening on: "http://localhost:7771"
+2023-08-29 17:17:47.160 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Now listening on: "http://localhost:6771"
+2023-08-29 17:17:47.162 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Application started. Press Ctrl+C to shut down.
+2023-08-29 17:17:47.162 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Hosting environment: "Development"
+2023-08-29 17:17:47.163 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Content root path: "D:\Source\ZOPOST 2023\iZOTA_core_balance\iZota.Core.Balance.Hosting"
+2023-08-29 17:17:47.171 +07:00 [INF] [Quartz.Core.QuartzScheduler.] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2023-08-29 17:27:22.555 +07:00 [WRN] [Orleans.Runtime.MembershipService.MembershipTableCleanupAgent.] CleanupDefunctSiloEntries operation is not supported by the current implementation of IMembershipTable. Disabling the timer now.
+2023-08-29 17:33:44.502 +07:00 [INF] [Orleans.Runtime.ActivationCollector.] DeactivateActivationsFromCollector: total 1 to promptly Destroy.
+2023-08-29 17:34:39.246 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/ - -
+2023-08-29 17:34:39.686 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/ - - - 404 0 - 442.8364ms
+2023-08-29 17:34:45.127 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui - -
+2023-08-29 17:34:45.147 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui - - - 302 0 - 20.1186ms
+2023-08-29 17:34:45.149 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/ - -
+2023-08-29 17:34:45.195 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/ - - - 200 4469 text/html;+charset=utf-8 45.7475ms
+2023-08-29 17:34:45.209 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/css/typography.css - -
+2023-08-29 17:34:45.211 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jquery-1.8.0.min.js - -
+2023-08-29 17:34:45.211 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/object-assign-pollyfill.js - -
+2023-08-29 17:34:45.211 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/css/reset.css - -
+2023-08-29 17:34:45.211 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/css/screen.css - -
+2023-08-29 17:34:45.212 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jquery.slideto.min.js - -
+2023-08-29 17:34:45.241 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/css/typography.css - - - 200 0 text/css 32.0503ms
+2023-08-29 17:34:45.241 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jquery.slideto.min.js - - - 200 365 text/javascript 28.5588ms
+2023-08-29 17:34:45.241 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/css/reset.css - - - 200 773 text/css 29.5482ms
+2023-08-29 17:34:45.241 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/object-assign-pollyfill.js - - - 200 349 text/javascript 29.5587ms
+2023-08-29 17:34:45.242 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jquery.ba-bbq.min.js - -
+2023-08-29 17:34:45.242 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jquery.wiggle.min.js - -
+2023-08-29 17:34:45.242 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/handlebars-4.0.5.js - -
+2023-08-29 17:34:45.244 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/css/screen.css - - - 200 43644 text/css 30.9893ms
+2023-08-29 17:34:45.245 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/lodash.min.js - -
+2023-08-29 17:34:45.248 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jquery.wiggle.min.js - - - 200 536 text/javascript 5.1505ms
+2023-08-29 17:34:45.248 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jquery.ba-bbq.min.js - - - 200 3518 text/javascript 5.1537ms
+2023-08-29 17:34:45.248 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/backbone-min.js - -
+2023-08-29 17:34:45.249 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/highlight.9.1.0.pack_extended.js - -
+2023-08-29 17:34:45.249 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jquery-1.8.0.min.js - - - 200 92032 text/javascript 37.3595ms
+2023-08-29 17:34:45.249 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/highlight.9.1.0.pack.js - -
+2023-08-29 17:34:45.250 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/lodash.min.js - - - 200 51894 text/javascript 5.3599ms
+2023-08-29 17:34:45.258 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/handlebars-4.0.5.js - - - 200 71504 text/javascript 15.9282ms
+2023-08-29 17:34:45.265 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/swagger-ui.js - -
+2023-08-29 17:34:45.265 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/highlight.9.1.0.pack_extended.js - - - 200 310 text/javascript 16.0851ms
+2023-08-29 17:34:45.266 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jsoneditor.min.js - -
+2023-08-29 17:34:45.266 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/marked.js - -
+2023-08-29 17:34:45.266 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/highlight.9.1.0.pack.js - - - 200 10962 text/javascript 16.9422ms
+2023-08-29 17:34:45.266 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/swagger-oauth.js - -
+2023-08-29 17:34:45.266 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/backbone-min.js - - - 200 19371 text/javascript 18.5490ms
+2023-08-29 17:34:45.268 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/marked.js - - - 200 15724 text/javascript 2.5923ms
+2023-08-29 17:34:45.269 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/swagger-oauth.js - - - 200 7042 text/javascript 2.9602ms
+2023-08-29 17:34:45.296 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jsoneditor.min.js - - - 200 129835 text/javascript 30.8721ms
+2023-08-29 17:34:45.301 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/images/logo_small.png - -
+2023-08-29 17:34:45.304 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/images/logo_small.png - - - 200 2912 image/png 3.4639ms
+2023-08-29 17:34:45.310 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/css/print.css - -
+2023-08-29 17:34:45.321 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/css/print.css - - - 200 41666 text/css 11.3733ms
+2023-08-29 17:34:45.347 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/swagger-ui.js - - - 200 2704477 text/javascript 81.8226ms
+2023-08-29 17:34:45.406 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/openapi - -
+2023-08-29 17:34:45.415 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/images/favicon-32x32.png - -
+2023-08-29 17:34:45.416 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/images/favicon-32x32.png - - - 200 1141 image/png 0.7551ms
+2023-08-29 17:34:45.682 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/openapi - - - 200 - application/json;+charset=utf-8 276.5979ms
+2023-08-29 17:36:14.414 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/images/throbber.gif - -
+2023-08-29 17:36:14.416 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request starting HTTP/1.1 POST http://localhost:6771/api/v1/wallet/transfer application/x-www-form-urlencoded 144
+2023-08-29 17:36:14.427 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/images/throbber.gif - - - 200 9257 image/gif 13.7806ms
+2023-08-29 17:36:14.519 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received TransferRequest: {"amount":1000,"srcAccount":"Z21446","currencyCode":"GSTAR","desAccount":"Z72037","transRef":"TEST_001","description":"chuyển","transactionType":"Transfer","fee":100,"feeType":"0"}
+2023-08-29 17:36:14.521 +07:00 [INF] [iZota.Core.Balance.Domain.Services.BalanceService.] Received TransferRequest: TEST_001
+2023-08-29 17:36:14.716 +07:00 [INF] [Orleans.Storage.MemoryGrainStorage.] Init: Name="balance-grains-storage" NumStorageGrains=10
+2023-08-29 17:36:14.734 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] On activate: Z21446|GSTAR
+2023-08-29 17:36:15.386 +07:00 [INF] [iZota.Core.Balance.Domain.Activities.BalanceWithdrawActivity.] BalanceWithdrawActivity:TEST_001-T23082900000006-b138b247-23df-4f2c-b195-7607c3a78558
+2023-08-29 17:36:15.387 +07:00 [INF] [iZota.Core.Balance.Domain.Activities.BalanceWithdrawActivity.] BalanceWithdrawActivity GetGrain:TEST_001-T23082900000006-b138b247-23df-4f2c-b195-7607c3a78558
+2023-08-29 17:36:15.392 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] Withdraw request: Z21446 - b138b247-23df-4f2c-b195-7607c3a78558 - 1000.0
+2023-08-29 17:36:15.423 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] Withdraw done:TEST_001-T23082900000006-b138b247-23df-4f2c-b195-7607c3a78558
+2023-08-29 17:36:15.425 +07:00 [INF] [iZota.Core.Balance.Domain.Activities.BalanceWithdrawActivity.] BalanceWithdrawActivity ModifyBalance:TEST_001-T23082900000006-b138b247-23df-4f2c-b195-7607c3a78558
+2023-08-29 17:36:15.425 +07:00 [INF] [iZota.Core.Balance.Domain.Activities.BalanceWithdrawActivity.] BalanceWithdrawActivity done:TEST_001-T23082900000006-b138b247-23df-4f2c-b195-7607c3a78558
+2023-08-29 17:36:15.437 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] On activate: Z72037|GSTAR
+2023-08-29 17:36:15.458 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] Deposit request: Z72037 - b138b247-23df-4f2c-b195-7607c3a78558 - 1000.0
+2023-08-29 17:36:15.464 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] Deposit AccountBalanceUpdateAsync done:TEST_001-T23082900000006-b138b247-23df-4f2c-b195-7607c3a78558-result: True
+2023-08-29 17:36:15.465 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] Deposit done:TEST_001-T23082900000006-b138b247-23df-4f2c-b195-7607c3a78558
+2023-08-29 17:36:15.467 +07:00 [INF] [iZota.Core.Balance.Domain.Activities.BalanceWithdrawActivity.] BalanceWithdrawActivity:-T23082900000006-a2989fec-c92f-49c7-b564-73c08e937077
+2023-08-29 17:36:15.467 +07:00 [INF] [iZota.Core.Balance.Domain.Activities.BalanceWithdrawActivity.] BalanceWithdrawActivity GetGrain:-T23082900000006-a2989fec-c92f-49c7-b564-73c08e937077
+2023-08-29 17:36:15.467 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] Withdraw request: Z21446 - a2989fec-c92f-49c7-b564-73c08e937077 - 100.0
+2023-08-29 17:36:15.474 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] Withdraw done:-T23082900000006-a2989fec-c92f-49c7-b564-73c08e937077
+2023-08-29 17:36:15.474 +07:00 [INF] [iZota.Core.Balance.Domain.Activities.BalanceWithdrawActivity.] BalanceWithdrawActivity ModifyBalance:-T23082900000006-a2989fec-c92f-49c7-b564-73c08e937077
+2023-08-29 17:36:15.474 +07:00 [INF] [iZota.Core.Balance.Domain.Activities.BalanceWithdrawActivity.] BalanceWithdrawActivity done:-T23082900000006-a2989fec-c92f-49c7-b564-73c08e937077
+2023-08-29 17:36:15.477 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] On activate: FEE|GSTAR
+2023-08-29 17:36:15.489 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] Deposit request: FEE - a2989fec-c92f-49c7-b564-73c08e937077 - 100.0
+2023-08-29 17:36:15.502 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] Deposit AccountBalanceUpdateAsync done:-T23082900000006-a2989fec-c92f-49c7-b564-73c08e937077-result: True
+2023-08-29 17:36:15.516 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] Deposit done:-T23082900000006-a2989fec-c92f-49c7-b564-73c08e937077
+2023-08-29 17:36:16.291 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] TransferRequest return: {"results":{"srcBalance":342690.000000,"desBalance":100.0,"transactionCode":"T23082900000006","balanceAfterTrans":[{"srcAccount":"Z21446","srcBalance":342690.000000,"srcBeforeBalance":0.0,"desAccount":"Z72037","desBalance":1000.0,"desBeforeBalance":0.0,"amount":1000.0,"transCode":"T23082900000006","currencyCode":"GSTAR"},{"srcAccount":"Z21446","srcBalance":342590.000000,"srcBeforeBalance":0.0,"desAccount":"FEE","desBalance":100.0,"desBeforeBalance":0.0,"amount":100.0,"transCode":"T23082900000006","currencyCode":"GSTAR"}]},"responseStatus":{"errorCode":"00","message":"Success"}}
+2023-08-29 17:36:16.303 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request finished HTTP/1.1 POST http://localhost:6771/api/v1/wallet/transfer application/x-www-form-urlencoded 144 - 200 - application/json;+charset=utf-8 1886.2582ms

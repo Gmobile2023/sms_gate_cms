@@ -1,0 +1,823 @@
+2023-10-03 14:39:48.132 +07:00 [INF] [Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.] User profile is available. Using '"C:\Users\letie\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-03 14:39:48.387 +07:00 [INF] [MassTransit.] Configured endpoint "cancel-payment", Consumer: "iZota.Core.Balance.Components.Consumers.CancelPaymentConsumer"
+2023-10-03 14:39:48.630 +07:00 [INF] [Orleans.Runtime.Silo.] Silo starting with GC settings: ServerGC=True GCLatencyMode="Interactive"
+2023-10-03 14:39:48.631 +07:00 [WRN] [Orleans.Runtime.Silo.] A verbose logging level ("Debug") is configured. This will impact performance. The recommended log level is Information.
+2023-10-03 14:39:48.634 +07:00 [INF] [Orleans.Runtime.Silo.] -------------- Initializing silo on host "GUNNER" MachineName "GUNNER" at "172.27.236.66:11126", gen 55323588 --------------
+2023-10-03 14:39:48.634 +07:00 [INF] [Orleans.Runtime.Silo.] Starting silo "Silo_2b974"
+2023-10-03 14:39:49.229 +07:00 [INF] [Orleans.Runtime.Silo.] -------------- Started silo "S172.27.236.66:11126:55323588", ConsistentHashCode "72F19879" --------------
+2023-10-03 14:39:49.604 +07:00 [INF] [Quartz.Core.SchedulerSignalerImpl.] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2023-10-03 14:39:49.604 +07:00 [INF] [Quartz.Core.QuartzScheduler.] Quartz Scheduler created
+2023-10-03 14:39:49.605 +07:00 [INF] [Quartz.Core.QuartzScheduler.] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2023-10-03 14:39:49.662 +07:00 [INF] [Quartz.Simpl.RAMJobStore.] RAMJobStore initialized.
+2023-10-03 14:39:49.700 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Quartz Scheduler 3.6.2.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2023-10-03 14:39:49.701 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2023-10-03 14:39:49.701 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2023-10-03 14:39:49.752 +07:00 [INF] [Orleans.Hosting.SiloHostedService.] Starting Orleans Silo.
+2023-10-03 14:39:49.796 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ActivationCountBasedPlacementOptions: 
+ChooseOutOf: 2
+
+2023-10-03 14:39:49.797 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ClusterMembershipOptions: 
+NumMissedTableIAmAliveLimit: 2
+LivenessEnabled: True
+ProbeTimeout: 00:00:05
+TableRefreshTimeout: 00:01:00
+DeathVoteExpirationTimeout: 00:02:00
+IAmAliveTablePublishTimeout: 00:05:00
+MaxJoinAttemptTime: 00:05:00
+UseLivenessGossip: True
+NumProbedSilos: 3
+NumMissedProbesLimit: 3
+NumVotesForDeathDeclaration: 2
+DefunctSiloExpiration: 7.00:00:00
+DefunctSiloCleanupPeriod: 01:00:00
+LocalHealthDegradationMonitoringPeriod: 00:00:10
+ExtendProbeTimeoutDuringDegradation: True
+EnableIndirectProbes: True
+
+2023-10-03 14:39:49.799 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ClusterOptions: 
+ClusterId: zota_balance_dev
+ServiceId: zota_balance_dev
+
+2023-10-03 14:39:49.799 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ConnectionOptions: 
+ProtocolVersion: Version1
+ConnectionsPerEndpoint: 1
+ConnectionRetryDelay: 00:00:01
+OpenConnectionTimeout: 00:00:05
+
+2023-10-03 14:39:49.800 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ConsistentRingOptions: 
+NumVirtualBucketsConsistentRing: 30
+UseVirtualBucketsConsistentRing: True
+
+2023-10-03 14:39:49.800 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.DevelopmentClusterMembershipOptions: 
+PrimarySiloEndpoint: 172.27.236.66:11126
+
+2023-10-03 14:39:49.801 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.EndpointOptions: 
+AdvertisedIPAddress: 172.27.236.66
+SiloPort: 11126
+GatewayPort: 30016
+SiloListeningEndpoint: 
+GatewayListeningEndpoint: 
+
+2023-10-03 14:39:49.801 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainCollectionOptions: 
+CollectionQuantum: 00:01:00
+CollectionAge: 00:15:00
+ActivationTimeout: 00:00:30
+DeactivationTimeout: 00:00:30
+
+2023-10-03 14:39:49.802 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainDirectoryOptions: 
+CachingStrategy: Adaptive
+CacheSize: 1000000
+InitialCacheTTL: 00:00:30
+MaximumCacheTTL: 00:04:00
+CacheTTLExtensionFactor: 2
+LazyDeregistrationDelay: 00:01:00
+
+2023-10-03 14:39:49.803 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainVersioningOptions: 
+DefaultCompatibilityStrategy: BackwardCompatible
+DefaultVersionSelectorStrategy: AllCompatibleVersions
+
+2023-10-03 14:39:49.803 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.LoadSheddingOptions: 
+LoadSheddingEnabled: False
+LoadSheddingLimit: 95
+
+2023-10-03 14:39:49.804 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-balance-grains-storage: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-10-03 14:39:49.804 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-Default: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-10-03 14:39:49.805 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-Default: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-10-03 14:39:49.805 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-SagasStorage: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-10-03 14:39:49.806 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SchedulingOptions: 
+DelayWarningThreshold: 00:00:10
+ActivationSchedulingQuantum: 00:00:00.1000000
+TurnWarningLengthThreshold: 00:00:01
+MaxPendingWorkItemsSoftLimit: 0
+StoppedActivationWarningInterval: 00:01:00
+
+2023-10-03 14:39:49.808 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SiloMessagingOptions: 
+SiloSenderQueues: 0
+GatewaySenderQueues: 0
+MaxForwardCount: 2
+ClientDropTimeout: 00:01:00
+ClientRegistrationRefresh: 00:05:00
+ClientGatewayShutdownNotificationTimeout: 00:00:05
+MaxEnqueuedRequestsSoftLimit: 0
+MaxEnqueuedRequestsHardLimit: 0
+MaxEnqueuedRequestsSoftLimit_StatelessWorker: 0
+MaxEnqueuedRequestsHardLimit_StatelessWorker: 0
+MaxRequestProcessingTime: 02:00:00
+AssumeHomogenousSilosForTesting: False
+ShutdownRerouteTimeout: 00:00:10
+SystemResponseTimeout: 00:30:00
+GrainWorkloadAnalysisPeriod: 00:00:05
+RequestProcessingWarningTime: 00:00:05
+RequestQueueDelayWarningTime: 00:00:10
+WaitForMessageToBeQueuedForOutboundTime: 00:00:02
+ResponseTimeout: 00:30:00
+ResponseTimeoutWithDebugger: 00:30:00
+DropExpiredMessages: True
+MaxMessageHeaderSize: 10485760
+MaxMessageBodySize: 104857600
+
+2023-10-03 14:39:49.809 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SiloOptions: 
+SiloName: Silo_2b974
+
+2023-10-03 14:39:49.828 +07:00 [INF] [Orleans.Runtime.InsideRuntimeClient.] Start InsideRuntimeClient took 1 milliseconds
+2023-10-03 14:39:49.831 +07:00 [INF] [Orleans.Runtime.Silo.] Silo Start()
+2023-10-03 14:39:49.836 +07:00 [INF] [Orleans.Runtime.GrainDirectory.LocalGrainDirectory.] Start
+2023-10-03 14:39:49.837 +07:00 [INF] [Orleans.Runtime.Silo.] "Start local grain directory" took 1 milliseconds to finish
+2023-10-03 14:39:49.847 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipTableManager.] MembershipOracle starting on host "GUNNER" with SiloAddress "S172.27.236.66:11126:55323588" at "2023-10-03 07:39:48.815 GMT"
+2023-10-03 14:39:49.849 +07:00 [INF] [Orleans.Runtime.MembershipService.SystemTargetBasedMembershipTable.] Creating in-memory membership table
+2023-10-03 14:39:49.851 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipTableSystemTarget.] GrainBasedMembershipTable Activated.
+2023-10-03 14:39:49.859 +07:00 [INF] [Orleans.Runtime.Silo.] Grain Service "OrleansDashboard.SiloGrainService" registered successfully.
+2023-10-03 14:39:49.859 +07:00 [INF] [Orleans.Runtime.Silo.] "Init grain services" took 9 milliseconds to finish
+2023-10-03 14:39:49.872 +07:00 [INF] [Orleans.Runtime.Silo.] "Start deployment load collector" took 12 milliseconds to finish
+2023-10-03 14:39:49.874 +07:00 [INF] [Orleans.Runtime.Watchdog.] Starting Silo Watchdog.
+2023-10-03 14:39:49.895 +07:00 [INF] [MassTransit.] Bus started: rabbitmq://172.16.0.124/zota
+2023-10-03 14:39:49.925 +07:00 [INF] [Orleans.Runtime.MembershipService.SystemTargetBasedMembershipTable.] Connected to membership table provider.
+2023-10-03 14:39:49.943 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] Joining
+2023-10-03 14:39:49.984 +07:00 [INF] [Orleans.Storage.MemoryGrainStorage.] Init: Name="Default" NumStorageGrains=10
+2023-10-03 14:39:49.987 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] -BecomeActive
+2023-10-03 14:39:49.996 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] -Finished BecomeActive.
+2023-10-03 14:39:50.002 +07:00 [INF] [Orleans.Runtime.ReminderService.LocalReminderService.] Starting "Orleans.Runtime.ReminderService.LocalReminderService" grain service on: "S172.27.236.66:11126:55323588" x"72F19879", with range "<(0 0], Size=x100000000, %Ring=100%>"
+2023-10-03 14:39:50.177 +07:00 [INF] [OrleansDashboard.Dashboard.] Dashboard listening on 8080
+2023-10-03 14:39:50.204 +07:00 [INF] [Orleans.Runtime.ReminderService.ReminderTableGrain.] Activated
+2023-10-03 14:39:50.279 +07:00 [INF] [Orleans.Runtime.ReminderService.LocalReminderService.] My range changed from "<(0 0], Size=x100000000, %Ring=100%>" to "<(0 0], Size=x100000000, %Ring=100%>" increased = True
+2023-10-03 14:39:50.398 +07:00 [INF] [OrleansDashboard.SiloGrainService.] Starting "OrleansDashboard.SiloGrainService" grain service on: "S172.27.236.66:11126:55323588" x"72F19879", with range "<(0 0], Size=x100000000, %Ring=100%>"
+2023-10-03 14:39:50.399 +07:00 [INF] [OrleansDashboard.SiloGrainService.] My range changed from "<(0 0], Size=x100000000, %Ring=100%>" to "<(0 0], Size=x100000000, %Ring=100%>" increased = True
+2023-10-03 14:39:50.399 +07:00 [INF] [Orleans.Runtime.Silo.] Grain Service "OrleansDashboard.SiloGrainService" started successfully.
+2023-10-03 14:39:50.401 +07:00 [INF] [Orleans.Hosting.SiloHostedService.] Orleans Silo started.
+2023-10-03 14:39:50.409 +07:00 [INF] [iZota.Core.Shared.Contracts.Commands.Balance.PaymentCancelCommand.] CancelPaymentConsumer recevied: {"__type":"MassTransit.DynamicInternal.iZota.Core.Shared.Contracts.Commands.Balance.PaymentCancelCommand, iZota.Core.Shared.Contracts.Commands.BalanceMassTransit.DynamicInternalc1673c7e725b45598c5f3433df7faeeb","TransCode":"Z23100200000009","PaymentTransCode":"P23100200000001","AccountCode":"ZT000001614","RevertAmount":7.000000,"TransNote":"Hoàn tiền cho giao dịch thanh toán: 70985d84-73ed-41a5-bb79-6d6eff620d0f","CurrencyCode":"GSTAR","TimeStamp":"\/Date(1696217586832+0700)\/","CorrelationId":"0e35d3b19c6f4567b04634c59201eb4c"}
+2023-10-03 14:39:51.326 +07:00 [INF] [Orleans.Storage.MemoryGrainStorage.] Init: Name="SagasStorage" NumStorageGrains=10
+2023-10-03 14:39:51.655 +07:00 [INF] [iZota.Core.Balance.Domain.Activities.BalanceWithdrawActivity.] BalanceWithdrawActivity: "Z23100200000009"-"P23100300000013"-"e9480929-49f9-4605-b47c-962ea6b5eb4c"
+2023-10-03 14:39:51.724 +07:00 [INF] [Orleans.Storage.MemoryGrainStorage.] Init: Name="balance-grains-storage" NumStorageGrains=10
+2023-10-03 14:39:51.737 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] On activate: "PAYMENT|GSTAR"
+2023-10-03 14:39:54.791 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] Withdraw request: "PAYMENT" - "e9480929-49f9-4605-b47c-962ea6b5eb4c" - 7.000000
+2023-10-03 14:39:54.816 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:03.8821353. Total GC Pause duration during that period: 00:00:00.0037560. We are now using a total of 13MB memory. gc=11, 11, 4
+2023-10-03 14:39:54.990 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed with BalanceException
+2023-10-03 14:39:54.994 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=1, Status=RanToCompletion]" in WorkGroup "[Activation: S172.27.236.66:11126:55323588/balance/PAYMENT|GSTAR@871df3e0e88b45cfbd4ade32c6876e5d#GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid]" took elapsed time "0:00:03.1861745" for execution, which is longer than 00:00:01. Running on thread "6"
+2023-10-03 14:39:55.123 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:39:55.654 +07:00 [INF] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider.] RPC services being provided by "GrpcServices": 19
+2023-10-03 14:39:55.706 +07:00 [INF] [ServiceStack.ServiceStackHost.] Initializing Application "iZOTA_Balance" took 5300.1685ms. No errors detected.
+2023-10-03 14:39:55.770 +07:00 [WRN] [Microsoft.AspNetCore.Server.Kestrel.] Overriding address(es) '"https://localhost:5002, http://localhost:5003"'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2023-10-03 14:39:55.773 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Now listening on: "http://localhost:7771"
+2023-10-03 14:39:55.774 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Now listening on: "http://localhost:6771"
+2023-10-03 14:39:55.776 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Application started. Press Ctrl+C to shut down.
+2023-10-03 14:39:55.776 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Hosting environment: "Development"
+2023-10-03 14:39:55.776 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Content root path: "D:\Source\ZOPOST 2023\iZOTA_core_balance\iZota.Core.Balance.Hosting"
+2023-10-03 14:39:55.784 +07:00 [INF] [Quartz.Core.QuartzScheduler.] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2023-10-03 14:40:00.247 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:40:05.366 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:40:10.494 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:40:15.610 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:40:20.741 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:40:25.875 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:40:30.995 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:40:36.115 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:40:41.230 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:40:46.359 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:40:51.499 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:40:56.616 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:41:01.737 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:41:06.866 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:41:11.991 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:41:17.113 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:41:22.244 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:41:27.371 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:41:32.495 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:42:16.018 +07:00 [INF] [Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.] User profile is available. Using '"C:\Users\letie\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-03 14:42:16.177 +07:00 [INF] [MassTransit.] Configured endpoint "cancel-payment", Consumer: "iZota.Core.Balance.Components.Consumers.CancelPaymentConsumer"
+2023-10-03 14:42:16.328 +07:00 [INF] [Orleans.Runtime.Silo.] Silo starting with GC settings: ServerGC=True GCLatencyMode="Interactive"
+2023-10-03 14:42:16.330 +07:00 [WRN] [Orleans.Runtime.Silo.] A verbose logging level ("Debug") is configured. This will impact performance. The recommended log level is Information.
+2023-10-03 14:42:16.331 +07:00 [INF] [Orleans.Runtime.Silo.] -------------- Initializing silo on host "GUNNER" MachineName "GUNNER" at "172.27.236.66:11126", gen 55323736 --------------
+2023-10-03 14:42:16.331 +07:00 [INF] [Orleans.Runtime.Silo.] Starting silo "Silo_24ab0"
+2023-10-03 14:42:16.904 +07:00 [INF] [Orleans.Runtime.Silo.] -------------- Started silo "S172.27.236.66:11126:55323736", ConsistentHashCode "238FCBFA" --------------
+2023-10-03 14:42:17.046 +07:00 [INF] [Quartz.Core.SchedulerSignalerImpl.] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2023-10-03 14:42:17.047 +07:00 [INF] [Quartz.Core.QuartzScheduler.] Quartz Scheduler created
+2023-10-03 14:42:17.047 +07:00 [INF] [Quartz.Core.QuartzScheduler.] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2023-10-03 14:42:17.078 +07:00 [INF] [Quartz.Simpl.RAMJobStore.] RAMJobStore initialized.
+2023-10-03 14:42:17.079 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Quartz Scheduler 3.6.2.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2023-10-03 14:42:17.079 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2023-10-03 14:42:17.079 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2023-10-03 14:42:17.120 +07:00 [INF] [Orleans.Hosting.SiloHostedService.] Starting Orleans Silo.
+2023-10-03 14:42:17.150 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ActivationCountBasedPlacementOptions: 
+ChooseOutOf: 2
+
+2023-10-03 14:42:17.151 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ClusterMembershipOptions: 
+NumMissedTableIAmAliveLimit: 2
+LivenessEnabled: True
+ProbeTimeout: 00:00:05
+TableRefreshTimeout: 00:01:00
+DeathVoteExpirationTimeout: 00:02:00
+IAmAliveTablePublishTimeout: 00:05:00
+MaxJoinAttemptTime: 00:05:00
+UseLivenessGossip: True
+NumProbedSilos: 3
+NumMissedProbesLimit: 3
+NumVotesForDeathDeclaration: 2
+DefunctSiloExpiration: 7.00:00:00
+DefunctSiloCleanupPeriod: 01:00:00
+LocalHealthDegradationMonitoringPeriod: 00:00:10
+ExtendProbeTimeoutDuringDegradation: True
+EnableIndirectProbes: True
+
+2023-10-03 14:42:17.152 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ClusterOptions: 
+ClusterId: zota_balance_dev
+ServiceId: zota_balance_dev
+
+2023-10-03 14:42:17.153 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ConnectionOptions: 
+ProtocolVersion: Version1
+ConnectionsPerEndpoint: 1
+ConnectionRetryDelay: 00:00:01
+OpenConnectionTimeout: 00:00:05
+
+2023-10-03 14:42:17.154 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ConsistentRingOptions: 
+NumVirtualBucketsConsistentRing: 30
+UseVirtualBucketsConsistentRing: True
+
+2023-10-03 14:42:17.154 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.DevelopmentClusterMembershipOptions: 
+PrimarySiloEndpoint: 172.27.236.66:11126
+
+2023-10-03 14:42:17.154 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.EndpointOptions: 
+AdvertisedIPAddress: 172.27.236.66
+SiloPort: 11126
+GatewayPort: 30016
+SiloListeningEndpoint: 
+GatewayListeningEndpoint: 
+
+2023-10-03 14:42:17.155 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainCollectionOptions: 
+CollectionQuantum: 00:01:00
+CollectionAge: 00:15:00
+ActivationTimeout: 00:00:30
+DeactivationTimeout: 00:00:30
+
+2023-10-03 14:42:17.156 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainDirectoryOptions: 
+CachingStrategy: Adaptive
+CacheSize: 1000000
+InitialCacheTTL: 00:00:30
+MaximumCacheTTL: 00:04:00
+CacheTTLExtensionFactor: 2
+LazyDeregistrationDelay: 00:01:00
+
+2023-10-03 14:42:17.157 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainVersioningOptions: 
+DefaultCompatibilityStrategy: BackwardCompatible
+DefaultVersionSelectorStrategy: AllCompatibleVersions
+
+2023-10-03 14:42:17.157 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.LoadSheddingOptions: 
+LoadSheddingEnabled: False
+LoadSheddingLimit: 95
+
+2023-10-03 14:42:17.158 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-balance-grains-storage: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-10-03 14:42:17.158 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-Default: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-10-03 14:42:17.159 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-Default: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-10-03 14:42:17.159 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-SagasStorage: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-10-03 14:42:17.160 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SchedulingOptions: 
+DelayWarningThreshold: 00:00:10
+ActivationSchedulingQuantum: 00:00:00.1000000
+TurnWarningLengthThreshold: 00:00:01
+MaxPendingWorkItemsSoftLimit: 0
+StoppedActivationWarningInterval: 00:01:00
+
+2023-10-03 14:42:17.162 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SiloMessagingOptions: 
+SiloSenderQueues: 0
+GatewaySenderQueues: 0
+MaxForwardCount: 2
+ClientDropTimeout: 00:01:00
+ClientRegistrationRefresh: 00:05:00
+ClientGatewayShutdownNotificationTimeout: 00:00:05
+MaxEnqueuedRequestsSoftLimit: 0
+MaxEnqueuedRequestsHardLimit: 0
+MaxEnqueuedRequestsSoftLimit_StatelessWorker: 0
+MaxEnqueuedRequestsHardLimit_StatelessWorker: 0
+MaxRequestProcessingTime: 02:00:00
+AssumeHomogenousSilosForTesting: False
+ShutdownRerouteTimeout: 00:00:10
+SystemResponseTimeout: 00:30:00
+GrainWorkloadAnalysisPeriod: 00:00:05
+RequestProcessingWarningTime: 00:00:05
+RequestQueueDelayWarningTime: 00:00:10
+WaitForMessageToBeQueuedForOutboundTime: 00:00:02
+ResponseTimeout: 00:30:00
+ResponseTimeoutWithDebugger: 00:30:00
+DropExpiredMessages: True
+MaxMessageHeaderSize: 10485760
+MaxMessageBodySize: 104857600
+
+2023-10-03 14:42:17.163 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SiloOptions: 
+SiloName: Silo_24ab0
+
+2023-10-03 14:42:17.172 +07:00 [INF] [Orleans.Runtime.InsideRuntimeClient.] Start InsideRuntimeClient took 1 milliseconds
+2023-10-03 14:42:17.175 +07:00 [INF] [Orleans.Runtime.Silo.] Silo Start()
+2023-10-03 14:42:17.180 +07:00 [INF] [Orleans.Runtime.GrainDirectory.LocalGrainDirectory.] Start
+2023-10-03 14:42:17.182 +07:00 [INF] [Orleans.Runtime.Silo.] "Start local grain directory" took 1 milliseconds to finish
+2023-10-03 14:42:17.193 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipTableManager.] MembershipOracle starting on host "GUNNER" with SiloAddress "S172.27.236.66:11126:55323736" at "2023-10-03 07:42:16.463 GMT"
+2023-10-03 14:42:17.196 +07:00 [INF] [Orleans.Runtime.MembershipService.SystemTargetBasedMembershipTable.] Creating in-memory membership table
+2023-10-03 14:42:17.198 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipTableSystemTarget.] GrainBasedMembershipTable Activated.
+2023-10-03 14:42:17.205 +07:00 [INF] [Orleans.Runtime.Silo.] Grain Service "OrleansDashboard.SiloGrainService" registered successfully.
+2023-10-03 14:42:17.205 +07:00 [INF] [Orleans.Runtime.Silo.] "Init grain services" took 8 milliseconds to finish
+2023-10-03 14:42:17.218 +07:00 [INF] [Orleans.Runtime.Silo.] "Start deployment load collector" took 12 milliseconds to finish
+2023-10-03 14:42:17.219 +07:00 [INF] [Orleans.Runtime.Watchdog.] Starting Silo Watchdog.
+2023-10-03 14:42:17.263 +07:00 [INF] [Orleans.Runtime.MembershipService.SystemTargetBasedMembershipTable.] Connected to membership table provider.
+2023-10-03 14:42:17.275 +07:00 [INF] [MassTransit.] Bus started: rabbitmq://172.16.0.124/gunner
+2023-10-03 14:42:17.283 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] Joining
+2023-10-03 14:42:17.303 +07:00 [INF] [Orleans.Storage.MemoryGrainStorage.] Init: Name="Default" NumStorageGrains=10
+2023-10-03 14:42:17.306 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] -BecomeActive
+2023-10-03 14:42:17.314 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] -Finished BecomeActive.
+2023-10-03 14:42:17.320 +07:00 [INF] [Orleans.Runtime.ReminderService.LocalReminderService.] Starting "Orleans.Runtime.ReminderService.LocalReminderService" grain service on: "S172.27.236.66:11126:55323736" x"238FCBFA", with range "<(0 0], Size=x100000000, %Ring=100%>"
+2023-10-03 14:42:17.353 +07:00 [INF] [OrleansDashboard.Dashboard.] Dashboard listening on 8080
+2023-10-03 14:42:17.420 +07:00 [INF] [Orleans.Runtime.ReminderService.ReminderTableGrain.] Activated
+2023-10-03 14:42:17.434 +07:00 [INF] [Orleans.Runtime.ReminderService.LocalReminderService.] My range changed from "<(0 0], Size=x100000000, %Ring=100%>" to "<(0 0], Size=x100000000, %Ring=100%>" increased = True
+2023-10-03 14:42:17.454 +07:00 [INF] [OrleansDashboard.SiloGrainService.] Starting "OrleansDashboard.SiloGrainService" grain service on: "S172.27.236.66:11126:55323736" x"238FCBFA", with range "<(0 0], Size=x100000000, %Ring=100%>"
+2023-10-03 14:42:17.455 +07:00 [INF] [OrleansDashboard.SiloGrainService.] My range changed from "<(0 0], Size=x100000000, %Ring=100%>" to "<(0 0], Size=x100000000, %Ring=100%>" increased = True
+2023-10-03 14:42:17.455 +07:00 [INF] [Orleans.Runtime.Silo.] Grain Service "OrleansDashboard.SiloGrainService" started successfully.
+2023-10-03 14:42:17.457 +07:00 [INF] [Orleans.Hosting.SiloHostedService.] Orleans Silo started.
+2023-10-03 14:42:18.859 +07:00 [INF] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider.] RPC services being provided by "GrpcServices": 19
+2023-10-03 14:42:18.875 +07:00 [INF] [ServiceStack.ServiceStackHost.] Initializing Application "iZOTA_Balance" took 1416.0432ms. No errors detected.
+2023-10-03 14:42:18.901 +07:00 [WRN] [Microsoft.AspNetCore.Server.Kestrel.] Overriding address(es) '"https://localhost:5002, http://localhost:5003"'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2023-10-03 14:42:18.904 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Now listening on: "http://localhost:7771"
+2023-10-03 14:42:18.904 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Now listening on: "http://localhost:6771"
+2023-10-03 14:42:18.906 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Application started. Press Ctrl+C to shut down.
+2023-10-03 14:42:18.906 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Hosting environment: "Development"
+2023-10-03 14:42:18.907 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Content root path: "D:\Source\ZOPOST 2023\iZOTA_core_balance\iZota.Core.Balance.Hosting"
+2023-10-03 14:42:18.911 +07:00 [INF] [Quartz.Core.QuartzScheduler.] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2023-10-03 14:42:19.016 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/ - -
+2023-10-03 14:42:19.256 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/ - - - 404 0 - 242.2774ms
+2023-10-03 14:42:24.520 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui - -
+2023-10-03 14:42:25.111 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui - - - 302 0 - 591.0572ms
+2023-10-03 14:42:25.112 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/ - -
+2023-10-03 14:42:25.178 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/ - - - 200 4469 text/html;+charset=utf-8 65.0985ms
+2023-10-03 14:42:25.200 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/css/typography.css - -
+2023-10-03 14:42:25.200 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/css/reset.css - -
+2023-10-03 14:42:25.201 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/css/screen.css - -
+2023-10-03 14:42:25.202 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/object-assign-pollyfill.js - -
+2023-10-03 14:42:25.202 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jquery-1.8.0.min.js - -
+2023-10-03 14:42:25.202 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jquery.slideto.min.js - -
+2023-10-03 14:42:25.225 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/object-assign-pollyfill.js - - - 200 349 text/javascript 23.2569ms
+2023-10-03 14:42:25.225 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jquery.slideto.min.js - - - 200 365 text/javascript 23.1001ms
+2023-10-03 14:42:25.226 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jquery.ba-bbq.min.js - -
+2023-10-03 14:42:25.226 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jquery.wiggle.min.js - -
+2023-10-03 14:42:25.227 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jquery.wiggle.min.js - - - 200 536 text/javascript 0.8106ms
+2023-10-03 14:42:25.228 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/handlebars-4.0.5.js - -
+2023-10-03 14:42:25.228 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/css/reset.css - - - 200 773 text/css 28.2456ms
+2023-10-03 14:42:25.229 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/lodash.min.js - -
+2023-10-03 14:42:25.229 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/css/typography.css - - - 200 0 text/css 28.9454ms
+2023-10-03 14:42:25.229 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/backbone-min.js - -
+2023-10-03 14:42:25.232 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jquery.ba-bbq.min.js - - - 200 3518 text/javascript 5.2698ms
+2023-10-03 14:42:25.232 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/swagger-ui.js - -
+2023-10-03 14:42:25.235 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/css/screen.css - - - 200 43644 text/css 34.1218ms
+2023-10-03 14:42:25.237 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/highlight.9.1.0.pack.js - -
+2023-10-03 14:42:25.238 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jquery-1.8.0.min.js - - - 200 92032 text/javascript 35.4802ms
+2023-10-03 14:42:25.238 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/highlight.9.1.0.pack_extended.js - -
+2023-10-03 14:42:25.238 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/backbone-min.js - - - 200 19371 text/javascript 8.8626ms
+2023-10-03 14:42:25.238 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/highlight.9.1.0.pack_extended.js - - - 200 310 text/javascript 0.5155ms
+2023-10-03 14:42:25.239 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jsoneditor.min.js - -
+2023-10-03 14:42:25.239 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/marked.js - -
+2023-10-03 14:42:25.240 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/highlight.9.1.0.pack.js - - - 200 10962 text/javascript 3.0352ms
+2023-10-03 14:42:25.240 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/swagger-oauth.js - -
+2023-10-03 14:42:25.243 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/marked.js - - - 200 15724 text/javascript 3.7248ms
+2023-10-03 14:42:25.245 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/lodash.min.js - - - 200 51894 text/javascript 16.0554ms
+2023-10-03 14:42:25.251 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/handlebars-4.0.5.js - - - 200 71504 text/javascript 23.0953ms
+2023-10-03 14:42:25.252 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/swagger-oauth.js - - - 200 7042 text/javascript 11.4076ms
+2023-10-03 14:42:25.263 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jsoneditor.min.js - - - 200 129835 text/javascript 23.4150ms
+2023-10-03 14:42:25.267 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/images/logo_small.png - -
+2023-10-03 14:42:25.271 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/images/logo_small.png - - - 200 2912 image/png 4.0649ms
+2023-10-03 14:42:25.272 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/css/print.css - -
+2023-10-03 14:42:25.282 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/css/print.css - - - 200 41666 text/css 9.7870ms
+2023-10-03 14:42:25.311 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/swagger-ui.js - - - 200 2704477 text/javascript 78.8039ms
+2023-10-03 14:42:25.376 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/openapi - -
+2023-10-03 14:42:25.444 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/images/favicon-32x32.png - -
+2023-10-03 14:42:25.445 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/images/favicon-32x32.png - - - 200 1141 image/png 1.0143ms
+2023-10-03 14:42:25.621 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/openapi - - - 200 - application/json;+charset=utf-8 244.3704ms
+2023-10-03 14:45:34.526 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/images/throbber.gif - -
+2023-10-03 14:45:34.529 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request starting HTTP/1.1 POST http://localhost:6771/api/v1/wallet/cancel_payment?TransactionCode=534534534&RevertAmount=1000&TransRef=test423432&TransNote=test&Description=test&CurrencyCode=GSTAR&AccountCode=Z21446 application/json 2
+2023-10-03 14:45:34.547 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/images/throbber.gif - - - 200 9257 image/gif 21.0321ms
+2023-10-03 14:45:34.649 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] BalanceCancelPaymentRequest: {"transactionCode":"534534534","revertAmount":1000,"transRef":"test423432","transNote":"test","description":"test","currencyCode":"GSTAR","accountCode":"Z21446"}
+2023-10-03 14:45:34.830 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] BalanceCancelPaymentRequest: {"responseStatus":{"errorCode":"01","message":"Giao dịch không tồn tại"}}
+2023-10-03 14:45:34.857 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request finished HTTP/1.1 POST http://localhost:6771/api/v1/wallet/cancel_payment?TransactionCode=534534534&RevertAmount=1000&TransRef=test423432&TransNote=test&Description=test&CurrencyCode=GSTAR&AccountCode=Z21446 application/json 2 - 200 - application/json;+charset=utf-8 328.1059ms
+2023-10-03 14:46:33.096 +07:00 [WRN] [Orleans.Runtime.MembershipService.MembershipTableCleanupAgent.] CleanupDefunctSiloEntries operation is not supported by the current implementation of IMembershipTable. Disabling the timer now.
+2023-10-03 14:48:37.109 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request starting HTTP/1.1 POST http://localhost:6771/api/v1/wallet/cancel_payment?TransactionCode=T23100100000009&RevertAmount=1000&TransRef=test423432&TransNote=test&Description=test&CurrencyCode=GSTAR&AccountCode=Z21446 application/json 2
+2023-10-03 14:48:42.740 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.ActivationWorkingSet.MonitorWorkingSet.] Timer should have fired at 10/03/2023 07:48:37 but fired at 10/03/2023 07:48:42, which is 00:00:04.8464081 longer than expected
+2023-10-03 14:48:42.741 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.IncomingRequestMonitor.] Timer should have fired at 10/03/2023 07:48:37 but fired at 10/03/2023 07:48:42, which is 00:00:04.7553995 longer than expected
+2023-10-03 14:48:42.740 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.LocalSiloHealthMonitor.] Timer should have fired at 10/03/2023 07:48:37 but fired at 10/03/2023 07:48:42, which is 00:00:05.1342730 longer than expected
+2023-10-03 14:48:42.742 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:05.6582626. Total GC Pause duration during that period: 00:00:00. We are now using a total of 21MB memory. gc=34, 34, 7
+2023-10-03 14:48:42.783 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] BalanceCancelPaymentRequest: {"transactionCode":"T23100100000009","revertAmount":1000,"transRef":"test423432","transNote":"test","description":"test","currencyCode":"GSTAR","accountCode":"Z21446"}
+2023-10-03 14:48:55.051 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:08.3193446. Total GC Pause duration during that period: 00:00:00. We are now using a total of 22MB memory. gc=34, 34, 7
+2023-10-03 14:48:55.052 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.IncomingRequestMonitor.] Timer should have fired at 10/03/2023 07:48:47 but fired at 10/03/2023 07:48:55, which is 00:00:07.2789354 longer than expected
+2023-10-03 14:48:55.052 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.ActivationWorkingSet.MonitorWorkingSet.] Timer should have fired at 10/03/2023 07:48:47 but fired at 10/03/2023 07:48:55, which is 00:00:07.3115958 longer than expected
+2023-10-03 14:48:55.750 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] BalanceCancelPaymentRequest: {"responseStatus":{"errorCode":"01","message":"Giao dịch không tồn tại"}}
+2023-10-03 14:48:55.753 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request finished HTTP/1.1 POST http://localhost:6771/api/v1/wallet/cancel_payment?TransactionCode=T23100100000009&RevertAmount=1000&TransRef=test423432&TransNote=test&Description=test&CurrencyCode=GSTAR&AccountCode=Z21446 application/json 2 - 200 - application/json;+charset=utf-8 18644.6353ms
+2023-10-03 14:49:02.805 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request starting HTTP/1.1 POST http://localhost:6771/api/v1/wallet/cancel_payment?TransactionCode=T23100100000009&RevertAmount=1000&TransRef=T23100100000009&TransNote=test&Description=test&CurrencyCode=GSTAR&AccountCode=Z21446 application/json 2
+2023-10-03 14:49:04.115 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] BalanceCancelPaymentRequest: {"transactionCode":"T23100100000009","revertAmount":1000,"transRef":"T23100100000009","transNote":"test","description":"test","currencyCode":"GSTAR","accountCode":"Z21446"}
+2023-10-03 14:49:08.758 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] BalanceCancelPaymentRequest: {"responseStatus":{"errorCode":"01","message":"Giao dịch không tồn tại"}}
+2023-10-03 14:49:08.761 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request finished HTTP/1.1 POST http://localhost:6771/api/v1/wallet/cancel_payment?TransactionCode=T23100100000009&RevertAmount=1000&TransRef=T23100100000009&TransNote=test&Description=test&CurrencyCode=GSTAR&AccountCode=Z21446 application/json 2 - 200 - application/json;+charset=utf-8 5956.4456ms
+2023-10-03 14:49:16.875 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request starting HTTP/1.1 POST http://localhost:6771/api/v1/wallet/cancel_payment?TransactionCode=T23100100000009&RevertAmount=1000&TransRef=T23100100000009&TransNote=test&Description=test&CurrencyCode=GSTAR&AccountCode=Z21446 application/json 2
+2023-10-03 14:49:18.293 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:02.2798271. Total GC Pause duration during that period: 00:00:00. We are now using a total of 22MB memory. gc=34, 34, 7
+2023-10-03 14:49:18.294 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] BalanceCancelPaymentRequest: {"transactionCode":"T23100100000009","revertAmount":1000,"transRef":"T23100100000009","transNote":"test","description":"test","currencyCode":"GSTAR","accountCode":"Z21446"}
+2023-10-03 14:49:30.894 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:11.0928565. Total GC Pause duration during that period: 00:00:00. We are now using a total of 22MB memory. gc=34, 34, 7
+2023-10-03 14:49:30.896 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.ActivationWorkingSet.MonitorWorkingSet.] Timer should have fired at 10/03/2023 07:49:25 but fired at 10/03/2023 07:49:30, which is 00:00:05.4504382 longer than expected
+2023-10-03 14:49:30.896 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.IncomingRequestMonitor.] Timer should have fired at 10/03/2023 07:49:25 but fired at 10/03/2023 07:49:30, which is 00:00:05.4519898 longer than expected
+2023-10-03 14:49:30.896 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.LocalSiloHealthMonitor.] Timer should have fired at 10/03/2023 07:49:25 but fired at 10/03/2023 07:49:30, which is 00:00:05.8401655 longer than expected
+2023-10-03 14:49:48.814 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:16.9101310. Total GC Pause duration during that period: 00:00:00. We are now using a total of 23MB memory. gc=34, 34, 7
+2023-10-03 14:49:48.814 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.LocalSiloHealthMonitor.] Timer should have fired at 10/03/2023 07:49:40 but fired at 10/03/2023 07:49:48, which is 00:00:07.9184223 longer than expected
+2023-10-03 14:49:48.814 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.ActivationWorkingSet.MonitorWorkingSet.] Timer should have fired at 10/03/2023 07:49:35 but fired at 10/03/2023 07:49:48, which is 00:00:12.9202045 longer than expected
+2023-10-03 14:49:48.814 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.IncomingRequestMonitor.] Timer should have fired at 10/03/2023 07:49:35 but fired at 10/03/2023 07:49:48, which is 00:00:12.9140924 longer than expected
+2023-10-03 14:49:50.856 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:02.0383693. Total GC Pause duration during that period: 00:00:00. We are now using a total of 23MB memory. gc=34, 34, 7
+2023-10-03 14:49:50.856 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] BalanceCancelPaymentRequest: {"responseStatus":{"errorCode":"01","message":"Giao dịch không tồn tại"}}
+2023-10-03 14:49:50.861 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request finished HTTP/1.1 POST http://localhost:6771/api/v1/wallet/cancel_payment?TransactionCode=T23100100000009&RevertAmount=1000&TransRef=T23100100000009&TransNote=test&Description=test&CurrencyCode=GSTAR&AccountCode=Z21446 application/json 2 - 200 - application/json;+charset=utf-8 33986.0638ms
+2023-10-03 14:50:42.114 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request starting HTTP/1.1 POST http://localhost:6771/api/v1/wallet/cancel_payment?TransactionCode=P23093000000008&RevertAmount=1000&TransRef=T23100100000009&TransNote=test&Description=test&CurrencyCode=GSTAR&AccountCode=Z21446 application/json 2
+2023-10-03 14:50:43.316 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] BalanceCancelPaymentRequest: {"transactionCode":"P23093000000008","revertAmount":1000,"transRef":"T23100100000009","transNote":"test","description":"test","currencyCode":"GSTAR","accountCode":"Z21446"}
+2023-10-03 14:50:50.395 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=9, Status=RanToCompletion]" in WorkGroup "[Activation: S172.27.236.66:11126:55323736/management/0@03b62e571fca4c20bbf44a38d41ac870#GrainType=Orleans.Runtime.Management.ManagementGrain,Orleans.Runtime Placement=StatelessWorkerPlacement State=Valid]" took elapsed time "0:00:01.7152217" for execution, which is longer than 00:00:01. Running on thread "17"
+2023-10-03 14:50:54.812 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:02.0572208. Total GC Pause duration during that period: 00:00:00. We are now using a total of 24MB memory. gc=34, 34, 7
+2023-10-03 14:50:57.461 +07:00 [INF] [Orleans.Storage.MemoryGrainStorage.] Init: Name="SagasStorage" NumStorageGrains=10
+2023-10-03 14:50:57.616 +07:00 [INF] [iZota.Core.Balance.Domain.Activities.BalanceWithdrawActivity.] BalanceWithdrawActivity: "T23100100000009"-"P23100300000014"-"d17bc879-9867-4717-9fc1-bb3cbdcb46b4"
+2023-10-03 14:50:57.630 +07:00 [INF] [Orleans.Storage.MemoryGrainStorage.] Init: Name="balance-grains-storage" NumStorageGrains=10
+2023-10-03 14:50:57.636 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] On activate: "PAYMENT|GSTAR"
+2023-10-03 14:50:59.021 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] Withdraw request: "PAYMENT" - "d17bc879-9867-4717-9fc1-bb3cbdcb46b4" - 1000.0
+2023-10-03 14:51:13.544 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.ActivationWorkingSet.MonitorWorkingSet.] Timer should have fired at 10/03/2023 07:51:05 but fired at 10/03/2023 07:51:13, which is 00:00:07.9629882 longer than expected
+2023-10-03 14:51:13.545 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.IncomingRequestMonitor.] Timer should have fired at 10/03/2023 07:51:05 but fired at 10/03/2023 07:51:13, which is 00:00:07.9638387 longer than expected
+2023-10-03 14:51:13.544 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:12.0698612. Total GC Pause duration during that period: 00:00:00. We are now using a total of 26MB memory. gc=34, 34, 7
+2023-10-03 14:51:13.545 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.LocalSiloHealthMonitor.] Timer should have fired at 10/03/2023 07:51:10 but fired at 10/03/2023 07:51:13, which is 00:00:03.1441417 longer than expected
+2023-10-03 14:51:13.545 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.PeriodicallyRefreshMembershipTable.] Timer should have fired at 10/03/2023 07:51:08 but fired at 10/03/2023 07:51:13, which is 00:00:04.7858979 longer than expected
+2023-10-03 14:51:13.565 +07:00 [WRN] [Orleans.Runtime.Watchdog.] Watchdog had 1 health Check failure(s) out of 5 health Check participants: "Orleans.Runtime.MembershipService.MembershipTableManager failed health check with reason \"PeriodicallyRefreshMembershipTable timer should have fired at 10/3/2023 7:51:08 AM, which is 00:00:04.7898512 ago\"."
+2023-10-03 14:51:13.565 +07:00 [WRN] [Orleans.Runtime.MembershipService.LocalSiloHealthMonitor.] Health check participant "Orleans.Runtime.MembershipService.MembershipTableManager" is reporting that it is unhealthy with complaint: "PeriodicallyRefreshMembershipTable timer should have fired at 10/3/2023 7:51:08 AM, which is 00:00:04.8005966 ago"
+2023-10-03 14:51:13.577 +07:00 [WRN] [Orleans.Runtime.MembershipService.LocalSiloHealthMonitor.] Self-monitoring determined that local health is degraded. Degradation score is 1/8 (lower is better). Complaints: "Health check participant Orleans.Runtime.MembershipService.MembershipTableManager is reporting that it is unhealthy with complaint: PeriodicallyRefreshMembershipTable timer should have fired at 10/3/2023 7:51:08 AM, which is 00:00:04.8005966 ago"
+2023-10-03 14:51:14.583 +07:00 [INF] [Orleans.Runtime.InsideRuntimeClient.] Received status update for pending request, Request: "Request [S172.27.236.66:11126:55323736 saga/84744a421346495e8482780ffc14e2ca]->[S172.27.236.66:11126:55323736 balance/PAYMENT|GSTAR] iZota.Core.Balance.Models.Grains.IBalanceGrain[(iZota.Core.Balance.Models.Grains.IBalanceGrain)iZota.Core.Balance.Domain.Grains.BalanceGrain].Withdraw(iZota.Core.Balance.Models.Dtos.SettlementDto) #1417". Status: "[Activation: S172.27.236.66:11126:55323736/balance/PAYMENT|GSTAR@8bde605858944a9ebcb99b51a244a8dd #GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid NonReentrancyQueueSize=0 NumRunning=1 IdlenessTimeSpan=00:00:00 CollectionAgeLimit=00:15:00]
+TaskScheduler status: WorkItemGroup:Name=[Activation: S172.27.236.66:11126:55323736/balance/PAYMENT|GSTAR@8bde605858944a9ebcb99b51a244a8dd#GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid],WorkGroupStatus=Running. Currently QueuedWorkItems=0; Total Enqueued=10; Total processed=9;  Executing Task Id=11 Status=Running for 00:00:16.7970000.TaskRunner=ActivationTaskScheduler-19:Queued=0; Detailed context=<[Activation: S172.27.236.66:11126:55323736/balance/PAYMENT|GSTAR@8bde605858944a9ebcb99b51a244a8dd #GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid NonReentrancyQueueSize=0 NumRunning=1 IdlenessTimeSpan=00:00:00 CollectionAgeLimit=00:15:00 CurrentlyExecuting=Request [S172.27.236.66:11126:55323736 saga/84744a421346495e8482780ffc14e2ca]->[S172.27.236.66:11126:55323736 balance/PAYMENT|GSTAR] iZota.Core.Balance.Models.Grains.IBalanceGrain[(iZota.Core.Balance.Models.Grains.IBalanceGrain)iZota.Core.Balance.Domain.Grains.BalanceGrain].Withdraw(iZota.Core.Balance.Models.Dtos.SettlementDto) #1417]>
+Message Request [S172.27.236.66:11126:55323736 saga/84744a421346495e8482780ffc14e2ca]->[S172.27.236.66:11126:55323736 balance/PAYMENT|GSTAR] iZota.Core.Balance.Models.Grains.IBalanceGrain[(iZota.Core.Balance.Models.Grains.IBalanceGrain)iZota.Core.Balance.Domain.Grains.BalanceGrain].Withdraw(iZota.Core.Balance.Models.Dtos.SettlementDto) #1417 was enqueued 00:00:15.8910000 ago and has now been executing for 00:00:15.8910000."
+2023-10-03 14:51:14.623 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=11, Status=RanToCompletion]" in WorkGroup "[Activation: S172.27.236.66:11126:55323736/balance/PAYMENT|GSTAR@8bde605858944a9ebcb99b51a244a8dd#GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid]" took elapsed time "0:00:16.9554549" for execution, which is longer than 00:00:01. Running on thread "37"
+2023-10-03 14:51:14.659 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed with BalanceException
+2023-10-03 14:51:14.806 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:51:19.949 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:51:25.089 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:51:30.235 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:51:35.372 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:51:40.505 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:51:45.656 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:51:50.795 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:51:55.939 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:52:01.084 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:52:06.228 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:52:11.373 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:52:16.516 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:52:21.654 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:52:26.786 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:52:31.924 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:52:37.058 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:52:42.194 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:53:08.288 +07:00 [INF] [Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.] User profile is available. Using '"C:\Users\letie\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-03 14:53:08.445 +07:00 [INF] [MassTransit.] Configured endpoint "cancel-payment", Consumer: "iZota.Core.Balance.Components.Consumers.CancelPaymentConsumer"
+2023-10-03 14:53:08.587 +07:00 [INF] [Orleans.Runtime.Silo.] Silo starting with GC settings: ServerGC=True GCLatencyMode="Interactive"
+2023-10-03 14:53:08.588 +07:00 [WRN] [Orleans.Runtime.Silo.] A verbose logging level ("Debug") is configured. This will impact performance. The recommended log level is Information.
+2023-10-03 14:53:08.590 +07:00 [INF] [Orleans.Runtime.Silo.] -------------- Initializing silo on host "GUNNER" MachineName "GUNNER" at "172.27.236.66:11126", gen 55324388 --------------
+2023-10-03 14:53:08.590 +07:00 [INF] [Orleans.Runtime.Silo.] Starting silo "Silo_d94ee"
+2023-10-03 14:53:08.982 +07:00 [INF] [Orleans.Runtime.Silo.] -------------- Started silo "S172.27.236.66:11126:55324388", ConsistentHashCode "78EACBB6" --------------
+2023-10-03 14:53:09.110 +07:00 [INF] [Quartz.Core.SchedulerSignalerImpl.] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2023-10-03 14:53:09.111 +07:00 [INF] [Quartz.Core.QuartzScheduler.] Quartz Scheduler created
+2023-10-03 14:53:09.111 +07:00 [INF] [Quartz.Core.QuartzScheduler.] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2023-10-03 14:53:09.119 +07:00 [INF] [Quartz.Simpl.RAMJobStore.] RAMJobStore initialized.
+2023-10-03 14:53:09.120 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Quartz Scheduler 3.6.2.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2023-10-03 14:53:09.120 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2023-10-03 14:53:09.121 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2023-10-03 14:53:09.162 +07:00 [INF] [Orleans.Hosting.SiloHostedService.] Starting Orleans Silo.
+2023-10-03 14:53:09.190 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ActivationCountBasedPlacementOptions: 
+ChooseOutOf: 2
+
+2023-10-03 14:53:09.192 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ClusterMembershipOptions: 
+NumMissedTableIAmAliveLimit: 2
+LivenessEnabled: True
+ProbeTimeout: 00:00:05
+TableRefreshTimeout: 00:01:00
+DeathVoteExpirationTimeout: 00:02:00
+IAmAliveTablePublishTimeout: 00:05:00
+MaxJoinAttemptTime: 00:05:00
+UseLivenessGossip: True
+NumProbedSilos: 3
+NumMissedProbesLimit: 3
+NumVotesForDeathDeclaration: 2
+DefunctSiloExpiration: 7.00:00:00
+DefunctSiloCleanupPeriod: 01:00:00
+LocalHealthDegradationMonitoringPeriod: 00:00:10
+ExtendProbeTimeoutDuringDegradation: True
+EnableIndirectProbes: True
+
+2023-10-03 14:53:09.193 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ClusterOptions: 
+ClusterId: zota_balance_dev
+ServiceId: zota_balance_dev
+
+2023-10-03 14:53:09.194 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ConnectionOptions: 
+ProtocolVersion: Version1
+ConnectionsPerEndpoint: 1
+ConnectionRetryDelay: 00:00:01
+OpenConnectionTimeout: 00:00:05
+
+2023-10-03 14:53:09.195 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ConsistentRingOptions: 
+NumVirtualBucketsConsistentRing: 30
+UseVirtualBucketsConsistentRing: True
+
+2023-10-03 14:53:09.195 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.DevelopmentClusterMembershipOptions: 
+PrimarySiloEndpoint: 172.27.236.66:11126
+
+2023-10-03 14:53:09.195 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.EndpointOptions: 
+AdvertisedIPAddress: 172.27.236.66
+SiloPort: 11126
+GatewayPort: 30016
+SiloListeningEndpoint: 
+GatewayListeningEndpoint: 
+
+2023-10-03 14:53:09.196 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainCollectionOptions: 
+CollectionQuantum: 00:01:00
+CollectionAge: 00:15:00
+ActivationTimeout: 00:00:30
+DeactivationTimeout: 00:00:30
+
+2023-10-03 14:53:09.197 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainDirectoryOptions: 
+CachingStrategy: Adaptive
+CacheSize: 1000000
+InitialCacheTTL: 00:00:30
+MaximumCacheTTL: 00:04:00
+CacheTTLExtensionFactor: 2
+LazyDeregistrationDelay: 00:01:00
+
+2023-10-03 14:53:09.197 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainVersioningOptions: 
+DefaultCompatibilityStrategy: BackwardCompatible
+DefaultVersionSelectorStrategy: AllCompatibleVersions
+
+2023-10-03 14:53:09.198 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.LoadSheddingOptions: 
+LoadSheddingEnabled: False
+LoadSheddingLimit: 95
+
+2023-10-03 14:53:09.198 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-balance-grains-storage: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-10-03 14:53:09.199 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-Default: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-10-03 14:53:09.199 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-Default: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-10-03 14:53:09.200 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-SagasStorage: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-10-03 14:53:09.200 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SchedulingOptions: 
+DelayWarningThreshold: 00:00:10
+ActivationSchedulingQuantum: 00:00:00.1000000
+TurnWarningLengthThreshold: 00:00:01
+MaxPendingWorkItemsSoftLimit: 0
+StoppedActivationWarningInterval: 00:01:00
+
+2023-10-03 14:53:09.202 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SiloMessagingOptions: 
+SiloSenderQueues: 0
+GatewaySenderQueues: 0
+MaxForwardCount: 2
+ClientDropTimeout: 00:01:00
+ClientRegistrationRefresh: 00:05:00
+ClientGatewayShutdownNotificationTimeout: 00:00:05
+MaxEnqueuedRequestsSoftLimit: 0
+MaxEnqueuedRequestsHardLimit: 0
+MaxEnqueuedRequestsSoftLimit_StatelessWorker: 0
+MaxEnqueuedRequestsHardLimit_StatelessWorker: 0
+MaxRequestProcessingTime: 02:00:00
+AssumeHomogenousSilosForTesting: False
+ShutdownRerouteTimeout: 00:00:10
+SystemResponseTimeout: 00:30:00
+GrainWorkloadAnalysisPeriod: 00:00:05
+RequestProcessingWarningTime: 00:00:05
+RequestQueueDelayWarningTime: 00:00:10
+WaitForMessageToBeQueuedForOutboundTime: 00:00:02
+ResponseTimeout: 00:30:00
+ResponseTimeoutWithDebugger: 00:30:00
+DropExpiredMessages: True
+MaxMessageHeaderSize: 10485760
+MaxMessageBodySize: 104857600
+
+2023-10-03 14:53:09.203 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SiloOptions: 
+SiloName: Silo_d94ee
+
+2023-10-03 14:53:09.213 +07:00 [INF] [Orleans.Runtime.InsideRuntimeClient.] Start InsideRuntimeClient took 1 milliseconds
+2023-10-03 14:53:09.216 +07:00 [INF] [Orleans.Runtime.Silo.] Silo Start()
+2023-10-03 14:53:09.219 +07:00 [INF] [Orleans.Runtime.GrainDirectory.LocalGrainDirectory.] Start
+2023-10-03 14:53:09.221 +07:00 [INF] [Orleans.Runtime.Silo.] "Start local grain directory" took 1 milliseconds to finish
+2023-10-03 14:53:09.230 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipTableManager.] MembershipOracle starting on host "GUNNER" with SiloAddress "S172.27.236.66:11126:55324388" at "2023-10-03 07:53:08.722 GMT"
+2023-10-03 14:53:09.238 +07:00 [INF] [Orleans.Runtime.MembershipService.SystemTargetBasedMembershipTable.] Creating in-memory membership table
+2023-10-03 14:53:09.239 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipTableSystemTarget.] GrainBasedMembershipTable Activated.
+2023-10-03 14:53:09.245 +07:00 [INF] [Orleans.Runtime.Silo.] Grain Service "OrleansDashboard.SiloGrainService" registered successfully.
+2023-10-03 14:53:09.245 +07:00 [INF] [Orleans.Runtime.Silo.] "Init grain services" took 8 milliseconds to finish
+2023-10-03 14:53:09.257 +07:00 [INF] [Orleans.Runtime.Silo.] "Start deployment load collector" took 11 milliseconds to finish
+2023-10-03 14:53:09.259 +07:00 [INF] [Orleans.Runtime.Watchdog.] Starting Silo Watchdog.
+2023-10-03 14:53:09.303 +07:00 [INF] [Orleans.Runtime.MembershipService.SystemTargetBasedMembershipTable.] Connected to membership table provider.
+2023-10-03 14:53:09.308 +07:00 [INF] [MassTransit.] Bus started: rabbitmq://172.16.0.124/gunner
+2023-10-03 14:53:09.320 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] Joining
+2023-10-03 14:53:09.340 +07:00 [INF] [Orleans.Storage.MemoryGrainStorage.] Init: Name="Default" NumStorageGrains=10
+2023-10-03 14:53:09.343 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] -BecomeActive
+2023-10-03 14:53:09.352 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] -Finished BecomeActive.
+2023-10-03 14:53:09.357 +07:00 [INF] [Orleans.Runtime.ReminderService.LocalReminderService.] Starting "Orleans.Runtime.ReminderService.LocalReminderService" grain service on: "S172.27.236.66:11126:55324388" x"78EACBB6", with range "<(0 0], Size=x100000000, %Ring=100%>"
+2023-10-03 14:53:09.390 +07:00 [INF] [OrleansDashboard.Dashboard.] Dashboard listening on 8080
+2023-10-03 14:53:09.458 +07:00 [INF] [Orleans.Runtime.ReminderService.ReminderTableGrain.] Activated
+2023-10-03 14:53:09.471 +07:00 [INF] [OrleansDashboard.SiloGrainService.] Starting "OrleansDashboard.SiloGrainService" grain service on: "S172.27.236.66:11126:55324388" x"78EACBB6", with range "<(0 0], Size=x100000000, %Ring=100%>"
+2023-10-03 14:53:09.473 +07:00 [INF] [OrleansDashboard.SiloGrainService.] My range changed from "<(0 0], Size=x100000000, %Ring=100%>" to "<(0 0], Size=x100000000, %Ring=100%>" increased = True
+2023-10-03 14:53:09.473 +07:00 [INF] [Orleans.Runtime.Silo.] Grain Service "OrleansDashboard.SiloGrainService" started successfully.
+2023-10-03 14:53:09.473 +07:00 [INF] [Orleans.Runtime.ReminderService.LocalReminderService.] My range changed from "<(0 0], Size=x100000000, %Ring=100%>" to "<(0 0], Size=x100000000, %Ring=100%>" increased = True
+2023-10-03 14:53:09.476 +07:00 [INF] [Orleans.Hosting.SiloHostedService.] Orleans Silo started.
+2023-10-03 14:53:10.779 +07:00 [INF] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider.] RPC services being provided by "GrpcServices": 19
+2023-10-03 14:53:10.796 +07:00 [INF] [ServiceStack.ServiceStackHost.] Initializing Application "iZOTA_Balance" took 1317.8188ms. No errors detected.
+2023-10-03 14:53:10.820 +07:00 [WRN] [Microsoft.AspNetCore.Server.Kestrel.] Overriding address(es) '"https://localhost:5002, http://localhost:5003"'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2023-10-03 14:53:10.823 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Now listening on: "http://localhost:7771"
+2023-10-03 14:53:10.823 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Now listening on: "http://localhost:6771"
+2023-10-03 14:53:10.825 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Application started. Press Ctrl+C to shut down.
+2023-10-03 14:53:10.825 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Hosting environment: "Development"
+2023-10-03 14:53:10.825 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Content root path: "D:\Source\ZOPOST 2023\iZOTA_core_balance\iZota.Core.Balance.Hosting"
+2023-10-03 14:53:10.829 +07:00 [INF] [Quartz.Core.QuartzScheduler.] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2023-10-03 14:53:15.327 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request starting HTTP/1.1 POST http://localhost:6771/api/v1/wallet/cancel_payment?TransactionCode=P23093000000008&RevertAmount=1000&TransRef=T23100100000009&TransNote=test&Description=test&CurrencyCode=GSTAR&AccountCode=Z21446 application/json 2
+2023-10-03 14:53:17.736 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:02.4008681. Total GC Pause duration during that period: 00:00:00. We are now using a total of 27MB memory. gc=3, 3, 3
+2023-10-03 14:53:17.756 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] BalanceCancelPaymentRequest: {"transactionCode":"P23093000000008","revertAmount":1000,"transRef":"T23100100000009","transNote":"test","description":"test","currencyCode":"GSTAR","accountCode":"Z21446"}
+2023-10-03 14:53:19.978 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:02.2401810. Total GC Pause duration during that period: 00:00:00. We are now using a total of 27MB memory. gc=3, 3, 3
+2023-10-03 14:53:20.222 +07:00 [INF] [Orleans.Storage.MemoryGrainStorage.] Init: Name="SagasStorage" NumStorageGrains=10
+2023-10-03 14:53:20.342 +07:00 [INF] [iZota.Core.Balance.Domain.Activities.BalanceWithdrawActivity.] BalanceWithdrawActivity: "T23100100000009"-"P23100300000015"-"e1c0cba2-d489-49db-9398-588a3e784ea2"
+2023-10-03 14:53:20.349 +07:00 [INF] [Orleans.Storage.MemoryGrainStorage.] Init: Name="balance-grains-storage" NumStorageGrains=10
+2023-10-03 14:53:20.353 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] On activate: "PAYMENT|GSTAR"
+2023-10-03 14:53:28.131 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:08.1525478. Total GC Pause duration during that period: 00:00:00. We are now using a total of 29MB memory. gc=3, 3, 3
+2023-10-03 14:53:28.132 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.ActivationWorkingSet.MonitorWorkingSet.] Timer should have fired at 10/03/2023 07:53:24 but fired at 10/03/2023 07:53:28, which is 00:00:03.1531685 longer than expected
+2023-10-03 14:53:28.132 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.IncomingRequestMonitor.] Timer should have fired at 10/03/2023 07:53:24 but fired at 10/03/2023 07:53:28, which is 00:00:03.1483352 longer than expected
+2023-10-03 14:53:28.181 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] Withdraw request: "PAYMENT" - "e1c0cba2-d489-49db-9398-588a3e784ea2" - 1000.0
+2023-10-03 14:53:30.214 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:02.0815218. Total GC Pause duration during that period: 00:00:00. We are now using a total of 30MB memory. gc=3, 3, 3
+2023-10-03 14:53:32.821 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=1, Status=RanToCompletion]" in WorkGroup "[SystemTarget: S172.27.236.66:11126:55324388/sys.svc.user.36F5F3BF/172.27.236.66:11126@55324388@b81578bf000000002b639de800000000]" took elapsed time "0:00:01.1805913" for execution, which is longer than 00:00:01. Running on thread "23"
+2023-10-03 14:53:32.821 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=3, Status=RanToCompletion]" in WorkGroup "[Activation: S172.27.236.66:11126:55324388/remindertable/3039@12065c9d02c34a9eaacfc5ae3c049031#GrainType=Orleans.Runtime.ReminderService.ReminderTableGrain,Orleans.Reminders Placement=RandomPlacement State=Valid]" took elapsed time "0:00:01.3874764" for execution, which is longer than 00:00:01. Running on thread "14"
+2023-10-03 14:53:32.830 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=2, Status=RanToCompletion]" in WorkGroup "[Activation: S172.27.236.66:11126:55324388/management/0@d7fa07aa226047599b9fb73e0c99c31b#GrainType=Orleans.Runtime.Management.ManagementGrain,Orleans.Runtime Placement=StatelessWorkerPlacement State=Valid]" took elapsed time "0:00:01.37674" for execution, which is longer than 00:00:01. Running on thread "8"
+2023-10-03 14:54:39.329 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:01:07.1841350. Total GC Pause duration during that period: 00:00:00. We are now using a total of 30MB memory. gc=3, 3, 3
+2023-10-03 14:54:39.350 +07:00 [WRN] [Orleans.Runtime.Watchdog.] Watchdog had 2 health Check failure(s) out of 5 health Check participants: "Orleans.Runtime.ActivationCollector failed health check with reason \"ActivationCollector timer should have fired at 10/3/2023 7:54:09 AM, which is 00:00:30.1121624 ago\". Orleans.Runtime.MembershipService.MembershipTableManager failed health check with reason \"PeriodicallyRefreshMembershipTable timer should have fired at 10/3/2023 7:53:52 AM, which is 00:00:47.0109354 ago\"."
+2023-10-03 14:54:39.351 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=4, Status=RanToCompletion]" in WorkGroup "[SystemTarget: S172.27.236.66:11126:55324388/sys.svc.user.36F5F3BF/172.27.236.66:11126@55324388@b81578bf000000002b639de800000000]" took elapsed time "0:01:06.5291655" for execution, which is longer than 00:00:01. Running on thread "23"
+2023-10-03 14:54:39.351 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.ActivationWorkingSet.MonitorWorkingSet.] Timer should have fired at 10/03/2023 07:53:33 but fired at 10/03/2023 07:54:39, which is 00:01:06.2202540 longer than expected
+2023-10-03 14:54:39.352 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.PeriodicallyRefreshMembershipTable.] Timer should have fired at 10/03/2023 07:53:52 but fired at 10/03/2023 07:54:39, which is 00:00:47.0162046 longer than expected
+2023-10-03 14:54:39.377 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.PerformGatewayMaintenance.] Timer should have fired at 10/03/2023 07:54:08 but fired at 10/03/2023 07:54:39, which is 00:00:30.4548634 longer than expected
+2023-10-03 14:54:40.068 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.LocalSiloHealthMonitor.] Timer should have fired at 10/03/2023 07:53:40 but fired at 10/03/2023 07:54:40, which is 00:00:59.8535486 longer than expected
+2023-10-03 14:54:40.082 +07:00 [WRN] [Orleans.Runtime.MembershipService.LocalSiloHealthMonitor.] Health check participant "Orleans.Runtime.ActivationCollector" is reporting that it is unhealthy with complaint: "ActivationCollector timer should have fired at 10/3/2023 7:54:09 AM, which is 00:00:30.8635937 ago"
+2023-10-03 14:54:40.083 +07:00 [WRN] [Orleans.Runtime.MembershipService.LocalSiloHealthMonitor.] Self-monitoring determined that local health is degraded. Degradation score is 1/8 (lower is better). Complaints: "Health check participant Orleans.Runtime.ActivationCollector is reporting that it is unhealthy with complaint: ActivationCollector timer should have fired at 10/3/2023 7:54:09 AM, which is 00:00:30.8635937 ago"
+2023-10-03 14:54:40.125 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.ActivationCollector.] Timer should have fired at 10/03/2023 07:54:09 but fired at 10/03/2023 07:54:40, which is 00:00:30.9082036 longer than expected
+2023-10-03 14:54:40.137 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.IncomingRequestMonitor.] Timer should have fired at 10/03/2023 07:53:33 but fired at 10/03/2023 07:54:40, which is 00:01:06.9797644 longer than expected
+2023-10-03 14:54:40.138 +07:00 [WRN] [Orleans.Runtime.AsyncTimer..] Timer should have fired at 10/03/2023 07:54:20 but fired at 10/03/2023 07:54:40, which is 00:00:19.8424047 longer than expected
+2023-10-03 14:54:40.247 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed with BalanceException
+2023-10-03 14:54:40.253 +07:00 [INF] [Orleans.Runtime.InsideRuntimeClient.] Received status update for unknown request. Message: "Status Response [S172.27.236.66:11126:55324388 balance/PAYMENT|GSTAR]->[S172.27.236.66:11126:55324388 saga/d5ef6b728f89442db9090741f4c89bef] IsExecuting: True, IsWaiting: False, Diagnostics: [[Activation: S172.27.236.66:11126:55324388/balance/PAYMENT|GSTAR@aa2c30b21273482588c1982968d1fc72 #GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid NonReentrancyQueueSize=0 NumRunning=1 IdlenessTimeSpan=00:00:00 CollectionAgeLimit=00:15:00], TaskScheduler status: WorkItemGroup:Name=[Activation: S172.27.236.66:11126:55324388/balance/PAYMENT|GSTAR@aa2c30b21273482588c1982968d1fc72#GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid],WorkGroupStatus=Running. Currently QueuedWorkItems=0; Total Enqueued=9; Total processed=8;  Executing Task Id=5 Status=Running for 00:01:19.8600000.TaskRunner=ActivationTaskScheduler-19:Queued=0; Detailed context=<[Activation: S172.27.236.66:11126:55324388/balance/PAYMENT|GSTAR@aa2c30b21273482588c1982968d1fc72 #GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid NonReentrancyQueueSize=0 NumRunning=1 IdlenessTimeSpan=00:00:00 CollectionAgeLimit=00:15:00 CurrentlyExecuting=Request [S172.27.236.66:11126:55324388 saga/d5ef6b728f89442db9090741f4c89bef]->[S172.27.236.66:11126:55324388 balance/PAYMENT|GSTAR] iZota.Core.Balance.Models.Grains.IBalanceGrain[(iZota.Core.Balance.Models.Grains.IBalanceGrain)iZota.Core.Balance.Domain.Grains.BalanceGrain].Withdraw(iZota.Core.Balance.Models.Dtos.SettlementDto) #40]>, Message Request [S172.27.236.66:11126:55324388 saga/d5ef6b728f89442db9090741f4c89bef]->[S172.27.236.66:11126:55324388 balance/PAYMENT|GSTAR] iZota.Core.Balance.Models.Grains.IBalanceGrain[(iZota.Core.Balance.Models.Grains.IBalanceGrain)iZota.Core.Balance.Domain.Grains.BalanceGrain].Withdraw(iZota.Core.Balance.Models.Dtos.SettlementDto) #40 was enqueued 00:01:19.7660000 ago and has now been executing for 00:01:19.7660000.] #40". Status: "[Activation: S172.27.236.66:11126:55324388/balance/PAYMENT|GSTAR@aa2c30b21273482588c1982968d1fc72 #GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid NonReentrancyQueueSize=0 NumRunning=1 IdlenessTimeSpan=00:00:00 CollectionAgeLimit=00:15:00]
+TaskScheduler status: WorkItemGroup:Name=[Activation: S172.27.236.66:11126:55324388/balance/PAYMENT|GSTAR@aa2c30b21273482588c1982968d1fc72#GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid],WorkGroupStatus=Running. Currently QueuedWorkItems=0; Total Enqueued=9; Total processed=8;  Executing Task Id=5 Status=Running for 00:01:19.8600000.TaskRunner=ActivationTaskScheduler-19:Queued=0; Detailed context=<[Activation: S172.27.236.66:11126:55324388/balance/PAYMENT|GSTAR@aa2c30b21273482588c1982968d1fc72 #GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid NonReentrancyQueueSize=0 NumRunning=1 IdlenessTimeSpan=00:00:00 CollectionAgeLimit=00:15:00 CurrentlyExecuting=Request [S172.27.236.66:11126:55324388 saga/d5ef6b728f89442db9090741f4c89bef]->[S172.27.236.66:11126:55324388 balance/PAYMENT|GSTAR] iZota.Core.Balance.Models.Grains.IBalanceGrain[(iZota.Core.Balance.Models.Grains.IBalanceGrain)iZota.Core.Balance.Domain.Grains.BalanceGrain].Withdraw(iZota.Core.Balance.Models.Dtos.SettlementDto) #40]>
+Message Request [S172.27.236.66:11126:55324388 saga/d5ef6b728f89442db9090741f4c89bef]->[S172.27.236.66:11126:55324388 balance/PAYMENT|GSTAR] iZota.Core.Balance.Models.Grains.IBalanceGrain[(iZota.Core.Balance.Models.Grains.IBalanceGrain)iZota.Core.Balance.Domain.Grains.BalanceGrain].Withdraw(iZota.Core.Balance.Models.Dtos.SettlementDto) #40 was enqueued 00:01:19.7660000 ago and has now been executing for 00:01:19.7660000."
+2023-10-03 14:54:40.256 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=5, Status=RanToCompletion]" in WorkGroup "[Activation: S172.27.236.66:11126:55324388/balance/PAYMENT|GSTAR@aa2c30b21273482588c1982968d1fc72#GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid]" took elapsed time "0:01:19.8773384" for execution, which is longer than 00:00:01. Running on thread "19"
+2023-10-03 14:54:40.381 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:54:45.521 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:54:50.646 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:54:55.770 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:55:00.911 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:55:06.034 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:55:11.158 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:55:16.280 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:55:21.393 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:55:26.530 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:55:31.653 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:55:36.777 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:55:41.933 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:55:47.064 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:55:52.200 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:55:57.320 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:56:02.464 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:56:04.889 +07:00 [WRN] [Orleans.Runtime.MembershipService.MembershipTableCleanupAgent.] CleanupDefunctSiloEntries operation is not supported by the current implementation of IMembershipTable. Disabling the timer now.
+2023-10-03 14:56:07.592 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:56:12.706 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:56:17.829 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:56:22.975 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:56:28.109 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:56:33.227 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:56:38.353 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:56:43.488 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:56:48.611 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:56:53.737 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:56:58.852 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:57:03.978 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:57:09.133 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:57:14.271 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:57:19.395 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:57:24.546 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:57:29.698 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:57:34.831 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:57:39.957 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:57:45.084 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:57:50.209 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:57:55.329 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:58:00.459 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:58:05.576 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:58:10.702 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:58:15.828 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:58:20.952 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:58:26.075 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:58:31.202 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:58:36.324 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:58:41.461 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:58:46.591 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:58:51.712 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:58:56.831 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:59:01.964 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:59:07.089 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:59:12.206 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:59:17.366 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:59:22.502 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:59:27.624 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:59:32.752 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:59:37.877 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:59:43.008 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:59:48.165 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:59:53.293 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 14:59:58.419 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:00:03.562 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:00:08.690 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:00:13.816 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:00:18.949 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:00:24.102 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:00:29.244 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:00:34.363 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:00:39.484 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:00:44.614 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:00:49.742 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:00:54.863 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:00:59.982 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:01:05.110 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:01:10.228 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:01:15.380 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:01:20.513 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:01:25.659 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:01:30.811 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:01:35.932 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:01:41.065 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:01:46.197 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:01:51.338 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:01:56.467 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:02:01.582 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:02:06.713 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:02:11.841 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:02:16.974 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:02:22.102 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:02:27.228 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:02:32.354 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:02:37.483 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:02:42.601 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:02:47.746 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:02:52.866 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:02:57.995 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:03:03.112 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:03:08.245 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:03:13.380 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:03:18.498 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:03:23.620 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:03:28.752 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:03:33.893 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:03:39.012 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:03:44.128 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:03:49.252 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:03:54.375 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:03:59.499 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:04:04.631 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:04:09.759 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:04:14.882 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:04:20.002 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:04:25.126 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:04:30.248 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:04:35.387 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:04:40.511 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:04:45.639 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:04:50.766 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:04:55.889 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:05:01.016 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException
+2023-10-03 15:05:06.145 +07:00 [WRN] [Orleans.Sagas.SagaGrain.] Activity 'BalanceWithdrawActivity' in saga 'SagaGrain' failed while compensating with NullReferenceException

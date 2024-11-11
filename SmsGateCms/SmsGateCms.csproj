@@ -32,6 +32,9 @@
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.*" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.*" />
     <PackageReference Include="ServiceStack.AspNetCore.OpenApi" Version="8.*" />
+    <PackageReference Include="MassTransit" Version="8.2.2" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.2.2" />
+    <PackageReference Include="MassTransit.Grpc" Version="8.1.3" />
   </ItemGroup>
   
   <ItemGroup>
@@ -45,6 +48,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SmsGate.Shared\SmsGate.Shared.csproj" />
     <ProjectReference Include="..\SmsGateCms.ServiceInterface\SmsGateCms.ServiceInterface.csproj" />
     <ProjectReference Include="..\SmsGateCms.ServiceModel\SmsGateCms.ServiceModel.csproj" />
   </ItemGroup>

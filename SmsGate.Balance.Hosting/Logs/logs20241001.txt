@@ -1,0 +1,313 @@
+2024-10-01 11:16:49.730 +07:00 [INF] [Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.] User profile is available. Using '"C:\Users\Gunner\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-01 11:16:49.919 +07:00 [INF] [MassTransit.] Configured endpoint "cancel-payment", Consumer: "iZota.Core.Balance.Components.Consumers.CancelPaymentConsumer"
+2024-10-01 11:16:50.198 +07:00 [INF] [Orleans.Runtime.Silo.] Silo starting with GC settings: ServerGC=True GCLatencyMode="Interactive"
+2024-10-01 11:16:50.206 +07:00 [INF] [Orleans.Runtime.Silo.] -------------- Initializing silo on host "gunner" MachineName "GUNNER" at "172.27.240.10:11126", gen 86761010 --------------
+2024-10-01 11:16:50.207 +07:00 [INF] [Orleans.Runtime.Silo.] Starting silo "Silo_e26cb"
+2024-10-01 11:16:50.667 +07:00 [INF] [Orleans.Runtime.Silo.] -------------- Started silo "S172.27.240.10:11126:86761010", ConsistentHashCode "42DD4B8E" --------------
+2024-10-01 11:16:50.772 +07:00 [INF] [Orleans.Hosting.SiloHostedService.] Starting Orleans Silo.
+2024-10-01 11:16:50.832 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ActivationCountBasedPlacementOptions: 
+ChooseOutOf: 2
+
+2024-10-01 11:16:50.838 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ClusterMembershipOptions: 
+NumMissedTableIAmAliveLimit: 2
+LivenessEnabled: True
+ProbeTimeout: 00:00:05
+TableRefreshTimeout: 00:01:00
+DeathVoteExpirationTimeout: 00:02:00
+IAmAliveTablePublishTimeout: 00:05:00
+MaxJoinAttemptTime: 00:05:00
+UseLivenessGossip: True
+NumProbedSilos: 3
+NumMissedProbesLimit: 3
+NumVotesForDeathDeclaration: 2
+DefunctSiloExpiration: 7.00:00:00
+DefunctSiloCleanupPeriod: 01:00:00
+LocalHealthDegradationMonitoringPeriod: 00:00:10
+ExtendProbeTimeoutDuringDegradation: True
+EnableIndirectProbes: True
+
+2024-10-01 11:16:50.839 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ClusterOptions: 
+ClusterId: zota_balance_dev
+ServiceId: zota_balance_dev
+
+2024-10-01 11:16:50.840 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ConnectionOptions: 
+ProtocolVersion: Version1
+ConnectionsPerEndpoint: 1
+ConnectionRetryDelay: 00:00:01
+OpenConnectionTimeout: 00:00:05
+
+2024-10-01 11:16:50.841 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ConsistentRingOptions: 
+NumVirtualBucketsConsistentRing: 30
+UseVirtualBucketsConsistentRing: True
+
+2024-10-01 11:16:50.841 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.DevelopmentClusterMembershipOptions: 
+PrimarySiloEndpoint: 172.27.240.10:11126
+
+2024-10-01 11:16:50.842 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.EndpointOptions: 
+AdvertisedIPAddress: 172.27.240.10
+SiloPort: 11126
+GatewayPort: 30016
+SiloListeningEndpoint: 
+GatewayListeningEndpoint: 
+
+2024-10-01 11:16:50.843 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainCollectionOptions: 
+CollectionQuantum: 00:01:00
+CollectionAge: 00:15:00
+ActivationTimeout: 00:00:30
+DeactivationTimeout: 00:00:30
+
+2024-10-01 11:16:50.845 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainDirectoryOptions: 
+CachingStrategy: Adaptive
+CacheSize: 1000000
+InitialCacheTTL: 00:00:30
+MaximumCacheTTL: 00:04:00
+CacheTTLExtensionFactor: 2
+LazyDeregistrationDelay: 00:01:00
+
+2024-10-01 11:16:50.846 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainVersioningOptions: 
+DefaultCompatibilityStrategy: BackwardCompatible
+DefaultVersionSelectorStrategy: AllCompatibleVersions
+
+2024-10-01 11:16:50.847 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.LoadSheddingOptions: 
+LoadSheddingEnabled: False
+CpuThreshold: 95
+MemoryThreshold: 90
+
+2024-10-01 11:16:50.848 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-balance-grains-storage: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2024-10-01 11:16:50.849 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-Default: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2024-10-01 11:16:50.849 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-SagasStorage: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2024-10-01 11:16:50.850 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ResourceOptimizedPlacementOptions: 
+CpuUsageWeight: 40
+MemoryUsageWeight: 30
+AvailableMemoryWeight: 20
+MaxAvailableMemoryWeight: 10
+LocalSiloPreferenceMargin: 5
+
+2024-10-01 11:16:50.851 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SchedulingOptions: 
+DelayWarningThreshold: 00:00:10
+ActivationSchedulingQuantum: 00:00:00.1000000
+TurnWarningLengthThreshold: 00:00:01
+MaxPendingWorkItemsSoftLimit: 0
+StoppedActivationWarningInterval: 00:01:00
+
+2024-10-01 11:16:50.853 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SiloMessagingOptions: 
+SiloSenderQueues: 0
+GatewaySenderQueues: 0
+MaxForwardCount: 2
+ClientDropTimeout: 00:01:00
+ClientRegistrationRefresh: 00:05:00
+ClientGatewayShutdownNotificationTimeout: 00:00:05
+MaxEnqueuedRequestsSoftLimit: 0
+MaxEnqueuedRequestsHardLimit: 0
+MaxEnqueuedRequestsSoftLimit_StatelessWorker: 0
+MaxEnqueuedRequestsHardLimit_StatelessWorker: 0
+MaxRequestProcessingTime: 02:00:00
+AssumeHomogenousSilosForTesting: False
+ShutdownRerouteTimeout: 00:00:10
+SystemResponseTimeout: 00:30:00
+GrainWorkloadAnalysisPeriod: 00:00:05
+RequestProcessingWarningTime: 00:00:05
+RequestQueueDelayWarningTime: 00:00:10
+WaitForMessageToBeQueuedForOutboundTime: 00:00:02
+ResponseTimeout: 00:30:00
+ResponseTimeoutWithDebugger: 00:30:00
+DropExpiredMessages: True
+MaxMessageHeaderSize: 10485760
+MaxMessageBodySize: 104857600
+
+2024-10-01 11:16:50.854 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SiloOptions: 
+SiloName: Silo_e26cb
+
+2024-10-01 11:16:50.865 +07:00 [INF] [Orleans.Runtime.Silo.] Silo Start()
+2024-10-01 11:16:50.871 +07:00 [INF] [Orleans.Runtime.Silo.] "Start local grain directory" took 0 milliseconds to finish
+2024-10-01 11:16:50.891 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipTableManager.] MembershipOracle starting on host "gunner" with SiloAddress "S172.27.240.10:11126:86761010" at "2024-10-01 04:16:50.392 GMT"
+2024-10-01 11:16:50.892 +07:00 [INF] [Orleans.Runtime.Silo.] "Init grain services" took 0 milliseconds to finish
+2024-10-01 11:16:50.894 +07:00 [INF] [Orleans.Runtime.MembershipService.SystemTargetBasedMembershipTable.] Creating in-memory membership table
+2024-10-01 11:16:50.896 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipTableSystemTarget.] GrainBasedMembershipTable Activated.
+2024-10-01 11:16:50.918 +07:00 [INF] [Orleans.Runtime.Silo.] "Start deployment load collector" took 24 milliseconds to finish
+2024-10-01 11:16:51.056 +07:00 [INF] [Orleans.Runtime.MembershipService.SystemTargetBasedMembershipTable.] Connected to membership table provider.
+2024-10-01 11:16:51.161 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] Joining
+2024-10-01 11:16:51.199 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] -BecomeActive
+2024-10-01 11:16:51.210 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] -Finished BecomeActive.
+2024-10-01 11:16:51.219 +07:00 [INF] [Orleans.Runtime.ReminderService.LocalReminderService.] Starting "Orleans.Runtime.ReminderService.LocalReminderService" grain service on: "S172.27.240.10:11126:86761010" x"42DD4B8E", with range "<(0 0], Size=x100000000, %Ring=100%>"
+2024-10-01 11:16:51.247 +07:00 [INF] [Orleans.Hosting.SiloHostedService.] Orleans Silo started.
+2024-10-01 11:16:51.279 +07:00 [INF] [MassTransit.] Bus started: rabbitmq://172.16.0.124/gunner
+2024-10-01 11:16:51.315 +07:00 [INF] [Orleans.Runtime.ReminderService.LocalReminderService.] My range changed from "<(0 0], Size=x100000000, %Ring=100%>" to "<(0 0], Size=x100000000, %Ring=100%>" increased = True
+2024-10-01 11:16:52.273 +07:00 [INF] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider.] RPC services being provided by "GrpcServices": 20
+2024-10-01 11:16:52.310 +07:00 [INF] [ServiceStack.ServiceStackHost.] Initializing Application "iZOTA_Balance" took 1057.2535ms. No errors detected.
+2024-10-01 11:16:52.353 +07:00 [WRN] [Microsoft.AspNetCore.Server.Kestrel.] Overriding address(es) '"https://localhost:5002, http://localhost:5003"'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-10-01 11:16:52.364 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Now listening on: "http://localhost:7771"
+2024-10-01 11:16:52.365 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Now listening on: "http://localhost:6771"
+2024-10-01 11:16:52.367 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Application started. Press Ctrl+C to shut down.
+2024-10-01 11:16:52.368 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Hosting environment: "Development"
+2024-10-01 11:16:52.368 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Content root path: "E:\SourceCode\iZOTA2023\iZOTA_core_balance\iZota.Core.Balance.Hosting"
+2024-10-01 15:44:13.734 +07:00 [INF] [Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.] User profile is available. Using '"C:\Users\Gunner\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-01 15:44:13.922 +07:00 [INF] [MassTransit.] Configured endpoint "cancel-payment", Consumer: "iZota.Core.Balance.Components.Consumers.CancelPaymentConsumer"
+2024-10-01 15:44:14.089 +07:00 [INF] [Orleans.Runtime.Silo.] Silo starting with GC settings: ServerGC=True GCLatencyMode="Interactive"
+2024-10-01 15:44:14.095 +07:00 [INF] [Orleans.Runtime.Silo.] -------------- Initializing silo on host "gunner" MachineName "GUNNER" at "192.168.10.12:11126", gen 86777054 --------------
+2024-10-01 15:44:14.096 +07:00 [INF] [Orleans.Runtime.Silo.] Starting silo "Silo_33701"
+2024-10-01 15:44:14.497 +07:00 [INF] [Orleans.Runtime.Silo.] -------------- Started silo "S192.168.10.12:11126:86777054", ConsistentHashCode "C5F9CBEF" --------------
+2024-10-01 15:44:14.600 +07:00 [INF] [Orleans.Hosting.SiloHostedService.] Starting Orleans Silo.
+2024-10-01 15:44:14.635 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ActivationCountBasedPlacementOptions: 
+ChooseOutOf: 2
+
+2024-10-01 15:44:14.636 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ClusterMembershipOptions: 
+NumMissedTableIAmAliveLimit: 2
+LivenessEnabled: True
+ProbeTimeout: 00:00:05
+TableRefreshTimeout: 00:01:00
+DeathVoteExpirationTimeout: 00:02:00
+IAmAliveTablePublishTimeout: 00:05:00
+MaxJoinAttemptTime: 00:05:00
+UseLivenessGossip: True
+NumProbedSilos: 3
+NumMissedProbesLimit: 3
+NumVotesForDeathDeclaration: 2
+DefunctSiloExpiration: 7.00:00:00
+DefunctSiloCleanupPeriod: 01:00:00
+LocalHealthDegradationMonitoringPeriod: 00:00:10
+ExtendProbeTimeoutDuringDegradation: True
+EnableIndirectProbes: True
+
+2024-10-01 15:44:14.637 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ClusterOptions: 
+ClusterId: zota_balance_dev
+ServiceId: zota_balance_dev
+
+2024-10-01 15:44:14.638 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ConnectionOptions: 
+ProtocolVersion: Version1
+ConnectionsPerEndpoint: 1
+ConnectionRetryDelay: 00:00:01
+OpenConnectionTimeout: 00:00:05
+
+2024-10-01 15:44:14.639 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ConsistentRingOptions: 
+NumVirtualBucketsConsistentRing: 30
+UseVirtualBucketsConsistentRing: True
+
+2024-10-01 15:44:14.639 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.DevelopmentClusterMembershipOptions: 
+PrimarySiloEndpoint: 192.168.10.12:11126
+
+2024-10-01 15:44:14.640 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.EndpointOptions: 
+AdvertisedIPAddress: 192.168.10.12
+SiloPort: 11126
+GatewayPort: 30016
+SiloListeningEndpoint: 
+GatewayListeningEndpoint: 
+
+2024-10-01 15:44:14.641 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainCollectionOptions: 
+CollectionQuantum: 00:01:00
+CollectionAge: 00:15:00
+ActivationTimeout: 00:00:30
+DeactivationTimeout: 00:00:30
+
+2024-10-01 15:44:14.641 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainDirectoryOptions: 
+CachingStrategy: Adaptive
+CacheSize: 1000000
+InitialCacheTTL: 00:00:30
+MaximumCacheTTL: 00:04:00
+CacheTTLExtensionFactor: 2
+LazyDeregistrationDelay: 00:01:00
+
+2024-10-01 15:44:14.642 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainVersioningOptions: 
+DefaultCompatibilityStrategy: BackwardCompatible
+DefaultVersionSelectorStrategy: AllCompatibleVersions
+
+2024-10-01 15:44:14.642 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.LoadSheddingOptions: 
+LoadSheddingEnabled: False
+CpuThreshold: 95
+MemoryThreshold: 90
+
+2024-10-01 15:44:14.643 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-balance-grains-storage: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2024-10-01 15:44:14.643 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-Default: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2024-10-01 15:44:14.644 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-SagasStorage: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2024-10-01 15:44:14.644 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ResourceOptimizedPlacementOptions: 
+CpuUsageWeight: 40
+MemoryUsageWeight: 30
+AvailableMemoryWeight: 20
+MaxAvailableMemoryWeight: 10
+LocalSiloPreferenceMargin: 5
+
+2024-10-01 15:44:14.645 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SchedulingOptions: 
+DelayWarningThreshold: 00:00:10
+ActivationSchedulingQuantum: 00:00:00.1000000
+TurnWarningLengthThreshold: 00:00:01
+MaxPendingWorkItemsSoftLimit: 0
+StoppedActivationWarningInterval: 00:01:00
+
+2024-10-01 15:44:14.647 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SiloMessagingOptions: 
+SiloSenderQueues: 0
+GatewaySenderQueues: 0
+MaxForwardCount: 2
+ClientDropTimeout: 00:01:00
+ClientRegistrationRefresh: 00:05:00
+ClientGatewayShutdownNotificationTimeout: 00:00:05
+MaxEnqueuedRequestsSoftLimit: 0
+MaxEnqueuedRequestsHardLimit: 0
+MaxEnqueuedRequestsSoftLimit_StatelessWorker: 0
+MaxEnqueuedRequestsHardLimit_StatelessWorker: 0
+MaxRequestProcessingTime: 02:00:00
+AssumeHomogenousSilosForTesting: False
+ShutdownRerouteTimeout: 00:00:10
+SystemResponseTimeout: 00:30:00
+GrainWorkloadAnalysisPeriod: 00:00:05
+RequestProcessingWarningTime: 00:00:05
+RequestQueueDelayWarningTime: 00:00:10
+WaitForMessageToBeQueuedForOutboundTime: 00:00:02
+ResponseTimeout: 00:30:00
+ResponseTimeoutWithDebugger: 00:30:00
+DropExpiredMessages: True
+MaxMessageHeaderSize: 10485760
+MaxMessageBodySize: 104857600
+
+2024-10-01 15:44:14.648 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SiloOptions: 
+SiloName: Silo_33701
+
+2024-10-01 15:44:14.658 +07:00 [INF] [Orleans.Runtime.Silo.] Silo Start()
+2024-10-01 15:44:14.667 +07:00 [INF] [Orleans.Runtime.Silo.] "Start local grain directory" took 0 milliseconds to finish
+2024-10-01 15:44:14.683 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipTableManager.] MembershipOracle starting on host "gunner" with SiloAddress "S192.168.10.12:11126:86777054" at "2024-10-01 08:44:14.265 GMT"
+2024-10-01 15:44:14.683 +07:00 [INF] [Orleans.Runtime.Silo.] "Init grain services" took 0 milliseconds to finish
+2024-10-01 15:44:14.687 +07:00 [INF] [Orleans.Runtime.MembershipService.SystemTargetBasedMembershipTable.] Creating in-memory membership table
+2024-10-01 15:44:14.689 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipTableSystemTarget.] GrainBasedMembershipTable Activated.
+2024-10-01 15:44:14.700 +07:00 [INF] [Orleans.Runtime.Silo.] "Start deployment load collector" took 16 milliseconds to finish
+2024-10-01 15:44:14.750 +07:00 [INF] [Orleans.Runtime.MembershipService.SystemTargetBasedMembershipTable.] Connected to membership table provider.
+2024-10-01 15:44:14.764 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] Joining
+2024-10-01 15:44:14.794 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] -BecomeActive
+2024-10-01 15:44:14.802 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] -Finished BecomeActive.
+2024-10-01 15:44:14.808 +07:00 [INF] [Orleans.Runtime.ReminderService.LocalReminderService.] Starting "Orleans.Runtime.ReminderService.LocalReminderService" grain service on: "S192.168.10.12:11126:86777054" x"C5F9CBEF", with range "<(0 0], Size=x100000000, %Ring=100%>"
+2024-10-01 15:44:14.825 +07:00 [INF] [Orleans.Hosting.SiloHostedService.] Orleans Silo started.
+2024-10-01 15:44:14.859 +07:00 [INF] [MassTransit.] Bus started: rabbitmq://172.16.0.124/gunner
+2024-10-01 15:44:14.889 +07:00 [INF] [Orleans.Runtime.ReminderService.LocalReminderService.] My range changed from "<(0 0], Size=x100000000, %Ring=100%>" to "<(0 0], Size=x100000000, %Ring=100%>" increased = True
+2024-10-01 15:44:15.764 +07:00 [INF] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider.] RPC services being provided by "GrpcServices": 20
+2024-10-01 15:44:15.811 +07:00 [INF] [ServiceStack.ServiceStackHost.] Initializing Application "iZOTA_Balance" took 977.4809ms. No errors detected.
+2024-10-01 15:44:15.875 +07:00 [WRN] [Microsoft.AspNetCore.Server.Kestrel.] Overriding address(es) '"https://localhost:5002, http://localhost:5003"'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-10-01 15:44:15.882 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Now listening on: "http://localhost:7771"
+2024-10-01 15:44:15.882 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Now listening on: "http://localhost:6771"
+2024-10-01 15:44:15.885 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Application started. Press Ctrl+C to shut down.
+2024-10-01 15:44:15.886 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Hosting environment: "Development"
+2024-10-01 15:44:15.886 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Content root path: "E:\SourceCode\iZOTA2023\iZOTA_core_balance\iZota.Core.Balance.Hosting"
+2024-10-01 15:45:18.539 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting "HTTP/1.1" "GET" "http"://"localhost:6771""""/""" - "application/x-www-form-urlencoded" 28
+2024-10-01 15:45:18.713 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished "HTTP/1.1" "GET" "http"://"localhost:6771""""/""" - 404 0 null 178.7051ms
+2024-10-01 15:45:18.714 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "http"://"localhost:6771""""/", Response status code: 404

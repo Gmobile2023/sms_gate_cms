@@ -3,9 +3,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Server.IISIntegration;
 using Microsoft.EntityFrameworkCore;
 using ServiceStack;
+using SmsGate.Shared.Utils;
 using SmsGateCms.Data;
 using SmsGateCms.ServiceInterface;
 
+ServiceStackHelper.SetLicense();
 var builder = WebApplication.CreateBuilder(args);
 
 var services = builder.Services;

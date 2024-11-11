@@ -1,0 +1,1207 @@
+2023-09-08 10:27:00.458 +07:00 [INF] [Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.] User profile is available. Using '"C:\Users\letie\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-08 10:27:00.819 +07:00 [INF] [MassTransit.] Configured endpoint "cancel-payment", Consumer: "iZota.Core.Balance.Components.Consumers.CancelPaymentConsumer"
+2023-09-08 10:27:01.440 +07:00 [INF] [Orleans.Runtime.Silo.] Silo starting with GC settings: ServerGC=True GCLatencyMode="Interactive"
+2023-09-08 10:27:01.442 +07:00 [WRN] [Orleans.Runtime.Silo.] A verbose logging level ("Debug") is configured. This will impact performance. The recommended log level is Information.
+2023-09-08 10:27:01.445 +07:00 [INF] [Orleans.Runtime.Silo.] -------------- Initializing silo on host "GUNNER" MachineName "GUNNER" at "10.8.0.10:11126", gen 53148421 --------------
+2023-09-08 10:27:01.445 +07:00 [INF] [Orleans.Runtime.Silo.] Starting silo "Silo_98e31"
+2023-09-08 10:27:02.253 +07:00 [INF] [Orleans.Runtime.Silo.] -------------- Started silo "S10.8.0.10:11126:53148421", ConsistentHashCode "E7FCB37F" --------------
+2023-09-08 10:27:02.636 +07:00 [INF] [Quartz.Core.SchedulerSignalerImpl.] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2023-09-08 10:27:02.637 +07:00 [INF] [Quartz.Core.QuartzScheduler.] Quartz Scheduler created
+2023-09-08 10:27:02.637 +07:00 [INF] [Quartz.Core.QuartzScheduler.] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2023-09-08 10:27:02.703 +07:00 [INF] [Quartz.Simpl.RAMJobStore.] RAMJobStore initialized.
+2023-09-08 10:27:02.706 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Quartz Scheduler 3.6.2.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2023-09-08 10:27:02.707 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2023-09-08 10:27:02.707 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2023-09-08 10:27:02.751 +07:00 [INF] [Orleans.Hosting.SiloHostedService.] Starting Orleans Silo.
+2023-09-08 10:27:02.812 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ActivationCountBasedPlacementOptions: 
+ChooseOutOf: 2
+
+2023-09-08 10:27:02.814 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ClusterMembershipOptions: 
+NumMissedTableIAmAliveLimit: 2
+LivenessEnabled: True
+ProbeTimeout: 00:00:05
+TableRefreshTimeout: 00:01:00
+DeathVoteExpirationTimeout: 00:02:00
+IAmAliveTablePublishTimeout: 00:05:00
+MaxJoinAttemptTime: 00:05:00
+UseLivenessGossip: True
+NumProbedSilos: 3
+NumMissedProbesLimit: 3
+NumVotesForDeathDeclaration: 2
+DefunctSiloExpiration: 7.00:00:00
+DefunctSiloCleanupPeriod: 01:00:00
+LocalHealthDegradationMonitoringPeriod: 00:00:10
+ExtendProbeTimeoutDuringDegradation: True
+EnableIndirectProbes: True
+
+2023-09-08 10:27:02.815 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ClusterOptions: 
+ClusterId: zota_balance_dev
+ServiceId: zota_balance_dev
+
+2023-09-08 10:27:02.817 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ConnectionOptions: 
+ProtocolVersion: Version1
+ConnectionsPerEndpoint: 1
+ConnectionRetryDelay: 00:00:01
+OpenConnectionTimeout: 00:00:05
+
+2023-09-08 10:27:02.817 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ConsistentRingOptions: 
+NumVirtualBucketsConsistentRing: 30
+UseVirtualBucketsConsistentRing: True
+
+2023-09-08 10:27:02.818 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.DevelopmentClusterMembershipOptions: 
+PrimarySiloEndpoint: 10.8.0.10:11126
+
+2023-09-08 10:27:02.818 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.EndpointOptions: 
+AdvertisedIPAddress: 10.8.0.10
+SiloPort: 11126
+GatewayPort: 30016
+SiloListeningEndpoint: 
+GatewayListeningEndpoint: 
+
+2023-09-08 10:27:02.819 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainCollectionOptions: 
+CollectionQuantum: 00:01:00
+CollectionAge: 00:15:00
+ActivationTimeout: 00:00:30
+DeactivationTimeout: 00:00:30
+
+2023-09-08 10:27:02.820 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainDirectoryOptions: 
+CachingStrategy: Adaptive
+CacheSize: 1000000
+InitialCacheTTL: 00:00:30
+MaximumCacheTTL: 00:04:00
+CacheTTLExtensionFactor: 2
+LazyDeregistrationDelay: 00:01:00
+
+2023-09-08 10:27:02.820 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainVersioningOptions: 
+DefaultCompatibilityStrategy: BackwardCompatible
+DefaultVersionSelectorStrategy: AllCompatibleVersions
+
+2023-09-08 10:27:02.821 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.LoadSheddingOptions: 
+LoadSheddingEnabled: False
+LoadSheddingLimit: 95
+
+2023-09-08 10:27:02.821 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-balance-grains-storage: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-09-08 10:27:02.822 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-Default: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-09-08 10:27:02.823 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-Default: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-09-08 10:27:02.823 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-SagasStorage: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-09-08 10:27:02.824 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SchedulingOptions: 
+DelayWarningThreshold: 00:00:10
+ActivationSchedulingQuantum: 00:00:00.1000000
+TurnWarningLengthThreshold: 00:00:01
+MaxPendingWorkItemsSoftLimit: 0
+StoppedActivationWarningInterval: 00:01:00
+
+2023-09-08 10:27:02.826 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SiloMessagingOptions: 
+SiloSenderQueues: 0
+GatewaySenderQueues: 0
+MaxForwardCount: 2
+ClientDropTimeout: 00:01:00
+ClientRegistrationRefresh: 00:05:00
+ClientGatewayShutdownNotificationTimeout: 00:00:05
+MaxEnqueuedRequestsSoftLimit: 0
+MaxEnqueuedRequestsHardLimit: 0
+MaxEnqueuedRequestsSoftLimit_StatelessWorker: 0
+MaxEnqueuedRequestsHardLimit_StatelessWorker: 0
+MaxRequestProcessingTime: 02:00:00
+AssumeHomogenousSilosForTesting: False
+ShutdownRerouteTimeout: 00:00:10
+SystemResponseTimeout: 00:30:00
+GrainWorkloadAnalysisPeriod: 00:00:05
+RequestProcessingWarningTime: 00:00:05
+RequestQueueDelayWarningTime: 00:00:10
+WaitForMessageToBeQueuedForOutboundTime: 00:00:02
+ResponseTimeout: 00:30:00
+ResponseTimeoutWithDebugger: 00:30:00
+DropExpiredMessages: True
+MaxMessageHeaderSize: 10485760
+MaxMessageBodySize: 104857600
+
+2023-09-08 10:27:02.827 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SiloOptions: 
+SiloName: Silo_98e31
+
+2023-09-08 10:27:02.840 +07:00 [INF] [Orleans.Runtime.InsideRuntimeClient.] Start InsideRuntimeClient took 2 milliseconds
+2023-09-08 10:27:02.842 +07:00 [INF] [Orleans.Runtime.Silo.] Silo Start()
+2023-09-08 10:27:02.858 +07:00 [INF] [Orleans.Runtime.GrainDirectory.LocalGrainDirectory.] Start
+2023-09-08 10:27:02.860 +07:00 [INF] [Orleans.Runtime.Silo.] "Start local grain directory" took 1 milliseconds to finish
+2023-09-08 10:27:02.880 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipTableManager.] MembershipOracle starting on host "GUNNER" with SiloAddress "S10.8.0.10:11126:53148421" at "2023-09-08 03:27:01.800 GMT"
+2023-09-08 10:27:02.884 +07:00 [INF] [Orleans.Runtime.MembershipService.SystemTargetBasedMembershipTable.] Creating in-memory membership table
+2023-09-08 10:27:02.891 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipTableSystemTarget.] GrainBasedMembershipTable Activated.
+2023-09-08 10:27:02.898 +07:00 [INF] [Orleans.Runtime.Silo.] Grain Service "OrleansDashboard.SiloGrainService" registered successfully.
+2023-09-08 10:27:02.898 +07:00 [INF] [Orleans.Runtime.Silo.] "Init grain services" took 14 milliseconds to finish
+2023-09-08 10:27:02.912 +07:00 [INF] [Orleans.Runtime.Silo.] "Start deployment load collector" took 13 milliseconds to finish
+2023-09-08 10:27:02.914 +07:00 [INF] [Orleans.Runtime.Watchdog.] Starting Silo Watchdog.
+2023-09-08 10:27:02.966 +07:00 [INF] [MassTransit.] Bus started: rabbitmq://172.16.0.124/zota
+2023-09-08 10:27:03.005 +07:00 [INF] [Orleans.Runtime.MembershipService.SystemTargetBasedMembershipTable.] Connected to membership table provider.
+2023-09-08 10:27:03.023 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] Joining
+2023-09-08 10:27:03.048 +07:00 [INF] [Orleans.Storage.MemoryGrainStorage.] Init: Name="Default" NumStorageGrains=10
+2023-09-08 10:27:03.065 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] -BecomeActive
+2023-09-08 10:27:03.080 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] -Finished BecomeActive.
+2023-09-08 10:27:03.108 +07:00 [INF] [Orleans.Runtime.ReminderService.LocalReminderService.] Starting "Orleans.Runtime.ReminderService.LocalReminderService" grain service on: "S10.8.0.10:11126:53148421" x"E7FCB37F", with range "<(0 0], Size=x100000000, %Ring=100%>"
+2023-09-08 10:27:03.202 +07:00 [INF] [OrleansDashboard.Dashboard.] Dashboard listening on 8080
+2023-09-08 10:27:03.263 +07:00 [INF] [Orleans.Runtime.ReminderService.ReminderTableGrain.] Activated
+2023-09-08 10:27:03.309 +07:00 [INF] [Orleans.Runtime.ReminderService.LocalReminderService.] My range changed from "<(0 0], Size=x100000000, %Ring=100%>" to "<(0 0], Size=x100000000, %Ring=100%>" increased = True
+2023-09-08 10:27:03.465 +07:00 [INF] [OrleansDashboard.SiloGrainService.] Starting "OrleansDashboard.SiloGrainService" grain service on: "S10.8.0.10:11126:53148421" x"E7FCB37F", with range "<(0 0], Size=x100000000, %Ring=100%>"
+2023-09-08 10:27:03.468 +07:00 [INF] [OrleansDashboard.SiloGrainService.] My range changed from "<(0 0], Size=x100000000, %Ring=100%>" to "<(0 0], Size=x100000000, %Ring=100%>" increased = True
+2023-09-08 10:27:03.469 +07:00 [INF] [Orleans.Runtime.Silo.] Grain Service "OrleansDashboard.SiloGrainService" started successfully.
+2023-09-08 10:27:03.471 +07:00 [INF] [Orleans.Hosting.SiloHostedService.] Orleans Silo started.
+2023-09-08 10:27:05.828 +07:00 [INF] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider.] RPC services being provided by "GrpcServices": 19
+2023-09-08 10:27:05.875 +07:00 [INF] [ServiceStack.ServiceStackHost.] Initializing Application "iZOTA_Balance" took 2400.6837ms. No errors detected.
+2023-09-08 10:27:05.911 +07:00 [WRN] [Microsoft.AspNetCore.Server.Kestrel.] Overriding address(es) '"https://localhost:5002, http://localhost:5003"'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2023-09-08 10:27:05.914 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Now listening on: "http://localhost:7771"
+2023-09-08 10:27:05.914 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Now listening on: "http://localhost:6771"
+2023-09-08 10:27:05.917 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Application started. Press Ctrl+C to shut down.
+2023-09-08 10:27:05.918 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Hosting environment: "Development"
+2023-09-08 10:27:05.918 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Content root path: "D:\Source\ZOPOST 2023\iZOTA_core_balance\iZota.Core.Balance.Hosting"
+2023-09-08 10:27:05.925 +07:00 [INF] [Quartz.Core.QuartzScheduler.] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2023-09-08 10:28:08.104 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/ - -
+2023-09-08 10:28:18.872 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/ - - - 404 0 - 11194.4373ms
+2023-09-08 10:28:25.485 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/ - -
+2023-09-08 10:28:25.509 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/ - - - 404 0 - 23.6207ms
+2023-09-08 10:28:30.525 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui - -
+2023-09-08 10:28:30.608 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui - - - 302 0 - 83.5353ms
+2023-09-08 10:28:30.612 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/ - -
+2023-09-08 10:28:30.648 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/ - - - 200 4469 text/html;+charset=utf-8 35.6609ms
+2023-09-08 10:28:30.661 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/css/typography.css - -
+2023-09-08 10:28:30.663 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/css/reset.css - -
+2023-09-08 10:28:30.664 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/object-assign-pollyfill.js - -
+2023-09-08 10:28:30.664 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/css/screen.css - -
+2023-09-08 10:28:30.664 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jquery-1.8.0.min.js - -
+2023-09-08 10:28:30.665 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jquery.slideto.min.js - -
+2023-09-08 10:28:30.683 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/css/reset.css - - - 200 773 text/css 19.4688ms
+2023-09-08 10:28:30.683 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jquery.slideto.min.js - - - 200 365 text/javascript 17.8348ms
+2023-09-08 10:28:30.683 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/object-assign-pollyfill.js - - - 200 349 text/javascript 18.6677ms
+2023-09-08 10:28:30.683 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/css/typography.css - - - 200 0 text/css 21.2639ms
+2023-09-08 10:28:30.686 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jquery.wiggle.min.js - -
+2023-09-08 10:28:30.686 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jquery.ba-bbq.min.js - -
+2023-09-08 10:28:30.686 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/handlebars-4.0.5.js - -
+2023-09-08 10:28:30.687 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/lodash.min.js - -
+2023-09-08 10:28:30.686 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/css/screen.css - - - 200 43644 text/css 22.3765ms
+2023-09-08 10:28:30.689 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jquery.wiggle.min.js - - - 200 536 text/javascript 5.1710ms
+2023-09-08 10:28:30.689 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/backbone-min.js - -
+2023-09-08 10:28:30.689 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jquery.ba-bbq.min.js - - - 200 3518 text/javascript 2.7831ms
+2023-09-08 10:28:30.690 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jquery-1.8.0.min.js - - - 200 92032 text/javascript 25.8837ms
+2023-09-08 10:28:30.691 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/highlight.9.1.0.pack.js - -
+2023-09-08 10:28:30.691 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/swagger-ui.js - -
+2023-09-08 10:28:30.691 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/highlight.9.1.0.pack_extended.js - -
+2023-09-08 10:28:30.691 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/highlight.9.1.0.pack_extended.js - - - 200 310 text/javascript 0.6096ms
+2023-09-08 10:28:30.692 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jsoneditor.min.js - -
+2023-09-08 10:28:30.694 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/highlight.9.1.0.pack.js - - - 200 10962 text/javascript 3.6269ms
+2023-09-08 10:28:30.695 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/marked.js - -
+2023-09-08 10:28:30.695 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/backbone-min.js - - - 200 19371 text/javascript 5.9329ms
+2023-09-08 10:28:30.696 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/swagger-oauth.js - -
+2023-09-08 10:28:30.702 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/marked.js - - - 200 15724 text/javascript 6.9311ms
+2023-09-08 10:28:30.702 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/lodash.min.js - - - 200 51894 text/javascript 15.3997ms
+2023-09-08 10:28:30.702 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/swagger-oauth.js - - - 200 7042 text/javascript 6.3378ms
+2023-09-08 10:28:30.706 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/jsoneditor.min.js - - - 200 129835 text/javascript 14.4451ms
+2023-09-08 10:28:30.706 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/lib/handlebars-4.0.5.js - - - 200 71504 text/javascript 20.0116ms
+2023-09-08 10:28:30.712 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/images/logo_small.png - -
+2023-09-08 10:28:30.715 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/images/logo_small.png - - - 200 2912 image/png 2.0789ms
+2023-09-08 10:28:30.716 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/css/print.css - -
+2023-09-08 10:28:30.719 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/css/print.css - - - 200 41666 text/css 2.7476ms
+2023-09-08 10:28:30.745 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/swagger-ui.js - - - 200 2704477 text/javascript 53.8566ms
+2023-09-08 10:28:30.798 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/openapi - -
+2023-09-08 10:28:30.806 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/images/favicon-32x32.png - -
+2023-09-08 10:28:30.806 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/images/favicon-32x32.png - - - 200 1141 image/png 0.6354ms
+2023-09-08 10:28:31.036 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/openapi - - - 200 - application/json;+charset=utf-8 238.3492ms
+2023-09-08 10:28:41.463 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/swagger-ui/images/throbber.gif - -
+2023-09-08 10:28:41.464 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=ZT000001518&CurrencyCode=GSTAR - -
+2023-09-08 10:28:41.477 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/swagger-ui/images/throbber.gif - - - 200 9257 image/gif 13.3312ms
+2023-09-08 10:28:43.163 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:02.0691740. Total GC Pause duration during that period: 00:00:00. We are now using a total of 24MB memory. gc=36, 36, 6
+2023-09-08 10:28:43.210 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received AccountBalanceCheckRequest: {"accountCode":"ZT000001518","currencyCode":"GSTAR"}
+2023-09-08 10:28:45.239 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:02.0746430. Total GC Pause duration during that period: 00:00:00. We are now using a total of 24MB memory. gc=36, 36, 6
+2023-09-08 10:28:47.830 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=1, Status=RanToCompletion]" in WorkGroup "[SystemTarget: S10.8.0.10:11126:53148421/sys.svc.user.95B6CAE6/10.8.0.10:11126@53148421@0d73e76f000000008c17227300000000]" took elapsed time "0:00:01.3559423" for execution, which is longer than 00:00:01. Running on thread "3"
+2023-09-08 10:28:47.830 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=2, Status=RanToCompletion]" in WorkGroup "[SystemTarget: S10.8.0.10:11126:53148421/sys.svc.load-publisher/10.8.0.10:11126@53148421@f4b42ed6000000008c17227300000000]" took elapsed time "0:00:01.3558102" for execution, which is longer than 00:00:01. Running on thread "15"
+2023-09-08 10:28:55.979 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:08.1654793. Total GC Pause duration during that period: 00:00:00. We are now using a total of 25MB memory. gc=36, 36, 6
+2023-09-08 10:28:55.979 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.IncomingRequestMonitor.] Timer should have fired at 09/08/2023 03:28:48 but fired at 09/08/2023 03:28:55, which is 00:00:07.3038121 longer than expected
+2023-09-08 10:28:56.074 +07:00 [INF] [Orleans.Storage.MemoryGrainStorage.] Init: Name="balance-grains-storage" NumStorageGrains=10
+2023-09-08 10:28:56.117 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] On activate: "ZT000001518|GSTAR"
+2023-09-08 10:29:11.519 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:14.0559990. Total GC Pause duration during that period: 00:00:00. We are now using a total of 26MB memory. gc=36, 36, 6
+2023-09-08 10:29:11.519 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.ActivationWorkingSet.MonitorWorkingSet.] Timer should have fired at 09/08/2023 03:29:00 but fired at 09/08/2023 03:29:11, which is 00:00:10.5247206 longer than expected
+2023-09-08 10:29:11.519 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.PerformGatewayMaintenance.] Timer should have fired at 09/08/2023 03:29:02 but fired at 09/08/2023 03:29:11, which is 00:00:09.3608589 longer than expected
+2023-09-08 10:29:11.519 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.LocalSiloHealthMonitor.] Timer should have fired at 09/08/2023 03:29:05 but fired at 09/08/2023 03:29:11, which is 00:00:05.5405912 longer than expected
+2023-09-08 10:29:11.519 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.IncomingRequestMonitor.] Timer should have fired at 09/08/2023 03:29:00 but fired at 09/08/2023 03:29:11, which is 00:00:10.5372904 longer than expected
+2023-09-08 10:29:11.522 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.ActivationCollector.] Timer should have fired at 09/08/2023 03:29:02 but fired at 09/08/2023 03:29:11, which is 00:00:08.6589371 longer than expected
+2023-09-08 10:29:11.537 +07:00 [WRN] [Orleans.Runtime.Watchdog.] Watchdog had 1 health Check failure(s) out of 5 health Check participants: "Orleans.Runtime.ActivationCollector failed health check with reason \"ActivationCollector timer should have fired at 9/8/2023 3:29:02 AM, which is 00:00:08.6597707 ago\"."
+2023-09-08 10:29:11.536 +07:00 [WRN] [Orleans.Runtime.MembershipService.LocalSiloHealthMonitor.] Health check participant "Orleans.Runtime.ActivationCollector" is reporting that it is unhealthy with complaint: "ActivationCollector timer should have fired at 9/8/2023 3:29:02 AM, which is 00:00:08.6721773 ago"
+2023-09-08 10:29:12.330 +07:00 [WRN] [Orleans.Runtime.MembershipService.LocalSiloHealthMonitor.] Self-monitoring determined that local health is degraded. Degradation score is 1/8 (lower is better). Complaints: "Health check participant Orleans.Runtime.ActivationCollector is reporting that it is unhealthy with complaint: ActivationCollector timer should have fired at 9/8/2023 3:29:02 AM, which is 00:00:08.6721773 ago"
+2023-09-08 10:29:13.603 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:02.0813801. Total GC Pause duration during that period: 00:00:00. We are now using a total of 26MB memory. gc=36, 36, 6
+2023-09-08 10:29:13.606 +07:00 [INF] [Orleans.Runtime.InsideRuntimeClient.] Received status update for unknown request. Message: "IsAlwaysInterleave Status Response [S10.8.0.10:11126:53148421 balance/ZT000001518|GSTAR]->[S10.8.0.10:11126:53148421 sys.client/hosted-10.8.0.10:11126@53148421] IsExecuting: True, IsWaiting: False, Diagnostics: [[Activation: S10.8.0.10:11126:53148421/balance/ZT000001518|GSTAR@1d9b2331107e459987c4711be0c59a84 #GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid NonReentrancyQueueSize=0 NumRunning=1 IdlenessTimeSpan=00:00:00 CollectionAgeLimit=00:15:00], TaskScheduler status: WorkItemGroup:Name=[Activation: S10.8.0.10:11126:53148421/balance/ZT000001518|GSTAR@1d9b2331107e459987c4711be0c59a84#GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid],WorkGroupStatus=Running. Currently QueuedWorkItems=0; Total Enqueued=10; Total processed=9;  Executing Task Id=3 Status=Running for 00:00:15.9530000.TaskRunner=ActivationTaskScheduler-17:Queued=0; Detailed context=<[Activation: S10.8.0.10:11126:53148421/balance/ZT000001518|GSTAR@1d9b2331107e459987c4711be0c59a84 #GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid NonReentrancyQueueSize=0 NumRunning=1 IdlenessTimeSpan=00:00:00 CollectionAgeLimit=00:15:00]>, Interleaving message IsAlwaysInterleave Request [S10.8.0.10:11126:53148421 sys.client/hosted-10.8.0.10:11126@53148421]->[S10.8.0.10:11126:53148421 balance/ZT000001518|GSTAR] iZota.Core.Balance.Models.Grains.IBalanceGrain[(iZota.Core.Balance.Models.Grains.IBalanceGrain)iZota.Core.Balance.Domain.Grains.BalanceGrain].GetBalance() #317 has been executing for 00:00:15.9370000.] #317". Status: "[Activation: S10.8.0.10:11126:53148421/balance/ZT000001518|GSTAR@1d9b2331107e459987c4711be0c59a84 #GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid NonReentrancyQueueSize=0 NumRunning=1 IdlenessTimeSpan=00:00:00 CollectionAgeLimit=00:15:00]
+TaskScheduler status: WorkItemGroup:Name=[Activation: S10.8.0.10:11126:53148421/balance/ZT000001518|GSTAR@1d9b2331107e459987c4711be0c59a84#GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid],WorkGroupStatus=Running. Currently QueuedWorkItems=0; Total Enqueued=10; Total processed=9;  Executing Task Id=3 Status=Running for 00:00:15.9530000.TaskRunner=ActivationTaskScheduler-17:Queued=0; Detailed context=<[Activation: S10.8.0.10:11126:53148421/balance/ZT000001518|GSTAR@1d9b2331107e459987c4711be0c59a84 #GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid NonReentrancyQueueSize=0 NumRunning=1 IdlenessTimeSpan=00:00:00 CollectionAgeLimit=00:15:00]>
+Interleaving message IsAlwaysInterleave Request [S10.8.0.10:11126:53148421 sys.client/hosted-10.8.0.10:11126@53148421]->[S10.8.0.10:11126:53148421 balance/ZT000001518|GSTAR] iZota.Core.Balance.Models.Grains.IBalanceGrain[(iZota.Core.Balance.Models.Grains.IBalanceGrain)iZota.Core.Balance.Domain.Grains.BalanceGrain].GetBalance() #317 has been executing for 00:00:15.9370000."
+2023-09-08 10:29:13.609 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] AccountBalanceCheckRequest return: -3.000000
+2023-09-08 10:29:13.609 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=3, Status=RanToCompletion]" in WorkGroup "[Activation: S10.8.0.10:11126:53148421/balance/ZT000001518|GSTAR@1d9b2331107e459987c4711be0c59a84#GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid]" took elapsed time "0:00:17.2170549" for execution, which is longer than 00:00:01. Running on thread "9"
+2023-09-08 10:29:13.637 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=ZT000001518&CurrencyCode=GSTAR - - - 200 - application/json;+charset=utf-8 32172.2802ms
+2023-09-08 10:29:19.660 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=ZT000001518&CurrencyCode=GSTAR - -
+2023-09-08 10:29:21.639 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:02.9802140. Total GC Pause duration during that period: 00:00:00. We are now using a total of 27MB memory. gc=36, 36, 6
+2023-09-08 10:29:21.639 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received AccountBalanceCheckRequest: {"accountCode":"ZT000001518","currencyCode":"GSTAR"}
+2023-09-08 10:35:53.827 +07:00 [INF] [Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.] User profile is available. Using '"C:\Users\letie\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-08 10:35:53.990 +07:00 [INF] [MassTransit.] Configured endpoint "cancel-payment", Consumer: "iZota.Core.Balance.Components.Consumers.CancelPaymentConsumer"
+2023-09-08 10:35:54.135 +07:00 [INF] [Orleans.Runtime.Silo.] Silo starting with GC settings: ServerGC=True GCLatencyMode="Interactive"
+2023-09-08 10:35:54.136 +07:00 [WRN] [Orleans.Runtime.Silo.] A verbose logging level ("Debug") is configured. This will impact performance. The recommended log level is Information.
+2023-09-08 10:35:54.138 +07:00 [INF] [Orleans.Runtime.Silo.] -------------- Initializing silo on host "GUNNER" MachineName "GUNNER" at "10.8.0.10:11126", gen 53148954 --------------
+2023-09-08 10:35:54.138 +07:00 [INF] [Orleans.Runtime.Silo.] Starting silo "Silo_50051"
+2023-09-08 10:35:54.538 +07:00 [INF] [Orleans.Runtime.Silo.] -------------- Started silo "S10.8.0.10:11126:53148954", ConsistentHashCode "55431866" --------------
+2023-09-08 10:35:54.666 +07:00 [INF] [Quartz.Core.SchedulerSignalerImpl.] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2023-09-08 10:35:54.667 +07:00 [INF] [Quartz.Core.QuartzScheduler.] Quartz Scheduler created
+2023-09-08 10:35:54.667 +07:00 [INF] [Quartz.Core.QuartzScheduler.] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2023-09-08 10:35:54.675 +07:00 [INF] [Quartz.Simpl.RAMJobStore.] RAMJobStore initialized.
+2023-09-08 10:35:54.676 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Quartz Scheduler 3.6.2.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2023-09-08 10:35:54.677 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2023-09-08 10:35:54.677 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2023-09-08 10:35:54.749 +07:00 [INF] [Orleans.Hosting.SiloHostedService.] Starting Orleans Silo.
+2023-09-08 10:35:54.781 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ActivationCountBasedPlacementOptions: 
+ChooseOutOf: 2
+
+2023-09-08 10:35:54.783 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ClusterMembershipOptions: 
+NumMissedTableIAmAliveLimit: 2
+LivenessEnabled: True
+ProbeTimeout: 00:00:05
+TableRefreshTimeout: 00:01:00
+DeathVoteExpirationTimeout: 00:02:00
+IAmAliveTablePublishTimeout: 00:05:00
+MaxJoinAttemptTime: 00:05:00
+UseLivenessGossip: True
+NumProbedSilos: 3
+NumMissedProbesLimit: 3
+NumVotesForDeathDeclaration: 2
+DefunctSiloExpiration: 7.00:00:00
+DefunctSiloCleanupPeriod: 01:00:00
+LocalHealthDegradationMonitoringPeriod: 00:00:10
+ExtendProbeTimeoutDuringDegradation: True
+EnableIndirectProbes: True
+
+2023-09-08 10:35:54.784 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ClusterOptions: 
+ClusterId: zota_balance_dev
+ServiceId: zota_balance_dev
+
+2023-09-08 10:35:54.785 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ConnectionOptions: 
+ProtocolVersion: Version1
+ConnectionsPerEndpoint: 1
+ConnectionRetryDelay: 00:00:01
+OpenConnectionTimeout: 00:00:05
+
+2023-09-08 10:35:54.785 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ConsistentRingOptions: 
+NumVirtualBucketsConsistentRing: 30
+UseVirtualBucketsConsistentRing: True
+
+2023-09-08 10:35:54.786 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.DevelopmentClusterMembershipOptions: 
+PrimarySiloEndpoint: 10.8.0.10:11126
+
+2023-09-08 10:35:54.786 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.EndpointOptions: 
+AdvertisedIPAddress: 10.8.0.10
+SiloPort: 11126
+GatewayPort: 30016
+SiloListeningEndpoint: 
+GatewayListeningEndpoint: 
+
+2023-09-08 10:35:54.787 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainCollectionOptions: 
+CollectionQuantum: 00:01:00
+CollectionAge: 00:15:00
+ActivationTimeout: 00:00:30
+DeactivationTimeout: 00:00:30
+
+2023-09-08 10:35:54.787 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainDirectoryOptions: 
+CachingStrategy: Adaptive
+CacheSize: 1000000
+InitialCacheTTL: 00:00:30
+MaximumCacheTTL: 00:04:00
+CacheTTLExtensionFactor: 2
+LazyDeregistrationDelay: 00:01:00
+
+2023-09-08 10:35:54.788 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainVersioningOptions: 
+DefaultCompatibilityStrategy: BackwardCompatible
+DefaultVersionSelectorStrategy: AllCompatibleVersions
+
+2023-09-08 10:35:54.788 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.LoadSheddingOptions: 
+LoadSheddingEnabled: False
+LoadSheddingLimit: 95
+
+2023-09-08 10:35:54.789 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-balance-grains-storage: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-09-08 10:35:54.790 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-Default: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-09-08 10:35:54.790 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-Default: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-09-08 10:35:54.790 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-SagasStorage: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-09-08 10:35:54.791 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SchedulingOptions: 
+DelayWarningThreshold: 00:00:10
+ActivationSchedulingQuantum: 00:00:00.1000000
+TurnWarningLengthThreshold: 00:00:01
+MaxPendingWorkItemsSoftLimit: 0
+StoppedActivationWarningInterval: 00:01:00
+
+2023-09-08 10:35:54.793 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SiloMessagingOptions: 
+SiloSenderQueues: 0
+GatewaySenderQueues: 0
+MaxForwardCount: 2
+ClientDropTimeout: 00:01:00
+ClientRegistrationRefresh: 00:05:00
+ClientGatewayShutdownNotificationTimeout: 00:00:05
+MaxEnqueuedRequestsSoftLimit: 0
+MaxEnqueuedRequestsHardLimit: 0
+MaxEnqueuedRequestsSoftLimit_StatelessWorker: 0
+MaxEnqueuedRequestsHardLimit_StatelessWorker: 0
+MaxRequestProcessingTime: 02:00:00
+AssumeHomogenousSilosForTesting: False
+ShutdownRerouteTimeout: 00:00:10
+SystemResponseTimeout: 00:30:00
+GrainWorkloadAnalysisPeriod: 00:00:05
+RequestProcessingWarningTime: 00:00:05
+RequestQueueDelayWarningTime: 00:00:10
+WaitForMessageToBeQueuedForOutboundTime: 00:00:02
+ResponseTimeout: 00:30:00
+ResponseTimeoutWithDebugger: 00:30:00
+DropExpiredMessages: True
+MaxMessageHeaderSize: 10485760
+MaxMessageBodySize: 104857600
+
+2023-09-08 10:35:54.794 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SiloOptions: 
+SiloName: Silo_50051
+
+2023-09-08 10:35:54.804 +07:00 [INF] [Orleans.Runtime.InsideRuntimeClient.] Start InsideRuntimeClient took 1 milliseconds
+2023-09-08 10:35:54.807 +07:00 [INF] [Orleans.Runtime.Silo.] Silo Start()
+2023-09-08 10:35:54.811 +07:00 [INF] [Orleans.Runtime.GrainDirectory.LocalGrainDirectory.] Start
+2023-09-08 10:35:54.812 +07:00 [INF] [Orleans.Runtime.Silo.] "Start local grain directory" took 1 milliseconds to finish
+2023-09-08 10:35:54.824 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipTableManager.] MembershipOracle starting on host "GUNNER" with SiloAddress "S10.8.0.10:11126:53148954" at "2023-09-08 03:35:54.262 GMT"
+2023-09-08 10:35:54.832 +07:00 [INF] [Orleans.Runtime.MembershipService.SystemTargetBasedMembershipTable.] Creating in-memory membership table
+2023-09-08 10:35:54.838 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipTableSystemTarget.] GrainBasedMembershipTable Activated.
+2023-09-08 10:35:54.846 +07:00 [INF] [Orleans.Runtime.Silo.] Grain Service "OrleansDashboard.SiloGrainService" registered successfully.
+2023-09-08 10:35:54.846 +07:00 [INF] [Orleans.Runtime.Silo.] "Init grain services" took 9 milliseconds to finish
+2023-09-08 10:35:54.858 +07:00 [INF] [Orleans.Runtime.Silo.] "Start deployment load collector" took 12 milliseconds to finish
+2023-09-08 10:35:54.860 +07:00 [INF] [Orleans.Runtime.Watchdog.] Starting Silo Watchdog.
+2023-09-08 10:35:54.908 +07:00 [INF] [Orleans.Runtime.MembershipService.SystemTargetBasedMembershipTable.] Connected to membership table provider.
+2023-09-08 10:35:54.910 +07:00 [INF] [MassTransit.] Bus started: rabbitmq://172.16.0.124/zota
+2023-09-08 10:35:54.930 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] Joining
+2023-09-08 10:35:54.955 +07:00 [INF] [Orleans.Storage.MemoryGrainStorage.] Init: Name="Default" NumStorageGrains=10
+2023-09-08 10:35:54.957 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] -BecomeActive
+2023-09-08 10:35:54.967 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] -Finished BecomeActive.
+2023-09-08 10:35:54.974 +07:00 [INF] [Orleans.Runtime.ReminderService.LocalReminderService.] Starting "Orleans.Runtime.ReminderService.LocalReminderService" grain service on: "S10.8.0.10:11126:53148954" x"55431866", with range "<(0 0], Size=x100000000, %Ring=100%>"
+2023-09-08 10:35:55.008 +07:00 [INF] [OrleansDashboard.Dashboard.] Dashboard listening on 8080
+2023-09-08 10:35:55.078 +07:00 [INF] [Orleans.Runtime.ReminderService.ReminderTableGrain.] Activated
+2023-09-08 10:35:55.092 +07:00 [INF] [Orleans.Runtime.ReminderService.LocalReminderService.] My range changed from "<(0 0], Size=x100000000, %Ring=100%>" to "<(0 0], Size=x100000000, %Ring=100%>" increased = True
+2023-09-08 10:35:55.099 +07:00 [INF] [OrleansDashboard.SiloGrainService.] Starting "OrleansDashboard.SiloGrainService" grain service on: "S10.8.0.10:11126:53148954" x"55431866", with range "<(0 0], Size=x100000000, %Ring=100%>"
+2023-09-08 10:35:55.099 +07:00 [INF] [OrleansDashboard.SiloGrainService.] My range changed from "<(0 0], Size=x100000000, %Ring=100%>" to "<(0 0], Size=x100000000, %Ring=100%>" increased = True
+2023-09-08 10:35:55.100 +07:00 [INF] [Orleans.Runtime.Silo.] Grain Service "OrleansDashboard.SiloGrainService" started successfully.
+2023-09-08 10:35:55.101 +07:00 [INF] [Orleans.Hosting.SiloHostedService.] Orleans Silo started.
+2023-09-08 10:35:56.460 +07:00 [INF] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider.] RPC services being provided by "GrpcServices": 19
+2023-09-08 10:35:56.476 +07:00 [INF] [ServiceStack.ServiceStackHost.] Initializing Application "iZOTA_Balance" took 1372.565ms. No errors detected.
+2023-09-08 10:35:56.501 +07:00 [WRN] [Microsoft.AspNetCore.Server.Kestrel.] Overriding address(es) '"https://localhost:5002, http://localhost:5003"'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2023-09-08 10:35:56.503 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Now listening on: "http://localhost:7771"
+2023-09-08 10:35:56.503 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Now listening on: "http://localhost:6771"
+2023-09-08 10:35:56.505 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Application started. Press Ctrl+C to shut down.
+2023-09-08 10:35:56.506 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Hosting environment: "Development"
+2023-09-08 10:35:56.506 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Content root path: "D:\Source\ZOPOST 2023\iZOTA_core_balance\iZota.Core.Balance.Hosting"
+2023-09-08 10:35:56.510 +07:00 [INF] [Quartz.Core.QuartzScheduler.] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2023-09-08 10:36:44.827 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request starting HTTP/1.1 POST http://localhost:6771/api/v1/wallet/deposit?AccountCode=gunner001&CurrencyCode=GSTAR&Amount=1000&TransRef=TEST&Description=TEST&TransNote=TEST application/json 2
+2023-09-08 10:36:45.085 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received DepositRequest: {"accountCode":"gunner001","currencyCode":"GSTAR","amount":1000,"transRef":"TEST","description":"TEST","transNote":"TEST","fee":0}
+2023-09-08 10:36:45.088 +07:00 [INF] [iZota.Core.Balance.Domain.Services.BalanceService.] Received DepositRequest: TEST
+2023-09-08 10:36:45.214 +07:00 [INF] [Orleans.Storage.MemoryGrainStorage.] Init: Name="balance-grains-storage" NumStorageGrains=10
+2023-09-08 10:36:45.236 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] On activate: "MASTER|GSTAR"
+2023-09-08 10:36:46.975 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:02.5269130. Total GC Pause duration during that period: 00:00:00. We are now using a total of 29MB memory. gc=3, 3, 3
+2023-09-08 10:36:49.094 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:02.0991480. Total GC Pause duration during that period: 00:00:00. We are now using a total of 29MB memory. gc=3, 3, 3
+2023-09-08 10:36:51.528 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:02.4319094. Total GC Pause duration during that period: 00:00:00. We are now using a total of 29MB memory. gc=3, 3, 3
+2023-09-08 10:36:53.008 +07:00 [INF] [Orleans.Runtime.InsideRuntimeClient.] Received status update for unknown request. Message: "IsAlwaysInterleave Status Response [S10.8.0.10:11126:53148954 balance/MASTER|GSTAR]->[S10.8.0.10:11126:53148954 sys.client/hosted-10.8.0.10:11126@53148954] IsExecuting: True, IsWaiting: False, Diagnostics: [[Activation: S10.8.0.10:11126:53148954/balance/MASTER|GSTAR@02b394c7564043cda97cc020ee134995 #GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid NonReentrancyQueueSize=0 NumRunning=1 IdlenessTimeSpan=00:00:00 CollectionAgeLimit=00:15:00], TaskScheduler status: WorkItemGroup:Name=[Activation: S10.8.0.10:11126:53148954/balance/MASTER|GSTAR@02b394c7564043cda97cc020ee134995#GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid],WorkGroupStatus=Running. Currently QueuedWorkItems=0; Total Enqueued=10; Total processed=9;  Executing Task Id=1 Status=Running for 00:00:07.6090000.TaskRunner=ActivationTaskScheduler-17:Queued=0; Detailed context=<[Activation: S10.8.0.10:11126:53148954/balance/MASTER|GSTAR@02b394c7564043cda97cc020ee134995 #GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid NonReentrancyQueueSize=0 NumRunning=1 IdlenessTimeSpan=00:00:00 CollectionAgeLimit=00:15:00]>, Interleaving message IsAlwaysInterleave Request [S10.8.0.10:11126:53148954 sys.client/hosted-10.8.0.10:11126@53148954]->[S10.8.0.10:11126:53148954 balance/MASTER|GSTAR] iZota.Core.Balance.Models.Grains.IBalanceGrain[(iZota.Core.Balance.Models.Grains.IBalanceGrain)iZota.Core.Balance.Domain.Grains.BalanceGrain].GetBalance() #163 has been executing for 00:00:06.1400000.] #163". Status: "[Activation: S10.8.0.10:11126:53148954/balance/MASTER|GSTAR@02b394c7564043cda97cc020ee134995 #GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid NonReentrancyQueueSize=0 NumRunning=1 IdlenessTimeSpan=00:00:00 CollectionAgeLimit=00:15:00]
+TaskScheduler status: WorkItemGroup:Name=[Activation: S10.8.0.10:11126:53148954/balance/MASTER|GSTAR@02b394c7564043cda97cc020ee134995#GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid],WorkGroupStatus=Running. Currently QueuedWorkItems=0; Total Enqueued=10; Total processed=9;  Executing Task Id=1 Status=Running for 00:00:07.6090000.TaskRunner=ActivationTaskScheduler-17:Queued=0; Detailed context=<[Activation: S10.8.0.10:11126:53148954/balance/MASTER|GSTAR@02b394c7564043cda97cc020ee134995 #GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid NonReentrancyQueueSize=0 NumRunning=1 IdlenessTimeSpan=00:00:00 CollectionAgeLimit=00:15:00]>
+Interleaving message IsAlwaysInterleave Request [S10.8.0.10:11126:53148954 sys.client/hosted-10.8.0.10:11126@53148954]->[S10.8.0.10:11126:53148954 balance/MASTER|GSTAR] iZota.Core.Balance.Models.Grains.IBalanceGrain[(iZota.Core.Balance.Models.Grains.IBalanceGrain)iZota.Core.Balance.Domain.Grains.BalanceGrain].GetBalance() #163 has been executing for 00:00:06.1400000."
+2023-09-08 10:36:53.012 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=1, Status=RanToCompletion]" in WorkGroup "[Activation: S10.8.0.10:11126:53148954/balance/MASTER|GSTAR@02b394c7564043cda97cc020ee134995#GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid]" took elapsed time "0:00:07.6152527" for execution, which is longer than 00:00:01. Running on thread "17"
+2023-09-08 10:36:55.258 +07:00 [INF] [Orleans.Storage.MemoryGrainStorage.] Init: Name="SagasStorage" NumStorageGrains=10
+2023-09-08 10:36:55.346 +07:00 [INF] [iZota.Core.Balance.Domain.Activities.BalanceWithdrawActivity.] BalanceWithdrawActivity: "TEST"-"D23090800000001"-"6b77b173-f51f-4538-8495-7c9bfebfa343"
+2023-09-08 10:36:58.980 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:04.3917378. Total GC Pause duration during that period: 00:00:00. We are now using a total of 30MB memory. gc=3, 3, 3
+2023-09-08 10:36:59.016 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] Withdraw request: "MASTER" - "6b77b173-f51f-4538-8495-7c9bfebfa343" - 1000.0
+2023-09-08 10:37:01.738 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:02.7548437. Total GC Pause duration during that period: 00:00:00. We are now using a total of 31MB memory. gc=3, 3, 3
+2023-09-08 10:37:03.687 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=2, Status=RanToCompletion]" in WorkGroup "[Activation: S10.8.0.10:11126:53148954/saga/5793b8207f8b405e8e348ee6b494026c@d3d3849a42bc4bbbbebf3d2f76fe192d#GrainType=Orleans.Sagas.SagaGrain,Orleans.Sagas Placement=PreferLocalPlacement State=Valid]" took elapsed time "0:00:01.9464961" for execution, which is longer than 00:00:01. Running on thread "24"
+2023-09-08 10:37:04.124 +07:00 [INF] [Orleans.Runtime.InsideRuntimeClient.] Received status update for pending request, Request: "Request [S10.8.0.10:11126:53148954 saga/5793b8207f8b405e8e348ee6b494026c]->[S10.8.0.10:11126:53148954 balance/MASTER|GSTAR] iZota.Core.Balance.Models.Grains.IBalanceGrain[(iZota.Core.Balance.Models.Grains.IBalanceGrain)iZota.Core.Balance.Domain.Grains.BalanceGrain].Withdraw(iZota.Core.Balance.Models.Dtos.SettlementDto) #186". Status: "[Activation: S10.8.0.10:11126:53148954/balance/MASTER|GSTAR@02b394c7564043cda97cc020ee134995 #GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid NonReentrancyQueueSize=0 NumRunning=1 IdlenessTimeSpan=00:00:11.0930000 CollectionAgeLimit=00:15:00]
+TaskScheduler status: WorkItemGroup:Name=[Activation: S10.8.0.10:11126:53148954/balance/MASTER|GSTAR@02b394c7564043cda97cc020ee134995#GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid],WorkGroupStatus=Running. Currently QueuedWorkItems=0; Total Enqueued=11; Total processed=10;  Executing Task Id=4 Status=Running for 00:00:08.7650000.TaskRunner=ActivationTaskScheduler-17:Queued=0; Detailed context=<[Activation: S10.8.0.10:11126:53148954/balance/MASTER|GSTAR@02b394c7564043cda97cc020ee134995 #GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid NonReentrancyQueueSize=0 NumRunning=1 IdlenessTimeSpan=00:00:11.0930000 CollectionAgeLimit=00:15:00 CurrentlyExecuting=Request [S10.8.0.10:11126:53148954 saga/5793b8207f8b405e8e348ee6b494026c]->[S10.8.0.10:11126:53148954 balance/MASTER|GSTAR] iZota.Core.Balance.Models.Grains.IBalanceGrain[(iZota.Core.Balance.Models.Grains.IBalanceGrain)iZota.Core.Balance.Domain.Grains.BalanceGrain].Withdraw(iZota.Core.Balance.Models.Dtos.SettlementDto) #186]>
+Message Request [S10.8.0.10:11126:53148954 saga/5793b8207f8b405e8e348ee6b494026c]->[S10.8.0.10:11126:53148954 balance/MASTER|GSTAR] iZota.Core.Balance.Models.Grains.IBalanceGrain[(iZota.Core.Balance.Models.Grains.IBalanceGrain)iZota.Core.Balance.Domain.Grains.BalanceGrain].Withdraw(iZota.Core.Balance.Models.Dtos.SettlementDto) #186 was enqueued 00:00:08.7650000 ago and has now been executing for 00:00:08.7650000."
+2023-09-08 10:37:04.159 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=3, Status=RanToCompletion]" in WorkGroup "[SystemTarget: S10.8.0.10:11126:53148954/sys.svc.user.95B6CAE6/10.8.0.10:11126@53148954@0d73e76f000000008ea6d52600000000]" took elapsed time "0:00:01.94687" for execution, which is longer than 00:00:01. Running on thread "17"
+2023-09-08 10:37:05.498 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=4, Status=RanToCompletion]" in WorkGroup "[Activation: S10.8.0.10:11126:53148954/balance/MASTER|GSTAR@02b394c7564043cda97cc020ee134995#GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid]" took elapsed time "0:00:10.1494677" for execution, which is longer than 00:00:01. Running on thread "16"
+2023-09-08 10:37:05.505 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] Withdraw done: "TEST"-"D23090800000001"-"6b77b173-f51f-4538-8495-7c9bfebfa343"
+2023-09-08 10:37:05.518 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] On activate: "gunner001|GSTAR"
+2023-09-08 10:37:05.540 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] Deposit request: "gunner001" - "6b77b173-f51f-4538-8495-7c9bfebfa343" - 1000.0
+2023-09-08 10:37:06.202 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] Deposit done: "TEST"-"D23090800000001"-"6b77b173-f51f-4538-8495-7c9bfebfa343"
+2023-09-08 10:37:07.518 +07:00 [INF] [iZota.Core.Balance.Domain.Services.BalanceService.] Deposit return: {"errorCode":"00","message":"Success"}
+2023-09-08 10:37:07.522 +07:00 [INF] [iZota.Core.Balance.Domain.Services.BalanceService.] PublishBalanceHistory => TransCode=D23090800000001|Amount= 1000|SrcAccountCode= MASTER|DesAccountCode= gunner001|TransType= Deposit
+2023-09-08 10:37:07.906 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] DepositRequest return: {"results":{"srcBalance":9494389518.000000,"desBalance":1000.0,"transactionCode":"D23090800000001","balanceAfterTrans":[{"srcAccount":"MASTER","srcBalance":9494389518.000000,"srcBeforeBalance":9494390518.000000,"desAccount":"gunner001","desBalance":1000.0,"desBeforeBalance":0.0,"amount":1000.0,"transCode":"D23090800000001","currencyCode":"GSTAR"}]},"responseStatus":{"errorCode":"00","message":"Success"}}
+2023-09-08 10:37:07.942 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request finished HTTP/1.1 POST http://localhost:6771/api/v1/wallet/deposit?AccountCode=gunner001&CurrencyCode=GSTAR&Amount=1000&TransRef=TEST&Description=TEST&TransNote=TEST application/json 2 - 200 - application/json;+charset=utf-8 23116.5839ms
+2023-09-08 10:37:25.893 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - -
+2023-09-08 10:37:27.112 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received AccountBalanceCheckRequest: {"accountCode":"gunner001","currencyCode":"GSTAR"}
+2023-09-08 10:37:27.630 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] AccountBalanceCheckRequest return: 1000.0
+2023-09-08 10:37:27.634 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - - - 200 - application/json;+charset=utf-8 1740.8019ms
+2023-09-08 10:37:48.465 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request starting HTTP/1.1 POST http://localhost:6771/api/v1/wallet/block?AccountCode=gunner001&CurrencyCode=GSTAR&BlockAmount=100&TransRef=TEST&TransNote=TEST application/json 2
+2023-09-08 10:37:48.473 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received BlockBalanceRequest: {"accountCode":"gunner001","currencyCode":"GSTAR","blockAmount":100,"transRef":"TEST","transNote":"TEST","isBlockAllBalance":false}
+2023-09-08 10:37:48.475 +07:00 [INF] [iZota.Core.Balance.Domain.Services.BalanceService.] Received BlockBalanceAsync: {"accountCode":"gunner001","currencyCode":"GSTAR","blockAmount":100,"transRef":"TEST","transNote":"TEST","isBlockAllBalance":false}
+2023-09-08 10:38:03.649 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:15.2988720. Total GC Pause duration during that period: 00:00:00. We are now using a total of 34MB memory. gc=3, 3, 3
+2023-09-08 10:38:03.649 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.PerformGatewayMaintenance.] Timer should have fired at 09/08/2023 03:37:54 but fired at 09/08/2023 03:38:03, which is 00:00:09.0603950 longer than expected
+2023-09-08 10:38:03.649 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.LocalSiloHealthMonitor.] Timer should have fired at 09/08/2023 03:37:55 but fired at 09/08/2023 03:38:03, which is 00:00:08.1463859 longer than expected
+2023-09-08 10:38:03.667 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.ActivationCollector.] Timer should have fired at 09/08/2023 03:37:55 but fired at 09/08/2023 03:38:03, which is 00:00:08.4674893 longer than expected
+2023-09-08 10:38:03.669 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.ActivationWorkingSet.MonitorWorkingSet.] Timer should have fired at 09/08/2023 03:37:49 but fired at 09/08/2023 03:38:03, which is 00:00:14.5100895 longer than expected
+2023-09-08 10:38:03.670 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.IncomingRequestMonitor.] Timer should have fired at 09/08/2023 03:37:49 but fired at 09/08/2023 03:38:03, which is 00:00:14.1414576 longer than expected
+2023-09-08 10:38:03.678 +07:00 [WRN] [Orleans.Runtime.Watchdog.] Watchdog had 1 health Check failure(s) out of 5 health Check participants: "Orleans.Runtime.ActivationCollector failed health check with reason \"ActivationCollector timer should have fired at 9/8/2023 3:37:55 AM, which is 00:00:08.4508050 ago\"."
+2023-09-08 10:38:03.681 +07:00 [WRN] [Orleans.Runtime.MembershipService.LocalSiloHealthMonitor.] Health check participant "Orleans.Runtime.ActivationCollector" is reporting that it is unhealthy with complaint: "ActivationCollector timer should have fired at 9/8/2023 3:37:55 AM, which is 00:00:08.4689020 ago"
+2023-09-08 10:38:03.700 +07:00 [WRN] [Orleans.Runtime.MembershipService.LocalSiloHealthMonitor.] Self-monitoring determined that local health is degraded. Degradation score is 1/8 (lower is better). Complaints: "Health check participant Orleans.Runtime.ActivationCollector is reporting that it is unhealthy with complaint: ActivationCollector timer should have fired at 9/8/2023 3:37:55 AM, which is 00:00:08.4689020 ago"
+2023-09-08 10:38:07.542 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:03.8920250. Total GC Pause duration during that period: 00:00:00. We are now using a total of 34MB memory. gc=3, 3, 3
+2023-09-08 10:38:09.220 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=5, Status=RanToCompletion]" in WorkGroup "[Activation: S10.8.0.10:11126:53148954/balance/gunner001|GSTAR@4a2b45dddc634637b48b35df5722a37d#GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid]" took elapsed time "0:00:20.7390087" for execution, which is longer than 00:00:01. Running on thread "19"
+2023-09-08 10:38:18.383 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:07.1857987. Total GC Pause duration during that period: 00:00:00. We are now using a total of 34MB memory. gc=3, 3, 3
+2023-09-08 10:38:18.384 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.LocalSiloHealthMonitor.] Timer should have fired at 09/08/2023 03:38:13 but fired at 09/08/2023 03:38:18, which is 00:00:04.7350544 longer than expected
+2023-09-08 10:38:18.384 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.IncomingRequestMonitor.] Timer should have fired at 09/08/2023 03:38:13 but fired at 09/08/2023 03:38:18, which is 00:00:04.6083827 longer than expected
+2023-09-08 10:38:18.385 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.ActivationWorkingSet.MonitorWorkingSet.] Timer should have fired at 09/08/2023 03:38:13 but fired at 09/08/2023 03:38:18, which is 00:00:04.6094322 longer than expected
+2023-09-08 10:38:33.087 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.ActivationWorkingSet.MonitorWorkingSet.] Timer should have fired at 09/08/2023 03:38:23 but fired at 09/08/2023 03:38:33, which is 00:00:09.7027269 longer than expected
+2023-09-08 10:38:33.088 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.IncomingRequestMonitor.] Timer should have fired at 09/08/2023 03:38:23 but fired at 09/08/2023 03:38:33, which is 00:00:09.6963125 longer than expected
+2023-09-08 10:38:33.088 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:14.7022716. Total GC Pause duration during that period: 00:00:00. We are now using a total of 34MB memory. gc=3, 3, 3
+2023-09-08 10:38:33.088 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.LocalSiloHealthMonitor.] Timer should have fired at 09/08/2023 03:38:28 but fired at 09/08/2023 03:38:33, which is 00:00:04.7042066 longer than expected
+2023-09-08 10:38:35.753 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=7, Status=RanToCompletion]" in WorkGroup "[Activation: S10.8.0.10:11126:53148954/management/0@9920a7805074474ca91dba55b51e9da8#GrainType=Orleans.Runtime.Management.ManagementGrain,Orleans.Runtime Placement=StatelessWorkerPlacement State=Valid]" took elapsed time "0:00:01.6418435" for execution, which is longer than 00:00:01. Running on thread "25"
+2023-09-08 10:38:39.562 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:02.2542927. Total GC Pause duration during that period: 00:00:00. We are now using a total of 34MB memory. gc=3, 3, 3
+2023-09-08 10:38:42.794 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:03.2312871. Total GC Pause duration during that period: 00:00:00. We are now using a total of 34MB memory. gc=3, 3, 3
+2023-09-08 10:38:42.794 +07:00 [INF] [iZota.Core.Balance.Domain.Services.BalanceService.] BlockMoneyAsync return:True
+2023-09-08 10:38:42.797 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] BlockBalanceRequest return: {"responseStatus":{"errorCode":"00","message":"Success"}}
+2023-09-08 10:38:42.798 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request finished HTTP/1.1 POST http://localhost:6771/api/v1/wallet/block?AccountCode=gunner001&CurrencyCode=GSTAR&BlockAmount=100&TransRef=TEST&TransNote=TEST application/json 2 - 200 - application/json;+charset=utf-8 54332.9087ms
+2023-09-08 10:40:10.690 +07:00 [WRN] [Orleans.Runtime.MembershipService.MembershipTableCleanupAgent.] CleanupDefunctSiloEntries operation is not supported by the current implementation of IMembershipTable. Disabling the timer now.
+2023-09-08 10:52:37.212 +07:00 [INF] [Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.] User profile is available. Using '"C:\Users\letie\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-08 10:52:37.370 +07:00 [INF] [MassTransit.] Configured endpoint "cancel-payment", Consumer: "iZota.Core.Balance.Components.Consumers.CancelPaymentConsumer"
+2023-09-08 10:52:37.510 +07:00 [INF] [Orleans.Runtime.Silo.] Silo starting with GC settings: ServerGC=True GCLatencyMode="Interactive"
+2023-09-08 10:52:37.512 +07:00 [WRN] [Orleans.Runtime.Silo.] A verbose logging level ("Debug") is configured. This will impact performance. The recommended log level is Information.
+2023-09-08 10:52:37.513 +07:00 [INF] [Orleans.Runtime.Silo.] -------------- Initializing silo on host "GUNNER" MachineName "GUNNER" at "10.8.0.10:11126", gen 53149957 --------------
+2023-09-08 10:52:37.514 +07:00 [INF] [Orleans.Runtime.Silo.] Starting silo "Silo_b8007"
+2023-09-08 10:52:37.873 +07:00 [INF] [Orleans.Runtime.Silo.] -------------- Started silo "S10.8.0.10:11126:53149957", ConsistentHashCode "B700EA6E" --------------
+2023-09-08 10:52:38.019 +07:00 [INF] [Quartz.Core.SchedulerSignalerImpl.] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2023-09-08 10:52:38.019 +07:00 [INF] [Quartz.Core.QuartzScheduler.] Quartz Scheduler created
+2023-09-08 10:52:38.020 +07:00 [INF] [Quartz.Core.QuartzScheduler.] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2023-09-08 10:52:38.027 +07:00 [INF] [Quartz.Simpl.RAMJobStore.] RAMJobStore initialized.
+2023-09-08 10:52:38.028 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Quartz Scheduler 3.6.2.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2023-09-08 10:52:38.029 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2023-09-08 10:52:38.029 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2023-09-08 10:52:38.099 +07:00 [INF] [Orleans.Hosting.SiloHostedService.] Starting Orleans Silo.
+2023-09-08 10:52:38.129 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ActivationCountBasedPlacementOptions: 
+ChooseOutOf: 2
+
+2023-09-08 10:52:38.130 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ClusterMembershipOptions: 
+NumMissedTableIAmAliveLimit: 2
+LivenessEnabled: True
+ProbeTimeout: 00:00:05
+TableRefreshTimeout: 00:01:00
+DeathVoteExpirationTimeout: 00:02:00
+IAmAliveTablePublishTimeout: 00:05:00
+MaxJoinAttemptTime: 00:05:00
+UseLivenessGossip: True
+NumProbedSilos: 3
+NumMissedProbesLimit: 3
+NumVotesForDeathDeclaration: 2
+DefunctSiloExpiration: 7.00:00:00
+DefunctSiloCleanupPeriod: 01:00:00
+LocalHealthDegradationMonitoringPeriod: 00:00:10
+ExtendProbeTimeoutDuringDegradation: True
+EnableIndirectProbes: True
+
+2023-09-08 10:52:38.131 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ClusterOptions: 
+ClusterId: zota_balance_dev
+ServiceId: zota_balance_dev
+
+2023-09-08 10:52:38.132 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ConnectionOptions: 
+ProtocolVersion: Version1
+ConnectionsPerEndpoint: 1
+ConnectionRetryDelay: 00:00:01
+OpenConnectionTimeout: 00:00:05
+
+2023-09-08 10:52:38.133 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ConsistentRingOptions: 
+NumVirtualBucketsConsistentRing: 30
+UseVirtualBucketsConsistentRing: True
+
+2023-09-08 10:52:38.133 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.DevelopmentClusterMembershipOptions: 
+PrimarySiloEndpoint: 10.8.0.10:11126
+
+2023-09-08 10:52:38.134 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.EndpointOptions: 
+AdvertisedIPAddress: 10.8.0.10
+SiloPort: 11126
+GatewayPort: 30016
+SiloListeningEndpoint: 
+GatewayListeningEndpoint: 
+
+2023-09-08 10:52:38.135 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainCollectionOptions: 
+CollectionQuantum: 00:01:00
+CollectionAge: 00:15:00
+ActivationTimeout: 00:00:30
+DeactivationTimeout: 00:00:30
+
+2023-09-08 10:52:38.135 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainDirectoryOptions: 
+CachingStrategy: Adaptive
+CacheSize: 1000000
+InitialCacheTTL: 00:00:30
+MaximumCacheTTL: 00:04:00
+CacheTTLExtensionFactor: 2
+LazyDeregistrationDelay: 00:01:00
+
+2023-09-08 10:52:38.136 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainVersioningOptions: 
+DefaultCompatibilityStrategy: BackwardCompatible
+DefaultVersionSelectorStrategy: AllCompatibleVersions
+
+2023-09-08 10:52:38.136 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.LoadSheddingOptions: 
+LoadSheddingEnabled: False
+LoadSheddingLimit: 95
+
+2023-09-08 10:52:38.137 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-balance-grains-storage: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-09-08 10:52:38.138 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-Default: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-09-08 10:52:38.139 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-Default: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-09-08 10:52:38.139 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-SagasStorage: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-09-08 10:52:38.140 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SchedulingOptions: 
+DelayWarningThreshold: 00:00:10
+ActivationSchedulingQuantum: 00:00:00.1000000
+TurnWarningLengthThreshold: 00:00:01
+MaxPendingWorkItemsSoftLimit: 0
+StoppedActivationWarningInterval: 00:01:00
+
+2023-09-08 10:52:38.142 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SiloMessagingOptions: 
+SiloSenderQueues: 0
+GatewaySenderQueues: 0
+MaxForwardCount: 2
+ClientDropTimeout: 00:01:00
+ClientRegistrationRefresh: 00:05:00
+ClientGatewayShutdownNotificationTimeout: 00:00:05
+MaxEnqueuedRequestsSoftLimit: 0
+MaxEnqueuedRequestsHardLimit: 0
+MaxEnqueuedRequestsSoftLimit_StatelessWorker: 0
+MaxEnqueuedRequestsHardLimit_StatelessWorker: 0
+MaxRequestProcessingTime: 02:00:00
+AssumeHomogenousSilosForTesting: False
+ShutdownRerouteTimeout: 00:00:10
+SystemResponseTimeout: 00:30:00
+GrainWorkloadAnalysisPeriod: 00:00:05
+RequestProcessingWarningTime: 00:00:05
+RequestQueueDelayWarningTime: 00:00:10
+WaitForMessageToBeQueuedForOutboundTime: 00:00:02
+ResponseTimeout: 00:30:00
+ResponseTimeoutWithDebugger: 00:30:00
+DropExpiredMessages: True
+MaxMessageHeaderSize: 10485760
+MaxMessageBodySize: 104857600
+
+2023-09-08 10:52:38.143 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SiloOptions: 
+SiloName: Silo_b8007
+
+2023-09-08 10:52:38.154 +07:00 [INF] [Orleans.Runtime.InsideRuntimeClient.] Start InsideRuntimeClient took 1 milliseconds
+2023-09-08 10:52:38.156 +07:00 [INF] [Orleans.Runtime.Silo.] Silo Start()
+2023-09-08 10:52:38.160 +07:00 [INF] [Orleans.Runtime.GrainDirectory.LocalGrainDirectory.] Start
+2023-09-08 10:52:38.161 +07:00 [INF] [Orleans.Runtime.Silo.] "Start local grain directory" took 1 milliseconds to finish
+2023-09-08 10:52:38.172 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipTableManager.] MembershipOracle starting on host "GUNNER" with SiloAddress "S10.8.0.10:11126:53149957" at "2023-09-08 03:52:37.635 GMT"
+2023-09-08 10:52:38.174 +07:00 [INF] [Orleans.Runtime.MembershipService.SystemTargetBasedMembershipTable.] Creating in-memory membership table
+2023-09-08 10:52:38.176 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipTableSystemTarget.] GrainBasedMembershipTable Activated.
+2023-09-08 10:52:38.188 +07:00 [INF] [Orleans.Runtime.Silo.] Grain Service "OrleansDashboard.SiloGrainService" registered successfully.
+2023-09-08 10:52:38.188 +07:00 [INF] [Orleans.Runtime.Silo.] "Init grain services" took 13 milliseconds to finish
+2023-09-08 10:52:38.201 +07:00 [INF] [Orleans.Runtime.Silo.] "Start deployment load collector" took 12 milliseconds to finish
+2023-09-08 10:52:38.202 +07:00 [INF] [Orleans.Runtime.Watchdog.] Starting Silo Watchdog.
+2023-09-08 10:52:38.248 +07:00 [INF] [Orleans.Runtime.MembershipService.SystemTargetBasedMembershipTable.] Connected to membership table provider.
+2023-09-08 10:52:38.257 +07:00 [INF] [MassTransit.] Bus started: rabbitmq://172.16.0.124/zota
+2023-09-08 10:52:38.266 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] Joining
+2023-09-08 10:52:38.287 +07:00 [INF] [Orleans.Storage.MemoryGrainStorage.] Init: Name="Default" NumStorageGrains=10
+2023-09-08 10:52:38.290 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] -BecomeActive
+2023-09-08 10:52:38.298 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] -Finished BecomeActive.
+2023-09-08 10:52:38.304 +07:00 [INF] [Orleans.Runtime.ReminderService.LocalReminderService.] Starting "Orleans.Runtime.ReminderService.LocalReminderService" grain service on: "S10.8.0.10:11126:53149957" x"B700EA6E", with range "<(0 0], Size=x100000000, %Ring=100%>"
+2023-09-08 10:52:38.339 +07:00 [INF] [OrleansDashboard.Dashboard.] Dashboard listening on 8080
+2023-09-08 10:52:38.408 +07:00 [INF] [Orleans.Runtime.ReminderService.ReminderTableGrain.] Activated
+2023-09-08 10:52:38.426 +07:00 [INF] [Orleans.Runtime.ReminderService.LocalReminderService.] My range changed from "<(0 0], Size=x100000000, %Ring=100%>" to "<(0 0], Size=x100000000, %Ring=100%>" increased = True
+2023-09-08 10:52:38.431 +07:00 [INF] [OrleansDashboard.SiloGrainService.] Starting "OrleansDashboard.SiloGrainService" grain service on: "S10.8.0.10:11126:53149957" x"B700EA6E", with range "<(0 0], Size=x100000000, %Ring=100%>"
+2023-09-08 10:52:38.432 +07:00 [INF] [OrleansDashboard.SiloGrainService.] My range changed from "<(0 0], Size=x100000000, %Ring=100%>" to "<(0 0], Size=x100000000, %Ring=100%>" increased = True
+2023-09-08 10:52:38.432 +07:00 [INF] [Orleans.Runtime.Silo.] Grain Service "OrleansDashboard.SiloGrainService" started successfully.
+2023-09-08 10:52:38.434 +07:00 [INF] [Orleans.Hosting.SiloHostedService.] Orleans Silo started.
+2023-09-08 10:52:39.791 +07:00 [INF] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider.] RPC services being provided by "GrpcServices": 19
+2023-09-08 10:52:39.807 +07:00 [INF] [ServiceStack.ServiceStackHost.] Initializing Application "iZOTA_Balance" took 1371.4347ms. No errors detected.
+2023-09-08 10:52:39.831 +07:00 [WRN] [Microsoft.AspNetCore.Server.Kestrel.] Overriding address(es) '"https://localhost:5002, http://localhost:5003"'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2023-09-08 10:52:39.833 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Now listening on: "http://localhost:7771"
+2023-09-08 10:52:39.833 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Now listening on: "http://localhost:6771"
+2023-09-08 10:52:39.835 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Application started. Press Ctrl+C to shut down.
+2023-09-08 10:52:39.835 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Hosting environment: "Development"
+2023-09-08 10:52:39.836 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Content root path: "D:\Source\ZOPOST 2023\iZOTA_core_balance\iZota.Core.Balance.Hosting"
+2023-09-08 10:52:39.840 +07:00 [INF] [Quartz.Core.QuartzScheduler.] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2023-09-08 10:53:07.606 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - -
+2023-09-08 10:53:09.753 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:02.2058597. Total GC Pause duration during that period: 00:00:00. We are now using a total of 13MB memory. gc=5, 5, 4
+2023-09-08 10:53:09.849 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received AccountBalanceCheckRequest: {"accountCode":"gunner001","currencyCode":"GSTAR"}
+2023-09-08 10:53:09.991 +07:00 [INF] [Orleans.Storage.MemoryGrainStorage.] Init: Name="balance-grains-storage" NumStorageGrains=10
+2023-09-08 10:53:10.008 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] On activate: "gunner001|GSTAR"
+2023-09-08 10:53:12.329 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:02.5741515. Total GC Pause duration during that period: 00:00:00. We are now using a total of 15MB memory. gc=5, 5, 4
+2023-09-08 10:53:12.339 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=1, Status=RanToCompletion]" in WorkGroup "[Activation: S10.8.0.10:11126:53149957/balance/gunner001|GSTAR@d3c87c98d8a94daaae0f3fa6bf3459f8#GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid]" took elapsed time "0:00:02.1563602" for execution, which is longer than 00:00:01. Running on thread "23"
+2023-09-08 10:53:12.341 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] AccountBalanceCheckRequest return: 900.000000
+2023-09-08 10:53:12.406 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - - - 200 - application/json;+charset=utf-8 4802.8932ms
+2023-09-08 10:53:29.279 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request starting HTTP/1.1 POST http://localhost:6771/api/v1/wallet/block?AccountCode=gunner001&CurrencyCode=GSTAR&BlockAmount=100&TransRef=TEST&TransNote=TEST application/json 2
+2023-09-08 10:53:29.335 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received BlockBalanceRequest: {"accountCode":"gunner001","currencyCode":"GSTAR","blockAmount":100,"transRef":"TEST","transNote":"TEST","isBlockAllBalance":false}
+2023-09-08 10:53:29.336 +07:00 [INF] [iZota.Core.Balance.Domain.Services.BalanceService.] Received BlockBalanceAsync: {"accountCode":"gunner001","currencyCode":"GSTAR","blockAmount":100,"transRef":"TEST","transNote":"TEST","isBlockAllBalance":false}
+2023-09-08 10:53:31.669 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:03.1626459. Total GC Pause duration during that period: 00:00:00. We are now using a total of 15MB memory. gc=5, 5, 4
+2023-09-08 10:53:42.494 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:10.8226858. Total GC Pause duration during that period: 00:00:00. We are now using a total of 16MB memory. gc=5, 5, 4
+2023-09-08 10:53:42.494 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.PerformGatewayMaintenance.] Timer should have fired at 09/08/2023 03:53:37 but fired at 09/08/2023 03:53:42, which is 00:00:04.6809192 longer than expected
+2023-09-08 10:53:42.494 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.IncomingRequestMonitor.] Timer should have fired at 09/08/2023 03:53:36 but fired at 09/08/2023 03:53:42, which is 00:00:05.8249343 longer than expected
+2023-09-08 10:53:42.494 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.ActivationWorkingSet.MonitorWorkingSet.] Timer should have fired at 09/08/2023 03:53:36 but fired at 09/08/2023 03:53:42, which is 00:00:05.8249490 longer than expected
+2023-09-08 10:53:42.513 +07:00 [WRN] [Orleans.Runtime.Watchdog.] Watchdog had 1 health Check failure(s) out of 5 health Check participants: "Orleans.Runtime.ActivationCollector failed health check with reason \"ActivationCollector timer should have fired at 9/8/2023 3:53:38 AM, which is 00:00:04.3374157 ago\"."
+2023-09-08 10:53:42.516 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.ActivationCollector.] Timer should have fired at 09/08/2023 03:53:38 but fired at 09/08/2023 03:53:42, which is 00:00:04.3370425 longer than expected
+2023-09-08 10:53:42.524 +07:00 [WRN] [Orleans.Runtime.MembershipService.LocalSiloHealthMonitor.] Health check participant "Orleans.Runtime.ActivationCollector" is reporting that it is unhealthy with complaint: "ActivationCollector timer should have fired at 9/8/2023 3:53:38 AM, which is 00:00:04.3370783 ago"
+2023-09-08 10:53:42.525 +07:00 [WRN] [Orleans.Runtime.MembershipService.LocalSiloHealthMonitor.] Self-monitoring determined that local health is degraded. Degradation score is 1/8 (lower is better). Complaints: "Health check participant Orleans.Runtime.ActivationCollector is reporting that it is unhealthy with complaint: ActivationCollector timer should have fired at 9/8/2023 3:53:38 AM, which is 00:00:04.3370783 ago"
+2023-09-08 10:53:43.928 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=2, Status=RanToCompletion]" in WorkGroup "[Activation: S10.8.0.10:11126:53149957/balance/gunner001|GSTAR@d3c87c98d8a94daaae0f3fa6bf3459f8#GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid]" took elapsed time "0:00:12.2431503" for execution, which is longer than 00:00:01. Running on thread "12"
+2023-09-08 10:53:44.654 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] BlockBalance request: "gunner001"-100
+2023-09-08 10:53:44.669 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=3, Status=RanToCompletion]" in WorkGroup "[SystemTarget: S10.8.0.10:11126:53149957/sys.svc.lifecycle/10.8.0.10:11126@53149957@f65d6c1900000000b9d5e13d00000000]" took elapsed time "0:00:02.1438148" for execution, which is longer than 00:00:01. Running on thread "19"
+2023-09-08 10:53:44.735 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] BlockBalanceRequest return: {"responseStatus":{"errorCode":"00","message":"Success"}}
+2023-09-08 10:53:44.738 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request finished HTTP/1.1 POST http://localhost:6771/api/v1/wallet/block?AccountCode=gunner001&CurrencyCode=GSTAR&BlockAmount=100&TransRef=TEST&TransNote=TEST application/json 2 - 200 - application/json;+charset=utf-8 15459.1351ms
+2023-09-08 10:53:53.359 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - -
+2023-09-08 10:53:54.620 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received AccountBalanceCheckRequest: {"accountCode":"gunner001","currencyCode":"GSTAR"}
+2023-09-08 10:53:55.575 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] AccountBalanceCheckRequest return: 800.000000
+2023-09-08 10:53:55.577 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - - - 200 - application/json;+charset=utf-8 2217.7607ms
+2023-09-08 10:54:04.093 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request starting HTTP/1.1 POST http://localhost:6771/api/v1/wallet/block?AccountCode=gunner001&CurrencyCode=GSTAR&BlockAmount=100&TransRef=TEST&TransNote=TEST application/json 2
+2023-09-08 10:54:04.094 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received BlockBalanceRequest: {"accountCode":"gunner001","currencyCode":"GSTAR","blockAmount":100,"transRef":"TEST","transNote":"TEST","isBlockAllBalance":false}
+2023-09-08 10:54:04.095 +07:00 [INF] [iZota.Core.Balance.Domain.Services.BalanceService.] Received BlockBalanceAsync: {"accountCode":"gunner001","currencyCode":"GSTAR","blockAmount":100,"transRef":"TEST","transNote":"TEST","isBlockAllBalance":false}
+2023-09-08 10:54:05.928 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=4, Status=RanToCompletion]" in WorkGroup "[Activation: S10.8.0.10:11126:53149957/balance/gunner001|GSTAR@d3c87c98d8a94daaae0f3fa6bf3459f8#GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid]" took elapsed time "0:00:01.8267274" for execution, which is longer than 00:00:01. Running on thread "8"
+2023-09-08 10:54:13.277 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:05.4312296. Total GC Pause duration during that period: 00:00:00. We are now using a total of 17MB memory. gc=5, 5, 4
+2023-09-08 10:54:13.990 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] BlockBalance request: "gunner001"-100
+2023-09-08 10:54:17.115 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=5, Status=RanToCompletion]" in WorkGroup "[Activation: S10.8.0.10:11126:53149957/balance/gunner001|GSTAR@d3c87c98d8a94daaae0f3fa6bf3459f8#GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid]" took elapsed time "0:00:03.8363066" for execution, which is longer than 00:00:01. Running on thread "15"
+2023-09-08 10:54:21.126 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:02.8408331. Total GC Pause duration during that period: 00:00:00. We are now using a total of 17MB memory. gc=5, 5, 4
+2023-09-08 10:54:23.899 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=7, Status=RanToCompletion]" in WorkGroup "[Activation: S10.8.0.10:11126:53149957/balance/gunner001|GSTAR@d3c87c98d8a94daaae0f3fa6bf3459f8#GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid]" took elapsed time "0:00:06.782927" for execution, which is longer than 00:00:01. Running on thread "15"
+2023-09-08 10:54:24.473 +07:00 [INF] [Orleans.Runtime.InsideRuntimeClient.] Received status update for pending request, Request: "Request [S10.8.0.10:11126:53149957 sys.client/hosted-10.8.0.10:11126@53149957]->[S10.8.0.10:11126:53149957 balance/gunner001|GSTAR] iZota.Core.Balance.Models.Grains.IBalanceGrain[(iZota.Core.Balance.Models.Grains.IBalanceGrain)iZota.Core.Balance.Domain.Grains.BalanceGrain].BlockBalance(100, TEST) #241". Status: "[Activation: S10.8.0.10:11126:53149957/balance/gunner001|GSTAR@d3c87c98d8a94daaae0f3fa6bf3459f8 #GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid NonReentrancyQueueSize=0 NumRunning=1 IdlenessTimeSpan=00:00:12.4060000 CollectionAgeLimit=00:15:00]
+TaskScheduler status: WorkItemGroup:Name=[Activation: S10.8.0.10:11126:53149957/balance/gunner001|GSTAR@d3c87c98d8a94daaae0f3fa6bf3459f8#GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid],WorkGroupStatus=Running. Currently QueuedWorkItems=0; Total Enqueued=21; Total processed=20;  Executing Task Id=7 Status=Running for 00:00:05.2820000.TaskRunner=ActivationTaskScheduler-17:Queued=0; Detailed context=<[Activation: S10.8.0.10:11126:53149957/balance/gunner001|GSTAR@d3c87c98d8a94daaae0f3fa6bf3459f8 #GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid NonReentrancyQueueSize=0 NumRunning=1 IdlenessTimeSpan=00:00:16.7030000 CollectionAgeLimit=00:15:00 CurrentlyExecuting=Request [S10.8.0.10:11126:53149957 sys.client/hosted-10.8.0.10:11126@53149957]->[S10.8.0.10:11126:53149957 balance/gunner001|GSTAR] iZota.Core.Balance.Models.Grains.IBalanceGrain[(iZota.Core.Balance.Models.Grains.IBalanceGrain)iZota.Core.Balance.Domain.Grains.BalanceGrain].BlockBalance(100, TEST) #241]>
+Message Request [S10.8.0.10:11126:53149957 sys.client/hosted-10.8.0.10:11126@53149957]->[S10.8.0.10:11126:53149957 balance/gunner001|GSTAR] iZota.Core.Balance.Models.Grains.IBalanceGrain[(iZota.Core.Balance.Models.Grains.IBalanceGrain)iZota.Core.Balance.Domain.Grains.BalanceGrain].BlockBalance(100, TEST) #241 was enqueued 00:00:05.0160000 ago and has now been executing for 00:00:05.0160000."
+2023-09-08 10:54:25.432 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] BlockBalanceRequest return: {"responseStatus":{"errorCode":"00","message":"Success"}}
+2023-09-08 10:54:25.433 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=9, Status=RanToCompletion]" in WorkGroup "[Activation: S10.8.0.10:11126:53149957/balance/gunner001|GSTAR@d3c87c98d8a94daaae0f3fa6bf3459f8#GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid]" took elapsed time "0:00:01.5332848" for execution, which is longer than 00:00:01. Running on thread "15"
+2023-09-08 10:54:25.433 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request finished HTTP/1.1 POST http://localhost:6771/api/v1/wallet/block?AccountCode=gunner001&CurrencyCode=GSTAR&BlockAmount=100&TransRef=TEST&TransNote=TEST application/json 2 - 200 - application/json;+charset=utf-8 21340.2879ms
+2023-09-08 10:56:36.166 +07:00 [INF] [Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.] User profile is available. Using '"C:\Users\letie\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-08 10:56:36.355 +07:00 [INF] [MassTransit.] Configured endpoint "cancel-payment", Consumer: "iZota.Core.Balance.Components.Consumers.CancelPaymentConsumer"
+2023-09-08 10:56:36.539 +07:00 [INF] [Orleans.Runtime.Silo.] Silo starting with GC settings: ServerGC=True GCLatencyMode="Interactive"
+2023-09-08 10:56:36.541 +07:00 [WRN] [Orleans.Runtime.Silo.] A verbose logging level ("Debug") is configured. This will impact performance. The recommended log level is Information.
+2023-09-08 10:56:36.543 +07:00 [INF] [Orleans.Runtime.Silo.] -------------- Initializing silo on host "GUNNER" MachineName "GUNNER" at "10.8.0.10:11126", gen 53150196 --------------
+2023-09-08 10:56:36.543 +07:00 [INF] [Orleans.Runtime.Silo.] Starting silo "Silo_ab176"
+2023-09-08 10:56:36.945 +07:00 [INF] [Orleans.Runtime.Silo.] -------------- Started silo "S10.8.0.10:11126:53150196", ConsistentHashCode "6AF75ECE" --------------
+2023-09-08 10:56:37.076 +07:00 [INF] [Quartz.Core.SchedulerSignalerImpl.] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2023-09-08 10:56:37.076 +07:00 [INF] [Quartz.Core.QuartzScheduler.] Quartz Scheduler created
+2023-09-08 10:56:37.077 +07:00 [INF] [Quartz.Core.QuartzScheduler.] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2023-09-08 10:56:37.084 +07:00 [INF] [Quartz.Simpl.RAMJobStore.] RAMJobStore initialized.
+2023-09-08 10:56:37.085 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Quartz Scheduler 3.6.2.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2023-09-08 10:56:37.086 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2023-09-08 10:56:37.086 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2023-09-08 10:56:37.158 +07:00 [INF] [Orleans.Hosting.SiloHostedService.] Starting Orleans Silo.
+2023-09-08 10:56:37.187 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ActivationCountBasedPlacementOptions: 
+ChooseOutOf: 2
+
+2023-09-08 10:56:37.189 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ClusterMembershipOptions: 
+NumMissedTableIAmAliveLimit: 2
+LivenessEnabled: True
+ProbeTimeout: 00:00:05
+TableRefreshTimeout: 00:01:00
+DeathVoteExpirationTimeout: 00:02:00
+IAmAliveTablePublishTimeout: 00:05:00
+MaxJoinAttemptTime: 00:05:00
+UseLivenessGossip: True
+NumProbedSilos: 3
+NumMissedProbesLimit: 3
+NumVotesForDeathDeclaration: 2
+DefunctSiloExpiration: 7.00:00:00
+DefunctSiloCleanupPeriod: 01:00:00
+LocalHealthDegradationMonitoringPeriod: 00:00:10
+ExtendProbeTimeoutDuringDegradation: True
+EnableIndirectProbes: True
+
+2023-09-08 10:56:37.190 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ClusterOptions: 
+ClusterId: zota_balance_dev
+ServiceId: zota_balance_dev
+
+2023-09-08 10:56:37.190 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ConnectionOptions: 
+ProtocolVersion: Version1
+ConnectionsPerEndpoint: 1
+ConnectionRetryDelay: 00:00:01
+OpenConnectionTimeout: 00:00:05
+
+2023-09-08 10:56:37.191 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ConsistentRingOptions: 
+NumVirtualBucketsConsistentRing: 30
+UseVirtualBucketsConsistentRing: True
+
+2023-09-08 10:56:37.191 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.DevelopmentClusterMembershipOptions: 
+PrimarySiloEndpoint: 10.8.0.10:11126
+
+2023-09-08 10:56:37.192 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.EndpointOptions: 
+AdvertisedIPAddress: 10.8.0.10
+SiloPort: 11126
+GatewayPort: 30016
+SiloListeningEndpoint: 
+GatewayListeningEndpoint: 
+
+2023-09-08 10:56:37.193 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainCollectionOptions: 
+CollectionQuantum: 00:01:00
+CollectionAge: 00:15:00
+ActivationTimeout: 00:00:30
+DeactivationTimeout: 00:00:30
+
+2023-09-08 10:56:37.193 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainDirectoryOptions: 
+CachingStrategy: Adaptive
+CacheSize: 1000000
+InitialCacheTTL: 00:00:30
+MaximumCacheTTL: 00:04:00
+CacheTTLExtensionFactor: 2
+LazyDeregistrationDelay: 00:01:00
+
+2023-09-08 10:56:37.194 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainVersioningOptions: 
+DefaultCompatibilityStrategy: BackwardCompatible
+DefaultVersionSelectorStrategy: AllCompatibleVersions
+
+2023-09-08 10:56:37.194 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.LoadSheddingOptions: 
+LoadSheddingEnabled: False
+LoadSheddingLimit: 95
+
+2023-09-08 10:56:37.195 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-balance-grains-storage: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-09-08 10:56:37.196 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-Default: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-09-08 10:56:37.196 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-Default: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-09-08 10:56:37.197 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-SagasStorage: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-09-08 10:56:37.198 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SchedulingOptions: 
+DelayWarningThreshold: 00:00:10
+ActivationSchedulingQuantum: 00:00:00.1000000
+TurnWarningLengthThreshold: 00:00:01
+MaxPendingWorkItemsSoftLimit: 0
+StoppedActivationWarningInterval: 00:01:00
+
+2023-09-08 10:56:37.200 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SiloMessagingOptions: 
+SiloSenderQueues: 0
+GatewaySenderQueues: 0
+MaxForwardCount: 2
+ClientDropTimeout: 00:01:00
+ClientRegistrationRefresh: 00:05:00
+ClientGatewayShutdownNotificationTimeout: 00:00:05
+MaxEnqueuedRequestsSoftLimit: 0
+MaxEnqueuedRequestsHardLimit: 0
+MaxEnqueuedRequestsSoftLimit_StatelessWorker: 0
+MaxEnqueuedRequestsHardLimit_StatelessWorker: 0
+MaxRequestProcessingTime: 02:00:00
+AssumeHomogenousSilosForTesting: False
+ShutdownRerouteTimeout: 00:00:10
+SystemResponseTimeout: 00:30:00
+GrainWorkloadAnalysisPeriod: 00:00:05
+RequestProcessingWarningTime: 00:00:05
+RequestQueueDelayWarningTime: 00:00:10
+WaitForMessageToBeQueuedForOutboundTime: 00:00:02
+ResponseTimeout: 00:30:00
+ResponseTimeoutWithDebugger: 00:30:00
+DropExpiredMessages: True
+MaxMessageHeaderSize: 10485760
+MaxMessageBodySize: 104857600
+
+2023-09-08 10:56:37.201 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SiloOptions: 
+SiloName: Silo_ab176
+
+2023-09-08 10:56:37.211 +07:00 [INF] [Orleans.Runtime.InsideRuntimeClient.] Start InsideRuntimeClient took 1 milliseconds
+2023-09-08 10:56:37.214 +07:00 [INF] [Orleans.Runtime.Silo.] Silo Start()
+2023-09-08 10:56:37.218 +07:00 [INF] [Orleans.Runtime.GrainDirectory.LocalGrainDirectory.] Start
+2023-09-08 10:56:37.219 +07:00 [INF] [Orleans.Runtime.Silo.] "Start local grain directory" took 1 milliseconds to finish
+2023-09-08 10:56:37.231 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipTableManager.] MembershipOracle starting on host "GUNNER" with SiloAddress "S10.8.0.10:11126:53150196" at "2023-09-08 03:56:36.675 GMT"
+2023-09-08 10:56:37.233 +07:00 [INF] [Orleans.Runtime.MembershipService.SystemTargetBasedMembershipTable.] Creating in-memory membership table
+2023-09-08 10:56:37.234 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipTableSystemTarget.] GrainBasedMembershipTable Activated.
+2023-09-08 10:56:37.239 +07:00 [INF] [Orleans.Runtime.Silo.] Grain Service "OrleansDashboard.SiloGrainService" registered successfully.
+2023-09-08 10:56:37.240 +07:00 [INF] [Orleans.Runtime.Silo.] "Init grain services" took 6 milliseconds to finish
+2023-09-08 10:56:37.259 +07:00 [INF] [Orleans.Runtime.Silo.] "Start deployment load collector" took 18 milliseconds to finish
+2023-09-08 10:56:37.261 +07:00 [INF] [Orleans.Runtime.Watchdog.] Starting Silo Watchdog.
+2023-09-08 10:56:37.305 +07:00 [INF] [Orleans.Runtime.MembershipService.SystemTargetBasedMembershipTable.] Connected to membership table provider.
+2023-09-08 10:56:37.318 +07:00 [INF] [MassTransit.] Bus started: rabbitmq://172.16.0.124/zota
+2023-09-08 10:56:37.324 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] Joining
+2023-09-08 10:56:37.345 +07:00 [INF] [Orleans.Storage.MemoryGrainStorage.] Init: Name="Default" NumStorageGrains=10
+2023-09-08 10:56:37.348 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] -BecomeActive
+2023-09-08 10:56:37.356 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] -Finished BecomeActive.
+2023-09-08 10:56:37.362 +07:00 [INF] [Orleans.Runtime.ReminderService.LocalReminderService.] Starting "Orleans.Runtime.ReminderService.LocalReminderService" grain service on: "S10.8.0.10:11126:53150196" x"6AF75ECE", with range "<(0 0], Size=x100000000, %Ring=100%>"
+2023-09-08 10:56:37.394 +07:00 [INF] [OrleansDashboard.Dashboard.] Dashboard listening on 8080
+2023-09-08 10:56:37.491 +07:00 [INF] [Orleans.Runtime.ReminderService.ReminderTableGrain.] Activated
+2023-09-08 10:56:37.503 +07:00 [INF] [OrleansDashboard.SiloGrainService.] Starting "OrleansDashboard.SiloGrainService" grain service on: "S10.8.0.10:11126:53150196" x"6AF75ECE", with range "<(0 0], Size=x100000000, %Ring=100%>"
+2023-09-08 10:56:37.505 +07:00 [INF] [Orleans.Runtime.Silo.] Grain Service "OrleansDashboard.SiloGrainService" started successfully.
+2023-09-08 10:56:37.505 +07:00 [INF] [OrleansDashboard.SiloGrainService.] My range changed from "<(0 0], Size=x100000000, %Ring=100%>" to "<(0 0], Size=x100000000, %Ring=100%>" increased = True
+2023-09-08 10:56:37.505 +07:00 [INF] [Orleans.Runtime.ReminderService.LocalReminderService.] My range changed from "<(0 0], Size=x100000000, %Ring=100%>" to "<(0 0], Size=x100000000, %Ring=100%>" increased = True
+2023-09-08 10:56:37.508 +07:00 [INF] [Orleans.Hosting.SiloHostedService.] Orleans Silo started.
+2023-09-08 10:56:38.826 +07:00 [INF] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider.] RPC services being provided by "GrpcServices": 19
+2023-09-08 10:56:38.841 +07:00 [INF] [ServiceStack.ServiceStackHost.] Initializing Application "iZOTA_Balance" took 1330.588ms. No errors detected.
+2023-09-08 10:56:38.865 +07:00 [WRN] [Microsoft.AspNetCore.Server.Kestrel.] Overriding address(es) '"https://localhost:5002, http://localhost:5003"'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2023-09-08 10:56:38.868 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Now listening on: "http://localhost:7771"
+2023-09-08 10:56:38.868 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Now listening on: "http://localhost:6771"
+2023-09-08 10:56:38.870 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Application started. Press Ctrl+C to shut down.
+2023-09-08 10:56:38.870 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Hosting environment: "Development"
+2023-09-08 10:56:38.870 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Content root path: "D:\Source\ZOPOST 2023\iZOTA_core_balance\iZota.Core.Balance.Hosting"
+2023-09-08 10:56:38.874 +07:00 [INF] [Quartz.Core.QuartzScheduler.] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2023-09-08 10:56:41.246 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - -
+2023-09-08 10:56:44.473 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:03.1826858. Total GC Pause duration during that period: 00:00:00. We are now using a total of 26MB memory. gc=3, 3, 3
+2023-09-08 10:56:44.492 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received AccountBalanceCheckRequest: {"accountCode":"gunner001","currencyCode":"GSTAR"}
+2023-09-08 10:56:44.585 +07:00 [INF] [Orleans.Storage.MemoryGrainStorage.] Init: Name="balance-grains-storage" NumStorageGrains=10
+2023-09-08 10:56:44.603 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] On activate: "gunner001|GSTAR"
+2023-09-08 10:56:46.634 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:02.1601043. Total GC Pause duration during that period: 00:00:00. We are now using a total of 28MB memory. gc=3, 3, 3
+2023-09-08 10:56:46.645 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=1, Status=RanToCompletion]" in WorkGroup "[Activation: S10.8.0.10:11126:53150196/balance/gunner001|GSTAR@cc78b3a8163b460492038aecace6eba5#GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid]" took elapsed time "0:00:01.8973034" for execution, which is longer than 00:00:01. Running on thread "15"
+2023-09-08 10:56:46.648 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] AccountBalanceCheckRequest return: 700.000000
+2023-09-08 10:56:46.689 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - - - 200 - application/json;+charset=utf-8 5444.4871ms
+2023-09-08 10:58:07.377 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request starting HTTP/1.1 POST http://localhost:6771/api/v1/wallet/unblock?AccountCode=gunner_001&CurrencyCode=GSTAR&IsUnBlockAllBalance=true application/json 2
+2023-09-08 10:58:07.420 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received UnBlockBalanceRequest: {"accountCode":"gunner_001","currencyCode":"GSTAR","unBlockAmount":0,"isUnBlockAllBalance":true}
+2023-09-08 10:58:07.437 +07:00 [INF] [iZota.Core.Balance.Domain.Services.BalanceService.] Received UnBlockBalanceAsync: {"accountCode":"gunner_001","currencyCode":"GSTAR","unBlockAmount":0,"isUnBlockAllBalance":true}
+2023-09-08 10:58:07.448 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] On activate: "gunner_001|GSTAR"
+2023-09-08 10:58:09.031 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:02.4445411. Total GC Pause duration during that period: 00:00:00. We are now using a total of 30MB memory. gc=3, 3, 3
+2023-09-08 10:58:09.059 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] BlockBalance request: "gunner_001"-0
+2023-09-08 10:58:13.427 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=2, Status=RanToCompletion]" in WorkGroup "[Activation: S10.8.0.10:11126:53150196/balance/gunner_001|GSTAR@e246f7ef959741c5bca7912928bff57c#GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid]" took elapsed time "0:00:05.9218467" for execution, which is longer than 00:00:01. Running on thread "13"
+2023-09-08 10:58:13.435 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] UnBlockBalanceRequest return: {"responseStatus":{"errorCode":"00","message":"Success"}}
+2023-09-08 10:58:13.438 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request finished HTTP/1.1 POST http://localhost:6771/api/v1/wallet/unblock?AccountCode=gunner_001&CurrencyCode=GSTAR&IsUnBlockAllBalance=true application/json 2 - 200 - application/json;+charset=utf-8 6061.5476ms
+2023-09-08 10:58:19.574 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - -
+2023-09-08 10:58:19.576 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received AccountBalanceCheckRequest: {"accountCode":"gunner001","currencyCode":"GSTAR"}
+2023-09-08 10:58:19.581 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] AccountBalanceCheckRequest return: 700.000000
+2023-09-08 10:58:19.582 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - - - 200 - application/json;+charset=utf-8 7.1827ms
+2023-09-08 10:58:20.619 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - -
+2023-09-08 10:58:20.620 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received AccountBalanceCheckRequest: {"accountCode":"gunner001","currencyCode":"GSTAR"}
+2023-09-08 10:58:20.625 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] AccountBalanceCheckRequest return: 700.000000
+2023-09-08 10:58:20.626 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - - - 200 - application/json;+charset=utf-8 6.3343ms
+2023-09-08 10:58:21.099 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - -
+2023-09-08 10:58:21.100 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received AccountBalanceCheckRequest: {"accountCode":"gunner001","currencyCode":"GSTAR"}
+2023-09-08 10:58:21.106 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] AccountBalanceCheckRequest return: 700.000000
+2023-09-08 10:58:21.106 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - - - 200 - application/json;+charset=utf-8 7.0883ms
+2023-09-08 10:58:21.279 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - -
+2023-09-08 10:58:21.279 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received AccountBalanceCheckRequest: {"accountCode":"gunner001","currencyCode":"GSTAR"}
+2023-09-08 10:58:21.287 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] AccountBalanceCheckRequest return: 700.000000
+2023-09-08 10:58:21.287 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - - - 200 - application/json;+charset=utf-8 8.3396ms
+2023-09-08 10:58:21.459 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - -
+2023-09-08 10:58:21.460 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received AccountBalanceCheckRequest: {"accountCode":"gunner001","currencyCode":"GSTAR"}
+2023-09-08 10:58:21.469 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] AccountBalanceCheckRequest return: 700.000000
+2023-09-08 10:58:21.469 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - - - 200 - application/json;+charset=utf-8 10.0416ms
+2023-09-08 10:58:21.632 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - -
+2023-09-08 10:58:21.632 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received AccountBalanceCheckRequest: {"accountCode":"gunner001","currencyCode":"GSTAR"}
+2023-09-08 10:58:21.640 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] AccountBalanceCheckRequest return: 700.000000
+2023-09-08 10:58:21.641 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - - - 200 - application/json;+charset=utf-8 9.0917ms
+2023-09-08 10:58:21.797 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - -
+2023-09-08 10:58:21.798 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received AccountBalanceCheckRequest: {"accountCode":"gunner001","currencyCode":"GSTAR"}
+2023-09-08 10:58:21.806 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] AccountBalanceCheckRequest return: 700.000000
+2023-09-08 10:58:21.806 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - - - 200 - application/json;+charset=utf-8 8.6706ms
+2023-09-08 10:58:27.452 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - -
+2023-09-08 10:58:27.453 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received AccountBalanceCheckRequest: {"accountCode":"gunner001","currencyCode":"GSTAR"}
+2023-09-08 10:58:27.459 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] AccountBalanceCheckRequest return: 700.000000
+2023-09-08 10:58:27.460 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - - - 200 - application/json;+charset=utf-8 7.1054ms
+2023-09-08 10:58:27.632 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - -
+2023-09-08 10:58:27.633 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received AccountBalanceCheckRequest: {"accountCode":"gunner001","currencyCode":"GSTAR"}
+2023-09-08 10:58:27.638 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] AccountBalanceCheckRequest return: 700.000000
+2023-09-08 10:58:27.639 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - - - 200 - application/json;+charset=utf-8 6.3091ms
+2023-09-08 10:58:27.797 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - -
+2023-09-08 10:58:27.798 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received AccountBalanceCheckRequest: {"accountCode":"gunner001","currencyCode":"GSTAR"}
+2023-09-08 10:58:27.803 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] AccountBalanceCheckRequest return: 700.000000
+2023-09-08 10:58:27.803 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - - - 200 - application/json;+charset=utf-8 5.7294ms
+2023-09-08 10:58:27.955 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - -
+2023-09-08 10:58:27.956 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received AccountBalanceCheckRequest: {"accountCode":"gunner001","currencyCode":"GSTAR"}
+2023-09-08 10:58:27.962 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] AccountBalanceCheckRequest return: 700.000000
+2023-09-08 10:58:27.963 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - - - 200 - application/json;+charset=utf-8 7.8377ms
+2023-09-08 10:58:47.014 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request starting HTTP/1.1 POST http://localhost:6771/api/v1/wallet/unblock?AccountCode=gunner_001&CurrencyCode=GSTAR&TransRef=test&TransNote=test&IsUnBlockAllBalance=true application/json 2
+2023-09-08 10:58:47.016 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received UnBlockBalanceRequest: {"accountCode":"gunner_001","currencyCode":"GSTAR","unBlockAmount":0,"transRef":"test","transNote":"test","isUnBlockAllBalance":true}
+2023-09-08 10:58:47.016 +07:00 [INF] [iZota.Core.Balance.Domain.Services.BalanceService.] Received UnBlockBalanceAsync: {"accountCode":"gunner_001","currencyCode":"GSTAR","unBlockAmount":0,"transRef":"test","transNote":"test","isUnBlockAllBalance":true}
+2023-09-08 10:58:50.076 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:03.2986052. Total GC Pause duration during that period: 00:00:00. We are now using a total of 31MB memory. gc=3, 3, 3
+2023-09-08 10:58:50.076 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] BlockBalance request: "gunner_001"-0
+2023-09-08 10:58:50.083 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=3, Status=RanToCompletion]" in WorkGroup "[Activation: S10.8.0.10:11126:53150196/balance/gunner_001|GSTAR@e246f7ef959741c5bca7912928bff57c#GrainType=iZota.Core.Balance.Domain.Grains.BalanceGrain,iZota.Core.Balance.Domain Placement=RandomPlacement State=Valid]" took elapsed time "0:00:03.0597306" for execution, which is longer than 00:00:01. Running on thread "16"
+2023-09-08 10:58:50.093 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] UnBlockBalanceRequest return: {"responseStatus":{"errorCode":"00","message":"Success"}}
+2023-09-08 10:58:50.094 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request finished HTTP/1.1 POST http://localhost:6771/api/v1/wallet/unblock?AccountCode=gunner_001&CurrencyCode=GSTAR&TransRef=test&TransNote=test&IsUnBlockAllBalance=true application/json 2 - 200 - application/json;+charset=utf-8 3080.2716ms
+2023-09-08 10:59:25.415 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request starting HTTP/1.1 POST http://localhost:6771/api/v1/wallet/unblock?AccountCode=gunner_001&CurrencyCode=GSTAR&TransRef=test&TransNote=test&IsUnBlockAllBalance=true application/json 2
+2023-09-08 10:59:25.416 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received UnBlockBalanceRequest: {"accountCode":"gunner_001","currencyCode":"GSTAR","unBlockAmount":0,"transRef":"test","transNote":"test","isUnBlockAllBalance":true}
+2023-09-08 10:59:26.830 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:02.3657020. Total GC Pause duration during that period: 00:00:00. We are now using a total of 32MB memory. gc=3, 3, 3
+2023-09-08 10:59:26.863 +07:00 [INF] [iZota.Core.Balance.Domain.Services.BalanceService.] Received UnBlockBalanceAsync: {"accountCode":"gunner_001","currencyCode":"GSTAR","unBlockAmount":0,"transRef":"test","transNote":"test","isUnBlockAllBalance":true}
+2023-09-08 10:59:35.135 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:06.8809478. Total GC Pause duration during that period: 00:00:00. We are now using a total of 32MB memory. gc=3, 3, 3
+2023-09-08 10:59:35.135 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.LocalSiloHealthMonitor.] Timer should have fired at 09/08/2023 03:59:30 but fired at 09/08/2023 03:59:35, which is 00:00:05.0362002 longer than expected
+2023-09-08 10:59:35.135 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.ActivationWorkingSet.MonitorWorkingSet.] Timer should have fired at 09/08/2023 03:59:30 but fired at 09/08/2023 03:59:35, which is 00:00:04.9423235 longer than expected
+2023-09-08 10:59:35.135 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.IncomingRequestMonitor.] Timer should have fired at 09/08/2023 03:59:31 but fired at 09/08/2023 03:59:35, which is 00:00:03.3046787 longer than expected
+2023-09-08 10:59:42.219 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:07.0829912. Total GC Pause duration during that period: 00:00:00. We are now using a total of 32MB memory. gc=3, 3, 3
+2023-09-08 10:59:42.220 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.ActivationCollector.] Timer should have fired at 09/08/2023 03:59:37 but fired at 09/08/2023 03:59:42, which is 00:00:04.9838582 longer than expected
+2023-09-08 10:59:42.220 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.PerformGatewayMaintenance.] Timer should have fired at 09/08/2023 03:59:36 but fired at 09/08/2023 03:59:42, which is 00:00:05.3218867 longer than expected
+2023-09-08 10:59:44.661 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:02.4402149. Total GC Pause duration during that period: 00:00:00. We are now using a total of 32MB memory. gc=3, 3, 3
+2023-09-08 10:59:48.543 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=6, Status=RanToCompletion]" in WorkGroup "[SystemTarget: S10.8.0.10:11126:53150196/sys.svc.load-publisher/10.8.0.10:11126@53150196@f4b42ed600000000b9a766a800000000]" took elapsed time "0:00:03.3998221" for execution, which is longer than 00:00:01. Running on thread "18"
+2023-09-08 11:03:31.994 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:03:43.9141635. Total GC Pause duration during that period: 00:00:00. We are now using a total of 14MB memory. gc=3, 3, 3
+2023-09-08 11:03:32.017 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.PeriodicallyRefreshMembershipTable.] Timer should have fired at 09/08/2023 03:59:50 but fired at 09/08/2023 04:03:32, which is 00:03:41.1044387 longer than expected
+2023-09-08 11:03:32.039 +07:00 [WRN] [Orleans.Runtime.Watchdog.] Watchdog had 3 health Check failure(s) out of 5 health Check participants: "Orleans.Runtime.ActivationCollector failed health check with reason \"ActivationCollector timer should have fired at 9/8/2023 4:00:42 AM, which is 00:02:49.7970374 ago\". Orleans.Runtime.MembershipService.MembershipAgent failed health check with reason \"UpdateIAmAlive timer should have fired at 9/8/2023 4:01:37 AM, which is 00:01:54.6796792 ago\". Orleans.Runtime.MembershipService.MembershipTableCleanupAgent failed health check with reason \"CleanupDefunctSilos timer should have fired at 9/8/2023 4:02:18 AM, which is 00:01:13.9627227 ago\"."
+2023-09-08 11:03:32.081 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.PerformGatewayMaintenance.] Timer should have fired at 09/08/2023 04:00:42 but fired at 09/08/2023 04:03:32, which is 00:02:49.8608767 longer than expected
+2023-09-08 11:04:16.024 +07:00 [INF] [Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.] User profile is available. Using '"C:\Users\letie\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-08 11:04:16.187 +07:00 [INF] [MassTransit.] Configured endpoint "cancel-payment", Consumer: "iZota.Core.Balance.Components.Consumers.CancelPaymentConsumer"
+2023-09-08 11:04:16.331 +07:00 [INF] [Orleans.Runtime.Silo.] Silo starting with GC settings: ServerGC=True GCLatencyMode="Interactive"
+2023-09-08 11:04:16.332 +07:00 [WRN] [Orleans.Runtime.Silo.] A verbose logging level ("Debug") is configured. This will impact performance. The recommended log level is Information.
+2023-09-08 11:04:16.333 +07:00 [INF] [Orleans.Runtime.Silo.] -------------- Initializing silo on host "GUNNER" MachineName "GUNNER" at "10.8.0.10:11126", gen 53150656 --------------
+2023-09-08 11:04:16.334 +07:00 [INF] [Orleans.Runtime.Silo.] Starting silo "Silo_0a388"
+2023-09-08 11:04:16.706 +07:00 [INF] [Orleans.Runtime.Silo.] -------------- Started silo "S10.8.0.10:11126:53150656", ConsistentHashCode "DD8C212A" --------------
+2023-09-08 11:04:16.841 +07:00 [INF] [Quartz.Core.SchedulerSignalerImpl.] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2023-09-08 11:04:16.842 +07:00 [INF] [Quartz.Core.QuartzScheduler.] Quartz Scheduler created
+2023-09-08 11:04:16.843 +07:00 [INF] [Quartz.Core.QuartzScheduler.] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2023-09-08 11:04:16.876 +07:00 [INF] [Quartz.Simpl.RAMJobStore.] RAMJobStore initialized.
+2023-09-08 11:04:16.877 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Quartz Scheduler 3.6.2.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2023-09-08 11:04:16.877 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2023-09-08 11:04:16.878 +07:00 [INF] [Quartz.Impl.StdSchedulerFactory.] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2023-09-08 11:04:16.921 +07:00 [INF] [Orleans.Hosting.SiloHostedService.] Starting Orleans Silo.
+2023-09-08 11:04:16.959 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ActivationCountBasedPlacementOptions: 
+ChooseOutOf: 2
+
+2023-09-08 11:04:16.961 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ClusterMembershipOptions: 
+NumMissedTableIAmAliveLimit: 2
+LivenessEnabled: True
+ProbeTimeout: 00:00:05
+TableRefreshTimeout: 00:01:00
+DeathVoteExpirationTimeout: 00:02:00
+IAmAliveTablePublishTimeout: 00:05:00
+MaxJoinAttemptTime: 00:05:00
+UseLivenessGossip: True
+NumProbedSilos: 3
+NumMissedProbesLimit: 3
+NumVotesForDeathDeclaration: 2
+DefunctSiloExpiration: 7.00:00:00
+DefunctSiloCleanupPeriod: 01:00:00
+LocalHealthDegradationMonitoringPeriod: 00:00:10
+ExtendProbeTimeoutDuringDegradation: True
+EnableIndirectProbes: True
+
+2023-09-08 11:04:16.962 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ClusterOptions: 
+ClusterId: zota_balance_dev
+ServiceId: zota_balance_dev
+
+2023-09-08 11:04:16.963 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ConnectionOptions: 
+ProtocolVersion: Version1
+ConnectionsPerEndpoint: 1
+ConnectionRetryDelay: 00:00:01
+OpenConnectionTimeout: 00:00:05
+
+2023-09-08 11:04:16.964 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.ConsistentRingOptions: 
+NumVirtualBucketsConsistentRing: 30
+UseVirtualBucketsConsistentRing: True
+
+2023-09-08 11:04:16.964 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.DevelopmentClusterMembershipOptions: 
+PrimarySiloEndpoint: 10.8.0.10:11126
+
+2023-09-08 11:04:16.965 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.EndpointOptions: 
+AdvertisedIPAddress: 10.8.0.10
+SiloPort: 11126
+GatewayPort: 30016
+SiloListeningEndpoint: 
+GatewayListeningEndpoint: 
+
+2023-09-08 11:04:16.966 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainCollectionOptions: 
+CollectionQuantum: 00:01:00
+CollectionAge: 00:15:00
+ActivationTimeout: 00:00:30
+DeactivationTimeout: 00:00:30
+
+2023-09-08 11:04:16.966 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainDirectoryOptions: 
+CachingStrategy: Adaptive
+CacheSize: 1000000
+InitialCacheTTL: 00:00:30
+MaximumCacheTTL: 00:04:00
+CacheTTLExtensionFactor: 2
+LazyDeregistrationDelay: 00:01:00
+
+2023-09-08 11:04:16.967 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.GrainVersioningOptions: 
+DefaultCompatibilityStrategy: BackwardCompatible
+DefaultVersionSelectorStrategy: AllCompatibleVersions
+
+2023-09-08 11:04:16.967 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.LoadSheddingOptions: 
+LoadSheddingEnabled: False
+LoadSheddingLimit: 95
+
+2023-09-08 11:04:16.968 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-balance-grains-storage: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-09-08 11:04:16.969 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-Default: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-09-08 11:04:16.969 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-Default: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-09-08 11:04:16.969 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.MemoryGrainStorageOptions-SagasStorage: 
+NumStorageGrains: 10
+InitStage: 10000
+GrainStorageSerializer: Orleans.Storage.JsonGrainStorageSerializer
+
+2023-09-08 11:04:16.970 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SchedulingOptions: 
+DelayWarningThreshold: 00:00:10
+ActivationSchedulingQuantum: 00:00:00.1000000
+TurnWarningLengthThreshold: 00:00:01
+MaxPendingWorkItemsSoftLimit: 0
+StoppedActivationWarningInterval: 00:01:00
+
+2023-09-08 11:04:16.972 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SiloMessagingOptions: 
+SiloSenderQueues: 0
+GatewaySenderQueues: 0
+MaxForwardCount: 2
+ClientDropTimeout: 00:01:00
+ClientRegistrationRefresh: 00:05:00
+ClientGatewayShutdownNotificationTimeout: 00:00:05
+MaxEnqueuedRequestsSoftLimit: 0
+MaxEnqueuedRequestsHardLimit: 0
+MaxEnqueuedRequestsSoftLimit_StatelessWorker: 0
+MaxEnqueuedRequestsHardLimit_StatelessWorker: 0
+MaxRequestProcessingTime: 02:00:00
+AssumeHomogenousSilosForTesting: False
+ShutdownRerouteTimeout: 00:00:10
+SystemResponseTimeout: 00:30:00
+GrainWorkloadAnalysisPeriod: 00:00:05
+RequestProcessingWarningTime: 00:00:05
+RequestQueueDelayWarningTime: 00:00:10
+WaitForMessageToBeQueuedForOutboundTime: 00:00:02
+ResponseTimeout: 00:30:00
+ResponseTimeoutWithDebugger: 00:30:00
+DropExpiredMessages: True
+MaxMessageHeaderSize: 10485760
+MaxMessageBodySize: 104857600
+
+2023-09-08 11:04:16.973 +07:00 [INF] [Orleans.Runtime.SiloOptionsLogger.] Configuration Orleans.Configuration.SiloOptions: 
+SiloName: Silo_0a388
+
+2023-09-08 11:04:16.983 +07:00 [INF] [Orleans.Runtime.InsideRuntimeClient.] Start InsideRuntimeClient took 1 milliseconds
+2023-09-08 11:04:16.985 +07:00 [INF] [Orleans.Runtime.Silo.] Silo Start()
+2023-09-08 11:04:16.989 +07:00 [INF] [Orleans.Runtime.GrainDirectory.LocalGrainDirectory.] Start
+2023-09-08 11:04:16.991 +07:00 [INF] [Orleans.Runtime.Silo.] "Start local grain directory" took 1 milliseconds to finish
+2023-09-08 11:04:17.003 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipTableManager.] MembershipOracle starting on host "GUNNER" with SiloAddress "S10.8.0.10:11126:53150656" at "2023-09-08 04:04:16.459 GMT"
+2023-09-08 11:04:17.006 +07:00 [INF] [Orleans.Runtime.MembershipService.SystemTargetBasedMembershipTable.] Creating in-memory membership table
+2023-09-08 11:04:17.008 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipTableSystemTarget.] GrainBasedMembershipTable Activated.
+2023-09-08 11:04:17.014 +07:00 [INF] [Orleans.Runtime.Silo.] Grain Service "OrleansDashboard.SiloGrainService" registered successfully.
+2023-09-08 11:04:17.014 +07:00 [INF] [Orleans.Runtime.Silo.] "Init grain services" took 7 milliseconds to finish
+2023-09-08 11:04:17.027 +07:00 [INF] [Orleans.Runtime.Silo.] "Start deployment load collector" took 12 milliseconds to finish
+2023-09-08 11:04:17.028 +07:00 [INF] [Orleans.Runtime.Watchdog.] Starting Silo Watchdog.
+2023-09-08 11:04:17.076 +07:00 [INF] [Orleans.Runtime.MembershipService.SystemTargetBasedMembershipTable.] Connected to membership table provider.
+2023-09-08 11:04:17.088 +07:00 [INF] [MassTransit.] Bus started: rabbitmq://172.16.0.124/zota
+2023-09-08 11:04:17.094 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] Joining
+2023-09-08 11:04:17.116 +07:00 [INF] [Orleans.Storage.MemoryGrainStorage.] Init: Name="Default" NumStorageGrains=10
+2023-09-08 11:04:17.119 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] -BecomeActive
+2023-09-08 11:04:17.128 +07:00 [INF] [Orleans.Runtime.MembershipService.MembershipAgent.] -Finished BecomeActive.
+2023-09-08 11:04:17.133 +07:00 [INF] [Orleans.Runtime.ReminderService.LocalReminderService.] Starting "Orleans.Runtime.ReminderService.LocalReminderService" grain service on: "S10.8.0.10:11126:53150656" x"DD8C212A", with range "<(0 0], Size=x100000000, %Ring=100%>"
+2023-09-08 11:04:17.168 +07:00 [INF] [OrleansDashboard.Dashboard.] Dashboard listening on 8080
+2023-09-08 11:04:17.254 +07:00 [INF] [Orleans.Runtime.ReminderService.ReminderTableGrain.] Activated
+2023-09-08 11:04:17.271 +07:00 [INF] [Orleans.Runtime.ReminderService.LocalReminderService.] My range changed from "<(0 0], Size=x100000000, %Ring=100%>" to "<(0 0], Size=x100000000, %Ring=100%>" increased = True
+2023-09-08 11:04:17.294 +07:00 [INF] [OrleansDashboard.SiloGrainService.] Starting "OrleansDashboard.SiloGrainService" grain service on: "S10.8.0.10:11126:53150656" x"DD8C212A", with range "<(0 0], Size=x100000000, %Ring=100%>"
+2023-09-08 11:04:17.294 +07:00 [INF] [OrleansDashboard.SiloGrainService.] My range changed from "<(0 0], Size=x100000000, %Ring=100%>" to "<(0 0], Size=x100000000, %Ring=100%>" increased = True
+2023-09-08 11:04:17.295 +07:00 [INF] [Orleans.Runtime.Silo.] Grain Service "OrleansDashboard.SiloGrainService" started successfully.
+2023-09-08 11:04:17.297 +07:00 [INF] [Orleans.Hosting.SiloHostedService.] Orleans Silo started.
+2023-09-08 11:04:18.705 +07:00 [INF] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider.] RPC services being provided by "GrpcServices": 19
+2023-09-08 11:04:18.721 +07:00 [INF] [ServiceStack.ServiceStackHost.] Initializing Application "iZOTA_Balance" took 1422.0998ms. No errors detected.
+2023-09-08 11:04:18.746 +07:00 [WRN] [Microsoft.AspNetCore.Server.Kestrel.] Overriding address(es) '"https://localhost:5002, http://localhost:5003"'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2023-09-08 11:04:18.749 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Now listening on: "http://localhost:7771"
+2023-09-08 11:04:18.749 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Now listening on: "http://localhost:6771"
+2023-09-08 11:04:18.751 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Application started. Press Ctrl+C to shut down.
+2023-09-08 11:04:18.751 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Hosting environment: "Development"
+2023-09-08 11:04:18.751 +07:00 [INF] [Microsoft.Hosting.Lifetime.] Content root path: "D:\Source\ZOPOST 2023\iZOTA_core_balance\iZota.Core.Balance.Hosting"
+2023-09-08 11:04:18.756 +07:00 [INF] [Quartz.Core.QuartzScheduler.] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2023-09-08 11:04:18.841 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - -
+2023-09-08 11:04:19.071 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received AccountBalanceCheckRequest: {"accountCode":"gunner001","currencyCode":"GSTAR"}
+2023-09-08 11:04:19.172 +07:00 [INF] [Orleans.Storage.MemoryGrainStorage.] Init: Name="balance-grains-storage" NumStorageGrains=10
+2023-09-08 11:04:19.191 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] On activate: "gunner001|GSTAR"
+2023-09-08 11:04:19.352 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] AccountBalanceCheckRequest return: 700.000000
+2023-09-08 11:04:19.395 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - - - 200 - application/json;+charset=utf-8 555.4752ms
+2023-09-08 11:04:21.609 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - -
+2023-09-08 11:04:21.612 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received AccountBalanceCheckRequest: {"accountCode":"gunner001","currencyCode":"GSTAR"}
+2023-09-08 11:04:21.623 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] AccountBalanceCheckRequest return: 700.000000
+2023-09-08 11:04:21.624 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - - - 200 - application/json;+charset=utf-8 15.5623ms
+2023-09-08 11:04:33.666 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request starting HTTP/1.1 POST http://localhost:6771/api/v1/wallet/unblock?AccountCode=gunner_001&CurrencyCode=GSTAR&UnBlockAmount=100&TransRef=test&TransNote=test&IsUnBlockAllBalance=false application/json 2
+2023-09-08 11:04:33.712 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received UnBlockBalanceRequest: {"accountCode":"gunner_001","currencyCode":"GSTAR","unBlockAmount":100,"transRef":"test","transNote":"test","isUnBlockAllBalance":false}
+2023-09-08 11:04:34.867 +07:00 [INF] [iZota.Core.Balance.Domain.Services.BalanceService.] Received UnBlockBalanceAsync: {"accountCode":"gunner_001","currencyCode":"GSTAR","unBlockAmount":100,"transRef":"test","transNote":"test","isUnBlockAllBalance":false}
+2023-09-08 11:04:37.101 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] On activate: "gunner_001|GSTAR"
+2023-09-08 11:04:43.738 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:04.8879290. Total GC Pause duration during that period: 00:00:00. We are now using a total of 29MB memory. gc=3, 3, 3
+2023-09-08 11:04:44.646 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] UnBlockBalanceRequest return: {"responseStatus":{"errorCode":"01","message":"Không thành công. Số tiền giải phong tỏa lớn hơn số tiền phong tỏa hiện tại"}}
+2023-09-08 11:04:44.646 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=4, Status=RanToCompletion]" in WorkGroup "[Activation: S10.8.0.10:11126:53150656/remindertable/3039@a0069ba9ce2a4098b97abbb7083b455f#GrainType=Orleans.Runtime.ReminderService.ReminderTableGrain,Orleans.Reminders Placement=RandomPlacement State=Valid]" took elapsed time "0:00:01.0971182" for execution, which is longer than 00:00:01. Running on thread "8"
+2023-09-08 11:04:44.646 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=5, Status=RanToCompletion]" in WorkGroup "[SystemTarget: S10.8.0.10:11126:53150656/sys.svc.load-publisher/10.8.0.10:11126@53150656@f4b42ed6000000004b7b248d00000000]" took elapsed time "0:00:01.0971857" for execution, which is longer than 00:00:01. Running on thread "3"
+2023-09-08 11:04:44.646 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=3, Status=RanToCompletion]" in WorkGroup "[SystemTarget: S10.8.0.10:11126:53150656/sys.svc.user.36F5F3BF/10.8.0.10:11126@53150656@b81578bf000000004b7b248d00000000]" took elapsed time "0:00:01.1066377" for execution, which is longer than 00:00:01. Running on thread "14"
+2023-09-08 11:04:44.646 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=2, Status=RanToCompletion]" in WorkGroup "[SystemTarget: S10.8.0.10:11126:53150656/sys.svc.user.95B6CAE6/10.8.0.10:11126@53150656@0d73e76f000000004b7b248d00000000]" took elapsed time "0:00:01.0973271" for execution, which is longer than 00:00:01. Running on thread "18"
+2023-09-08 11:04:44.652 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request finished HTTP/1.1 POST http://localhost:6771/api/v1/wallet/unblock?AccountCode=gunner_001&CurrencyCode=GSTAR&UnBlockAmount=100&TransRef=test&TransNote=test&IsUnBlockAllBalance=false application/json 2 - 200 - application/json;+charset=utf-8 10985.9984ms
+2023-09-08 11:04:48.770 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request starting HTTP/1.1 POST http://localhost:6771/api/v1/wallet/unblock?AccountCode=gunner_001&CurrencyCode=GSTAR&UnBlockAmount=100&TransRef=test&TransNote=test&IsUnBlockAllBalance=true application/json 2
+2023-09-08 11:04:48.772 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received UnBlockBalanceRequest: {"accountCode":"gunner_001","currencyCode":"GSTAR","unBlockAmount":100,"transRef":"test","transNote":"test","isUnBlockAllBalance":true}
+2023-09-08 11:04:49.516 +07:00 [INF] [iZota.Core.Balance.Domain.Services.BalanceService.] Received UnBlockBalanceAsync: {"accountCode":"gunner_001","currencyCode":"GSTAR","unBlockAmount":100,"transRef":"test","transNote":"test","isUnBlockAllBalance":true}
+2023-09-08 11:05:05.418 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:12.1699699. Total GC Pause duration during that period: 00:00:00. We are now using a total of 29MB memory. gc=3, 3, 3
+2023-09-08 11:05:05.419 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.ActivationWorkingSet.MonitorWorkingSet.] Timer should have fired at 09/08/2023 04:04:53 but fired at 09/08/2023 04:05:05, which is 00:00:11.6669399 longer than expected
+2023-09-08 11:05:05.419 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.LocalSiloHealthMonitor.] Timer should have fired at 09/08/2023 04:04:57 but fired at 09/08/2023 04:05:05, which is 00:00:07.6518464 longer than expected
+2023-09-08 11:05:05.419 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.IncomingRequestMonitor.] Timer should have fired at 09/08/2023 04:04:53 but fired at 09/08/2023 04:05:05, which is 00:00:11.6670380 longer than expected
+2023-09-08 11:05:05.422 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=9, Status=RanToCompletion]" in WorkGroup "[SystemTarget: S10.8.0.10:11126:53150656/sys.svc.user.95B6CAE6/10.8.0.10:11126@53150656@0d73e76f000000004b7b248d00000000]" took elapsed time "0:00:12.1730447" for execution, which is longer than 00:00:01. Running on thread "11"
+2023-09-08 11:05:05.422 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=8, Status=RanToCompletion]" in WorkGroup "[SystemTarget: S10.8.0.10:11126:53150656/sys.svc.load-publisher/10.8.0.10:11126@53150656@f4b42ed6000000004b7b248d00000000]" took elapsed time "0:00:12.1728208" for execution, which is longer than 00:00:01. Running on thread "16"
+2023-09-08 11:05:05.430 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] UnBlockBalance request: "gunner_001"-0.000000
+2023-09-08 11:05:05.467 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] UnBlockBalanceRequest return: {"responseStatus":{"errorCode":"00","message":"Success"}}
+2023-09-08 11:05:05.468 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request finished HTTP/1.1 POST http://localhost:6771/api/v1/wallet/unblock?AccountCode=gunner_001&CurrencyCode=GSTAR&UnBlockAmount=100&TransRef=test&TransNote=test&IsUnBlockAllBalance=true application/json 2 - 200 - application/json;+charset=utf-8 16697.1675ms
+2023-09-08 11:05:06.951 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request starting HTTP/1.1 POST http://localhost:6771/api/v1/wallet/unblock?AccountCode=gunner_001&CurrencyCode=GSTAR&UnBlockAmount=100&TransRef=test&TransNote=test&IsUnBlockAllBalance=true application/json 2
+2023-09-08 11:05:06.952 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received UnBlockBalanceRequest: {"accountCode":"gunner_001","currencyCode":"GSTAR","unBlockAmount":100,"transRef":"test","transNote":"test","isUnBlockAllBalance":true}
+2023-09-08 11:05:07.927 +07:00 [INF] [iZota.Core.Balance.Domain.Services.BalanceService.] Received UnBlockBalanceAsync: {"accountCode":"gunner_001","currencyCode":"GSTAR","unBlockAmount":100,"transRef":"test","transNote":"test","isUnBlockAllBalance":true}
+2023-09-08 11:05:13.865 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:02.6217978. Total GC Pause duration during that period: 00:00:00. We are now using a total of 30MB memory. gc=3, 3, 3
+2023-09-08 11:05:13.912 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=11, Status=RanToCompletion]" in WorkGroup "[Activation: S10.8.0.10:11126:53150656/management/0@74a9caf1fde341ee8e42edd4ace54b51#GrainType=Orleans.Runtime.Management.ManagementGrain,Orleans.Runtime Placement=StatelessWorkerPlacement State=Valid]" took elapsed time "0:00:02.6662341" for execution, which is longer than 00:00:01. Running on thread "12"
+2023-09-08 11:05:19.751 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:05.8845772. Total GC Pause duration during that period: 00:00:00. We are now using a total of 30MB memory. gc=3, 3, 3
+2023-09-08 11:05:19.752 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.IncomingRequestMonitor.] Timer should have fired at 09/08/2023 04:05:16 but fired at 09/08/2023 04:05:19, which is 00:00:03.5076675 longer than expected
+2023-09-08 11:05:19.752 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.LocalSiloHealthMonitor.] Timer should have fired at 09/08/2023 04:05:15 but fired at 09/08/2023 04:05:19, which is 00:00:04.3334778 longer than expected
+2023-09-08 11:05:19.753 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.ActivationWorkingSet.MonitorWorkingSet.] Timer should have fired at 09/08/2023 04:05:16 but fired at 09/08/2023 04:05:19, which is 00:00:03.5093151 longer than expected
+2023-09-08 11:05:19.753 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.PerformGatewayMaintenance.] Timer should have fired at 09/08/2023 04:05:16 but fired at 09/08/2023 04:05:19, which is 00:00:03.1110152 longer than expected
+2023-09-08 11:05:35.569 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:15.8140182. Total GC Pause duration during that period: 00:00:00. We are now using a total of 30MB memory. gc=3, 3, 3
+2023-09-08 11:05:35.569 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.LocalSiloHealthMonitor.] Timer should have fired at 09/08/2023 04:05:29 but fired at 09/08/2023 04:05:35, which is 00:00:05.8169149 longer than expected
+2023-09-08 11:05:35.569 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.ActivationWorkingSet.MonitorWorkingSet.] Timer should have fired at 09/08/2023 04:05:24 but fired at 09/08/2023 04:05:35, which is 00:00:10.8161835 longer than expected
+2023-09-08 11:05:35.569 +07:00 [WRN] [Orleans.Runtime.AsyncTimer.IncomingRequestMonitor.] Timer should have fired at 09/08/2023 04:05:24 but fired at 09/08/2023 04:05:35, which is 00:00:10.7852732 longer than expected
+2023-09-08 11:05:35.574 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] UnBlockBalance request: "gunner_001"-0.000000
+2023-09-08 11:05:35.584 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] UnBlockBalanceRequest return: {"responseStatus":{"errorCode":"00","message":"Success"}}
+2023-09-08 11:05:35.585 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request finished HTTP/1.1 POST http://localhost:6771/api/v1/wallet/unblock?AccountCode=gunner_001&CurrencyCode=GSTAR&UnBlockAmount=100&TransRef=test&TransNote=test&IsUnBlockAllBalance=true application/json 2 - 200 - application/json;+charset=utf-8 28633.8126ms
+2023-09-08 11:05:35.587 +07:00 [WRN] [Orleans.Runtime.Scheduler.WorkItemGroup.] Task "[Id=13, Status=RanToCompletion]" in WorkGroup "[SystemTarget: S10.8.0.10:11126:53150656/sys.svc.lifecycle/10.8.0.10:11126@53150656@f65d6c19000000004b7b248d00000000]" took elapsed time "0:00:15.8346315" for execution, which is longer than 00:00:01. Running on thread "9"
+2023-09-08 11:05:45.599 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request starting HTTP/1.1 POST http://localhost:6771/api/v1/wallet/unblock?AccountCode=gunner001&CurrencyCode=GSTAR&UnBlockAmount=100&TransRef=test&TransNote=test&IsUnBlockAllBalance=false application/json 2
+2023-09-08 11:05:45.601 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received UnBlockBalanceRequest: {"accountCode":"gunner001","currencyCode":"GSTAR","unBlockAmount":100,"transRef":"test","transNote":"test","isUnBlockAllBalance":false}
+2023-09-08 11:05:46.717 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:02.0835614. Total GC Pause duration during that period: 00:00:00. We are now using a total of 30MB memory. gc=3, 3, 3
+2023-09-08 11:05:46.747 +07:00 [INF] [iZota.Core.Balance.Domain.Services.BalanceService.] Received UnBlockBalanceAsync: {"accountCode":"gunner001","currencyCode":"GSTAR","unBlockAmount":100,"transRef":"test","transNote":"test","isUnBlockAllBalance":false}
+2023-09-08 11:05:57.296 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:04.0627933. Total GC Pause duration during that period: 00:00:00. We are now using a total of 31MB memory. gc=3, 3, 3
+2023-09-08 11:05:59.932 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:02.6342755. Total GC Pause duration during that period: 00:00:00. We are now using a total of 31MB memory. gc=3, 3, 3
+2023-09-08 11:06:01.492 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] UnBlockBalance request: "gunner001"-100
+2023-09-08 11:06:01.500 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] UnBlockBalanceRequest return: {"responseStatus":{"errorCode":"00","message":"Success"}}
+2023-09-08 11:06:01.500 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request finished HTTP/1.1 POST http://localhost:6771/api/v1/wallet/unblock?AccountCode=gunner001&CurrencyCode=GSTAR&UnBlockAmount=100&TransRef=test&TransNote=test&IsUnBlockAllBalance=false application/json 2 - 200 - application/json;+charset=utf-8 15901.0232ms
+2023-09-08 11:06:04.176 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - -
+2023-09-08 11:06:04.177 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received AccountBalanceCheckRequest: {"accountCode":"gunner001","currencyCode":"GSTAR"}
+2023-09-08 11:06:04.182 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] AccountBalanceCheckRequest return: 800.000000
+2023-09-08 11:06:04.182 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - - - 200 - application/json;+charset=utf-8 6.0782ms
+2023-09-08 11:06:08.460 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request starting HTTP/1.1 POST http://localhost:6771/api/v1/wallet/unblock?AccountCode=gunner001&CurrencyCode=GSTAR&UnBlockAmount=100&TransRef=test&TransNote=test&IsUnBlockAllBalance=true application/json 2
+2023-09-08 11:06:08.461 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received UnBlockBalanceRequest: {"accountCode":"gunner001","currencyCode":"GSTAR","unBlockAmount":100,"transRef":"test","transNote":"test","isUnBlockAllBalance":true}
+2023-09-08 11:06:09.187 +07:00 [INF] [iZota.Core.Balance.Domain.Services.BalanceService.] Received UnBlockBalanceAsync: {"accountCode":"gunner001","currencyCode":"GSTAR","unBlockAmount":100,"transRef":"test","transNote":"test","isUnBlockAllBalance":true}
+2023-09-08 11:06:18.012 +07:00 [WRN] [Orleans.Runtime.Watchdog.] .NET Runtime Platform stalled for 00:00:04.1575237. Total GC Pause duration during that period: 00:00:00. We are now using a total of 31MB memory. gc=3, 3, 3
+2023-09-08 11:06:20.118 +07:00 [INF] [iZota.Core.Balance.Domain.Grains.BalanceGrain.] UnBlockBalance request: "gunner001"-200.000000
+2023-09-08 11:06:21.484 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] UnBlockBalanceRequest return: {"responseStatus":{"errorCode":"00","message":"Success"}}
+2023-09-08 11:06:21.487 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.POST] Request finished HTTP/1.1 POST http://localhost:6771/api/v1/wallet/unblock?AccountCode=gunner001&CurrencyCode=GSTAR&UnBlockAmount=100&TransRef=test&TransNote=test&IsUnBlockAllBalance=true application/json 2 - 200 - application/json;+charset=utf-8 13026.8707ms
+2023-09-08 11:06:25.995 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request starting HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - -
+2023-09-08 11:06:25.995 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] Received AccountBalanceCheckRequest: {"accountCode":"gunner001","currencyCode":"GSTAR"}
+2023-09-08 11:06:26.016 +07:00 [INF] [iZota.Core.Balance.Components.Services.MainService.] AccountBalanceCheckRequest return: 1000.000000
+2023-09-08 11:06:26.016 +07:00 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics.GET] Request finished HTTP/1.1 GET http://localhost:6771/api/v1/wallet/check?AccountCode=gunner001&CurrencyCode=GSTAR - - - 200 - application/json;+charset=utf-8 21.3721ms

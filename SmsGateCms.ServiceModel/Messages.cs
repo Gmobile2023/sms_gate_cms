@@ -25,7 +25,6 @@ public class Message : AuditBase
     [Ref(Model = nameof(Partner), RefId = nameof(Partner.Id), RefLabel = nameof(Partner.PartnerCode))]
     [References(typeof(Partner))]
     public int PartnerId { get; set; }
-
     [Reference] public Partner Partner { get; set; }
 
     [Ref(Model = nameof(Provider), RefId = nameof(Provider.Id), RefLabel = nameof(Provider.ProviderCode))]

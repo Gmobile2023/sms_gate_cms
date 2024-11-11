@@ -9,6 +9,8 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.*" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.*" />
+    <PackageReference Include="Microsoft.Orleans.Core.Abstractions" Version="8.2.0" />
+    <PackageReference Include="Microsoft.Orleans.Runtime" Version="8.2.0" />
     <PackageReference Include="ServiceStack" Version="8.*" />
     <PackageReference Include="ServiceStack.Ormlite" Version="8.*" />
   </ItemGroup>

@@ -3,17 +3,32 @@ using Microsoft.AspNetCore.Mvc;
 using SmsGateCms.Models;
 using Microsoft.AspNetCore.Authorization;
 using ServiceStack.Mvc;
+using SmsGateCms.ServiceInterface.BalanceGrain;
 
 namespace SmsGateCms.Controllers;
 
 public class HomeController : ServiceStackController
 {
+    private readonly IGrainFactory _grainFactory;
+
+    public HomeController(IGrainFactory grainFactory)
+    {
+        _grainFactory = grainFactory;
+    }
+
     [HttpGet]
     public IActionResult Index() => View();
 
     [HttpGet]
     [Authorize]
-    public IActionResult Bookings() => View();
+    public async Task<IActionResult> Bookings()
+    {
+        var grain = _grainFactory.GetGrain<ICustomerBalanceGrain>(111 + "|" + "VND");
+        decimal amount = 10000;
+        await grain.DepositAsync(amount);
+
+        return View();
+    }
 
 
     [HttpGet]
@@ -28,7 +43,7 @@ public class HomeController : ServiceStackController
     [HttpGet]
     [Authorize]
     public IActionResult MessageTemplates() => View();
-    
+
     [HttpGet]
     [Authorize]
     public IActionResult Messages() => View();

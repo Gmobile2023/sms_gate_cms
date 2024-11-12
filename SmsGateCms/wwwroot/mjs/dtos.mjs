@@ -1,6 +1,6 @@
 /* Options:
-Date: 2023-11-16 13:19:05
-Version: 8.0
+Date: 2024-11-09 11:20:16
+Version: 8.40
 Tip: To override a DTO option, remove "//" prefix before updating
 BaseUrl: https://localhost:5001
 
@@ -13,21 +13,6 @@ BaseUrl: https://localhost:5001
 */
 
 "use strict";
-/** @typedef {'Mr'|'Mrs'|'Miss'} */
-export var Title;
-(function (Title) {
-    Title["Mr"] = "Mr"
-    Title["Mrs"] = "Mrs"
-    Title["Miss"] = "Miss"
-})(Title || (Title = {}));
-/** @typedef {'Action'|'Adventure'|'Comedy'|'Drama'} */
-export var FilmGenre;
-(function (FilmGenre) {
-    FilmGenre["Action"] = "Action"
-    FilmGenre["Adventure"] = "Adventure"
-    FilmGenre["Comedy"] = "Comedy"
-    FilmGenre["Drama"] = "Drama"
-})(FilmGenre || (FilmGenre = {}));
 export class QueryBase {
     /** @param {{skip?:number,take?:number,orderBy?:string,orderByDesc?:string,include?:string,fields?:string,meta?:{ [index: string]: string; }}} [init] */
     constructor(init) { Object.assign(this, init) }
@@ -114,23 +99,143 @@ export class Booking extends AuditBase {
     /** @type {?boolean} */
     cancelled;
 }
-export class Contact {
-    /** @param {{id?:number,userAuthId?:string,title?:Title,name?:string,color?:string,favoriteGenre?:FilmGenre,age?:number}} [init] */
-    constructor(init) { Object.assign(this, init) }
+/** @typedef {'Initial'|'Sent'|'Delivered'|'Failed'} */
+export var MessageStatus;
+(function (MessageStatus) {
+    MessageStatus["Initial"] = "Initial"
+    MessageStatus["Sent"] = "Sent"
+    MessageStatus["Delivered"] = "Delivered"
+    MessageStatus["Failed"] = "Failed"
+})(MessageStatus || (MessageStatus = {}));
+/** @typedef {'Initial'|'Active'|'Cancel'|'Locked'} */
+export var MessageTemplateStatus;
+(function (MessageTemplateStatus) {
+    MessageTemplateStatus["Initial"] = "Initial"
+    MessageTemplateStatus["Active"] = "Active"
+    MessageTemplateStatus["Cancel"] = "Cancel"
+    MessageTemplateStatus["Locked"] = "Locked"
+})(MessageTemplateStatus || (MessageTemplateStatus = {}));
+/** @typedef {'Inactive'|'Active'} */
+export var PartnerStatus;
+(function (PartnerStatus) {
+    PartnerStatus["Inactive"] = "Inactive"
+    PartnerStatus["Active"] = "Active"
+})(PartnerStatus || (PartnerStatus = {}));
+export class Partner extends AuditBase {
+    /** @param {{id?:number,partnerCode?:string,partnerName?:string,emailAddress?:string,phoneNumber?:string,apiKey?:string,userName?:string,password?:string,ips?:string,status?:PartnerStatus,createdDate?:string,createdBy?:string,modifiedDate?:string,modifiedBy?:string,deletedDate?:string,deletedBy?:string}} [init] */
+    constructor(init) { super(init); Object.assign(this, init) }
     /** @type {number} */
     id;
     /** @type {string} */
-    userAuthId;
-    /** @type {Title} */
-    title;
-    /** @type {?string} */
-    name;
-    /** @type {?string} */
-    color;
-    /** @type {?FilmGenre} */
-    favoriteGenre;
+    partnerCode;
+    /** @type {string} */
+    partnerName;
+    /** @type {string} */
+    emailAddress;
+    /** @type {string} */
+    phoneNumber;
+    /** @type {string} */
+    apiKey;
+    /** @type {string} */
+    userName;
+    /** @type {string} */
+    password;
+    /** @type {string} */
+    ips;
+    /** @type {PartnerStatus} */
+    status;
+}
+export class MessageTemplate extends AuditBase {
+    /** @param {{id?:number,content?:string,status?:MessageTemplateStatus,partnerId?:number,partnerName?:Partner,createdDate?:string,createdBy?:string,modifiedDate?:string,modifiedBy?:string,deletedDate?:string,deletedBy?:string}} [init] */
+    constructor(init) { super(init); Object.assign(this, init) }
     /** @type {number} */
-    age;
+    id;
+    /** @type {string} */
+    content;
+    /** @type {MessageTemplateStatus} */
+    status;
+    /** @type {number} */
+    partnerId;
+    /** @type {Partner} */
+    partnerName;
+}
+/** @typedef {'Inactive'|'Active'} */
+export var ProviderStatus;
+(function (ProviderStatus) {
+    ProviderStatus["Inactive"] = "Inactive"
+    ProviderStatus["Active"] = "Active"
+})(ProviderStatus || (ProviderStatus = {}));
+export class Provider extends AuditBase {
+    /** @param {{id?:number,providerCode?:string,providerName?:string,emailAddress?:string,phoneNumber?:string,apiKey?:string,userName?:string,password?:string,apiUrl?:string,status?:ProviderStatus,createdDate?:string,createdBy?:string,modifiedDate?:string,modifiedBy?:string,deletedDate?:string,deletedBy?:string}} [init] */
+    constructor(init) { super(init); Object.assign(this, init) }
+    /** @type {number} */
+    id;
+    /** @type {string} */
+    providerCode;
+    /** @type {string} */
+    providerName;
+    /** @type {string} */
+    emailAddress;
+    /** @type {string} */
+    phoneNumber;
+    /** @type {string} */
+    apiKey;
+    /** @type {string} */
+    userName;
+    /** @type {string} */
+    password;
+    /** @type {string} */
+    apiUrl;
+    /** @type {ProviderStatus} */
+    status;
+}
+export class Message extends AuditBase {
+    /** @param {{id?:number,sms?:string,status?:MessageStatus,receiver?:string,messageTemplate?:MessageTemplate,messageTemplateId?:number,partnerId?:number,partner?:Partner,providerId?:number,provider?:Provider,requestDate?:string,sentDate?:string,responseDate?:string,telco?:string,responseMassage?:string,messageId?:string,createdDate?:string,createdBy?:string,modifiedDate?:string,modifiedBy?:string,deletedDate?:string,deletedBy?:string}} [init] */
+    constructor(init) { super(init); Object.assign(this, init) }
+    /** @type {number} */
+    id;
+    /** @type {string} */
+    sms;
+    /** @type {MessageStatus} */
+    status;
+    /** @type {string} */
+    receiver;
+    /** @type {MessageTemplate} */
+    messageTemplate;
+    /** @type {number} */
+    messageTemplateId;
+    /** @type {number} */
+    partnerId;
+    /** @type {Partner} */
+    partner;
+    /** @type {number} */
+    providerId;
+    /** @type {Provider} */
+    provider;
+    /** @type {string} */
+    requestDate;
+    /** @type {?string} */
+    sentDate;
+    /** @type {?string} */
+    responseDate;
+    /** @type {string} */
+    telco;
+    /** @type {string} */
+    responseMassage;
+    /** @type {string} */
+    messageId;
+}
+export class MessageTemplateDetail {
+    /** @param {{id?:number,messageTemplateId?:number,messageTemplate?:MessageTemplate,content?:string}} [init] */
+    constructor(init) { Object.assign(this, init) }
+    /** @type {number} */
+    id;
+    /** @type {number} */
+    messageTemplateId;
+    /** @type {MessageTemplate} */
+    messageTemplate;
+    /** @type {string} */
+    content;
 }
 export class ResponseError {
     /** @param {{errorCode?:string,fieldName?:string,message?:string,meta?:{ [index: string]: string; }}} [init] */
@@ -158,54 +263,14 @@ export class ResponseStatus {
     /** @type {{ [index: string]: string; }} */
     meta;
 }
-export class GetContactsResponse {
-    /** @param {{results?:Contact[],responseStatus?:ResponseStatus}} [init] */
-    constructor(init) { Object.assign(this, init) }
-    /** @type {Contact[]} */
-    results;
-    /** @type {?ResponseStatus} */
-    responseStatus;
-}
-export class CreateContactResponse {
-    /** @param {{result?:Contact,responseStatus?:ResponseStatus}} [init] */
-    constructor(init) { Object.assign(this, init) }
-    /** @type {?Contact} */
-    result;
-    /** @type {?ResponseStatus} */
-    responseStatus;
-}
-export class UpdateContactResponse {
-    /** @param {{responseStatus?:ResponseStatus}} [init] */
-    constructor(init) { Object.assign(this, init) }
-    /** @type {?ResponseStatus} */
-    responseStatus;
-}
 export class HelloResponse {
     /** @param {{result?:string}} [init] */
     constructor(init) { Object.assign(this, init) }
     /** @type {string} */
     result;
 }
-export class RequiresAuthResponse {
-    /** @param {{result?:string}} [init] */
-    constructor(init) { Object.assign(this, init) }
-    /** @type {string} */
-    result;
-}
-export class RequiresRoleResponse {
-    /** @param {{result?:string}} [init] */
-    constructor(init) { Object.assign(this, init) }
-    /** @type {string} */
-    result;
-}
-export class RequiresAdminResponse {
-    /** @param {{result?:string}} [init] */
-    constructor(init) { Object.assign(this, init) }
-    /** @type {string} */
-    result;
-}
 export class AuthenticateResponse {
-    /** @param {{userId?:string,sessionId?:string,userName?:string,displayName?:string,referrerUrl?:string,bearerToken?:string,refreshToken?:string,profileUrl?:string,roles?:string[],permissions?:string[],responseStatus?:ResponseStatus,meta?:{ [index: string]: string; }}} [init] */
+    /** @param {{userId?:string,sessionId?:string,userName?:string,displayName?:string,referrerUrl?:string,bearerToken?:string,refreshToken?:string,refreshTokenExpiry?:string,profileUrl?:string,roles?:string[],permissions?:string[],responseStatus?:ResponseStatus,meta?:{ [index: string]: string; }}} [init] */
     constructor(init) { Object.assign(this, init) }
     /** @type {string} */
     userId;
@@ -221,6 +286,8 @@ export class AuthenticateResponse {
     bearerToken;
     /** @type {string} */
     refreshToken;
+    /** @type {?string} */
+    refreshTokenExpiry;
     /** @type {string} */
     profileUrl;
     /** @type {string[]} */
@@ -255,62 +322,6 @@ export class IdResponse {
     /** @type {ResponseStatus} */
     responseStatus;
 }
-export class GetContacts {
-    /** @param {{id?:number}} [init] */
-    constructor(init) { Object.assign(this, init) }
-    /** @type {?number} */
-    id;
-    getTypeName() { return 'GetContacts' }
-    getMethod() { return 'GET' }
-    createResponse() { return new GetContactsResponse() }
-}
-export class CreateContact {
-    /** @param {{title?:Title,name?:string,color?:string,favoriteGenre?:FilmGenre,age?:number,agree?:boolean}} [init] */
-    constructor(init) { Object.assign(this, init) }
-    /** @type {Title} */
-    title;
-    /** @type {string} */
-    name;
-    /** @type {?string} */
-    color;
-    /** @type {FilmGenre} */
-    favoriteGenre;
-    /** @type {number} */
-    age;
-    /** @type {boolean} */
-    agree;
-    getTypeName() { return 'CreateContact' }
-    getMethod() { return 'POST' }
-    createResponse() { return new CreateContactResponse() }
-}
-export class DeleteContact {
-    /** @param {{id?:number}} [init] */
-    constructor(init) { Object.assign(this, init) }
-    /** @type {number} */
-    id;
-    getTypeName() { return 'DeleteContact' }
-    getMethod() { return 'DELETE' }
-    createResponse() { }
-}
-export class UpdateContact {
-    /** @param {{id?:number,title?:Title,name?:string,color?:string,favoriteGenre?:FilmGenre,age?:number}} [init] */
-    constructor(init) { Object.assign(this, init) }
-    /** @type {number} */
-    id;
-    /** @type {?Title} */
-    title;
-    /** @type {?string} */
-    name;
-    /** @type {?string} */
-    color;
-    /** @type {?FilmGenre} */
-    favoriteGenre;
-    /** @type {?number} */
-    age;
-    getTypeName() { return 'UpdateContact' }
-    getMethod() { return 'PUT' }
-    createResponse() { return new UpdateContactResponse() }
-}
 export class Hello {
     /** @param {{name?:string}} [init] */
     constructor(init) { Object.assign(this, init) }
@@ -320,46 +331,13 @@ export class Hello {
     getMethod() { return 'POST' }
     createResponse() { return new HelloResponse() }
 }
-export class RequiresAuth {
-    /** @param {{name?:string}} [init] */
-    constructor(init) { Object.assign(this, init) }
-    /** @type {?string} */
-    name;
-    getTypeName() { return 'RequiresAuth' }
-    getMethod() { return 'POST' }
-    createResponse() { return new RequiresAuthResponse() }
-}
-export class RequiresRole {
-    /** @param {{name?:string}} [init] */
-    constructor(init) { Object.assign(this, init) }
-    /** @type {?string} */
-    name;
-    getTypeName() { return 'RequiresRole' }
-    getMethod() { return 'POST' }
-    createResponse() { return new RequiresRoleResponse() }
-}
-export class RequiresAdmin {
-    /** @param {{name?:string}} [init] */
-    constructor(init) { Object.assign(this, init) }
-    /** @type {?string} */
-    name;
-    getTypeName() { return 'RequiresAdmin' }
-    getMethod() { return 'POST' }
-    createResponse() { return new RequiresAdminResponse() }
-}
 export class Authenticate {
-    /** @param {{provider?:string,state?:string,oauth_token?:string,oauth_verifier?:string,userName?:string,password?:string,rememberMe?:boolean,errorView?:string,nonce?:string,uri?:string,response?:string,qop?:string,nc?:string,cnonce?:string,accessToken?:string,accessTokenSecret?:string,scope?:string,returnUrl?:string,meta?:{ [index: string]: string; }}} [init] */
+    /** @param {{provider?:string,userName?:string,password?:string,rememberMe?:boolean,accessToken?:string,accessTokenSecret?:string,returnUrl?:string,errorView?:string,meta?:{ [index: string]: string; }}} [init] */
     constructor(init) { Object.assign(this, init) }
     /**
      * @type {string}
      * @description AuthProvider, e.g. credentials */
     provider;
-    /** @type {string} */
-    state;
-    /** @type {string} */
-    oauth_token;
-    /** @type {string} */
-    oauth_verifier;
     /** @type {string} */
     userName;
     /** @type {string} */
@@ -367,27 +345,13 @@ export class Authenticate {
     /** @type {?boolean} */
     rememberMe;
     /** @type {string} */
-    errorView;
-    /** @type {string} */
-    nonce;
-    /** @type {string} */
-    uri;
-    /** @type {string} */
-    response;
-    /** @type {string} */
-    qop;
-    /** @type {string} */
-    nc;
-    /** @type {string} */
-    cnonce;
-    /** @type {string} */
     accessToken;
     /** @type {string} */
     accessTokenSecret;
     /** @type {string} */
-    scope;
-    /** @type {string} */
     returnUrl;
+    /** @type {string} */
+    errorView;
     /** @type {{ [index: string]: string; }} */
     meta;
     getTypeName() { return 'Authenticate' }
@@ -409,6 +373,70 @@ export class QueryCoupons extends QueryDb {
     /** @type {?string} */
     id;
     getTypeName() { return 'QueryCoupons' }
+    getMethod() { return 'GET' }
+    createResponse() { return new QueryResponse() }
+}
+export class QueryMessages extends QueryDb {
+    /** @param {{id?:number,status?:MessageStatus,receiver?:string,telco?:string,fromDate?:string,toDate?:string,skip?:number,take?:number,orderBy?:string,orderByDesc?:string,include?:string,fields?:string,meta?:{ [index: string]: string; }}} [init] */
+    constructor(init) { super(init); Object.assign(this, init) }
+    /** @type {?number} */
+    id;
+    /** @type {?MessageStatus} */
+    status;
+    /** @type {string} */
+    receiver;
+    /** @type {string} */
+    telco;
+    /** @type {?string} */
+    fromDate;
+    /** @type {?string} */
+    toDate;
+    getTypeName() { return 'QueryMessages' }
+    getMethod() { return 'GET' }
+    createResponse() { return new QueryResponse() }
+}
+export class QueryMessageTemplates extends QueryDb {
+    /** @param {{id?:number,skip?:number,take?:number,orderBy?:string,orderByDesc?:string,include?:string,fields?:string,meta?:{ [index: string]: string; }}} [init] */
+    constructor(init) { super(init); Object.assign(this, init) }
+    /** @type {?number} */
+    id;
+    getTypeName() { return 'QueryMessageTemplates' }
+    getMethod() { return 'GET' }
+    createResponse() { return new QueryResponse() }
+}
+export class QueryMessageTemplatesByStatus extends QueryDb {
+    /** @param {{status?:MessageTemplateStatus,skip?:number,take?:number,orderBy?:string,orderByDesc?:string,include?:string,fields?:string,meta?:{ [index: string]: string; }}} [init] */
+    constructor(init) { super(init); Object.assign(this, init) }
+    /** @type {MessageTemplateStatus} */
+    status;
+    getTypeName() { return 'QueryMessageTemplatesByStatus' }
+    getMethod() { return 'GET' }
+    createResponse() { return new QueryResponse() }
+}
+export class QueryMessageTemplateDetails extends QueryDb {
+    /** @param {{id?:number,skip?:number,take?:number,orderBy?:string,orderByDesc?:string,include?:string,fields?:string,meta?:{ [index: string]: string; }}} [init] */
+    constructor(init) { super(init); Object.assign(this, init) }
+    /** @type {?number} */
+    id;
+    getTypeName() { return 'QueryMessageTemplateDetails' }
+    getMethod() { return 'GET' }
+    createResponse() { return new QueryResponse() }
+}
+export class GetPartners extends QueryDb {
+    /** @param {{id?:number,skip?:number,take?:number,orderBy?:string,orderByDesc?:string,include?:string,fields?:string,meta?:{ [index: string]: string; }}} [init] */
+    constructor(init) { super(init); Object.assign(this, init) }
+    /** @type {?number} */
+    id;
+    getTypeName() { return 'GetPartners' }
+    getMethod() { return 'GET' }
+    createResponse() { return new QueryResponse() }
+}
+export class GetProviders extends QueryDb {
+    /** @param {{id?:number,skip?:number,take?:number,orderBy?:string,orderByDesc?:string,include?:string,fields?:string,meta?:{ [index: string]: string; }}} [init] */
+    constructor(init) { super(init); Object.assign(this, init) }
+    /** @type {?number} */
+    id;
+    getTypeName() { return 'GetProviders' }
     getMethod() { return 'GET' }
     createResponse() { return new QueryResponse() }
 }
@@ -507,6 +535,189 @@ export class DeleteCoupon {
     /** @type {string} */
     id;
     getTypeName() { return 'DeleteCoupon' }
+    getMethod() { return 'DELETE' }
+    createResponse() { }
+}
+export class CreateMessageTemplate {
+    /** @param {{content?:string,status?:MessageTemplateStatus,parnerId?:number}} [init] */
+    constructor(init) { Object.assign(this, init) }
+    /**
+     * @type {string}
+     * @description Missing template */
+    content;
+    /** @type {MessageTemplateStatus} */
+    status;
+    /** @type {?number} */
+    parnerId;
+    getTypeName() { return 'CreateMessageTemplate' }
+    getMethod() { return 'POST' }
+    createResponse() { return new IdResponse() }
+}
+export class UpdateMessageTemplate {
+    /** @param {{id?:number,content?:string,status?:MessageTemplateStatus}} [init] */
+    constructor(init) { Object.assign(this, init) }
+    /** @type {number} */
+    id;
+    /**
+     * @type {string}
+     * @description Missing template */
+    content;
+    /** @type {MessageTemplateStatus} */
+    status;
+    getTypeName() { return 'UpdateMessageTemplate' }
+    getMethod() { return 'PATCH' }
+    createResponse() { return new IdResponse() }
+}
+export class DeleteMessageTemplate {
+    /** @param {{id?:number}} [init] */
+    constructor(init) { Object.assign(this, init) }
+    /** @type {number} */
+    id;
+    getTypeName() { return 'DeleteMessageTemplate' }
+    getMethod() { return 'DELETE' }
+    createResponse() { }
+}
+export class UpdateMessageTemplateDetail {
+    /** @param {{id?:number,providerId?:number,content?:string}} [init] */
+    constructor(init) { Object.assign(this, init) }
+    /** @type {number} */
+    id;
+    /** @type {number} */
+    providerId;
+    /** @type {string} */
+    content;
+    getTypeName() { return 'UpdateMessageTemplateDetail' }
+    getMethod() { return 'PATCH' }
+    createResponse() { return new IdResponse() }
+}
+export class DeleteMessageTemplateDetail {
+    /** @param {{id?:number}} [init] */
+    constructor(init) { Object.assign(this, init) }
+    /** @type {number} */
+    id;
+    getTypeName() { return 'DeleteMessageTemplateDetail' }
+    getMethod() { return 'DELETE' }
+    createResponse() { }
+}
+export class CreatePartner {
+    /** @param {{partnerCode?:string,partnerName?:string,emailAddress?:string,phoneNumber?:string,apiKey?:string,userName?:string,password?:string,ips?:string,status?:PartnerStatus}} [init] */
+    constructor(init) { Object.assign(this, init) }
+    /** @type {string} */
+    partnerCode;
+    /** @type {string} */
+    partnerName;
+    /** @type {string} */
+    emailAddress;
+    /** @type {string} */
+    phoneNumber;
+    /** @type {string} */
+    apiKey;
+    /** @type {string} */
+    userName;
+    /** @type {string} */
+    password;
+    /** @type {string} */
+    ips;
+    /** @type {PartnerStatus} */
+    status;
+    getTypeName() { return 'CreatePartner' }
+    getMethod() { return 'POST' }
+    createResponse() { return new IdResponse() }
+}
+export class UpdatePartner {
+    /** @param {{id?:number,partnerCode?:string,partnerName?:string,emailAddress?:string,phoneNumber?:string,apiKey?:string,userName?:string,password?:string,ips?:string,status?:PartnerStatus}} [init] */
+    constructor(init) { Object.assign(this, init) }
+    /** @type {number} */
+    id;
+    /** @type {string} */
+    partnerCode;
+    /** @type {string} */
+    partnerName;
+    /** @type {string} */
+    emailAddress;
+    /** @type {string} */
+    phoneNumber;
+    /** @type {string} */
+    apiKey;
+    /** @type {string} */
+    userName;
+    /** @type {string} */
+    password;
+    /** @type {string} */
+    ips;
+    /** @type {PartnerStatus} */
+    status;
+    getTypeName() { return 'UpdatePartner' }
+    getMethod() { return 'PATCH' }
+    createResponse() { return new IdResponse() }
+}
+export class DeletePartner {
+    /** @param {{id?:number}} [init] */
+    constructor(init) { Object.assign(this, init) }
+    /** @type {number} */
+    id;
+    getTypeName() { return 'DeletePartner' }
+    getMethod() { return 'DELETE' }
+    createResponse() { }
+}
+export class CreateProvider {
+    /** @param {{providerCode?:string,providerName?:string,emailAddress?:string,phoneNumber?:string,apiKey?:string,userName?:string,password?:string,apiUrl?:string,status?:ProviderStatus}} [init] */
+    constructor(init) { Object.assign(this, init) }
+    /** @type {string} */
+    providerCode;
+    /** @type {string} */
+    providerName;
+    /** @type {string} */
+    emailAddress;
+    /** @type {string} */
+    phoneNumber;
+    /** @type {string} */
+    apiKey;
+    /** @type {string} */
+    userName;
+    /** @type {string} */
+    password;
+    /** @type {string} */
+    apiUrl;
+    /** @type {ProviderStatus} */
+    status;
+    getTypeName() { return 'CreateProvider' }
+    getMethod() { return 'POST' }
+    createResponse() { return new IdResponse() }
+}
+export class UpdateProvider {
+    /** @param {{id?:number,providerCode?:string,providerName?:string,emailAddress?:string,phoneNumber?:string,apiKey?:string,userName?:string,password?:string,apiUrl?:string,status?:ProviderStatus}} [init] */
+    constructor(init) { Object.assign(this, init) }
+    /** @type {number} */
+    id;
+    /** @type {string} */
+    providerCode;
+    /** @type {string} */
+    providerName;
+    /** @type {string} */
+    emailAddress;
+    /** @type {string} */
+    phoneNumber;
+    /** @type {string} */
+    apiKey;
+    /** @type {string} */
+    userName;
+    /** @type {string} */
+    password;
+    /** @type {string} */
+    apiUrl;
+    /** @type {ProviderStatus} */
+    status;
+    getTypeName() { return 'UpdateProvider' }
+    getMethod() { return 'PATCH' }
+    createResponse() { return new IdResponse() }
+}
+export class DeleteProvider {
+    /** @param {{id?:number}} [init] */
+    constructor(init) { Object.assign(this, init) }
+    /** @type {number} */
+    id;
+    getTypeName() { return 'DeleteProvider' }
     getMethod() { return 'DELETE' }
     createResponse() { }
 }

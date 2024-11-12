@@ -3,6 +3,7 @@ using ServiceStack.Data;
 using ServiceStack.OrmLite;
 using SmsGateCms.Data;
 using ServiceStack;
+using SmsGateCms.ServiceInterface;
 
 [assembly: HostingStartup(typeof(SmsGateCms.ConfigureDb))]
 
@@ -24,5 +25,6 @@ public class ConfigureDb : IHostingStartup
             
             // Enable built-in Database Admin UI at /admin-ui/database
             services.AddPlugin(new AdminDatabaseFeature());
+            services.AddScoped<IMessageService,MessageService>();
         });
 }

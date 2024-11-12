@@ -48,6 +48,7 @@ export default {
         const coupon = ref()
         const { currency } = useFormatters()
         async function showCoupon(id) {
+
             const api = await client.api(new QueryCoupons({ id }))
             if (api.succeeded) {
                 coupon.value = api.response.results[0]

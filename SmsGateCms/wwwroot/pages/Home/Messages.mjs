@@ -1,5 +1,7 @@
 import { ref } from "vue";
 import { useClient, useFormatters } from "@servicestack/vue";
+import {GetPartners, GetProviders, QueryMessageTemplates} from "../../mjs/dtos.mjs";
+import messageTemplates from "./MessageTemplates.mjs";
 // import { CreateMessage, UpdateMessage } from "dtos.mjs"
 
 export default {
@@ -23,25 +25,22 @@ export default {
             <span v-html="receiver"></span>
         </template>
 
-        <template #messageTemplateId-header>
-            Template
-        </template>
-        <template #messageTemplateId="{ messageTemplateId }">
-            <span v-html="messageTemplateId"></span>
-        </template>
-
-        <template #partnerId-header>
-            Partner
-        </template>
-        <template #partnerId="{ partnerId }">
-            <span v-html="partnerId"></span>
+        <template #messageTemplate= "{ messageTemplate }">
+            <text-link v-if="messageTemplate" class="flex items-end" @click.stop="showMessageTemplate(messageTemplateId)" :title="messageTemplate.id">
+                <preview-format :value="messageTemplate.content"></preview-format>
+            </text-link>
         </template>
 
-        <template #providerId-header>
-            Provider
+         <template #partner="{ partner }">
+            <text-link v-if="partner" class="flex items-end" @click.stop="showPartner(partnerId)" :title="partner.id">
+                <preview-format :value="partner.partnerName"></preview-format>
+            </text-link>
         </template>
-        <template #providerId="{ providerId }">
-            <span v-html="providerId"></span>
+
+        <template #provider="{ provider }">
+            <text-link v-if="provider" class="flex items-end" @click.stop="showProvider(providerId)" :title="provider.id">
+                <preview-format :value="provider.providerName"></preview-format>
+            </text-link>
         </template>
 
         <template #requestDate="{ requestDate }">
@@ -71,6 +70,9 @@ export default {
   `,
     setup() {
         const client = useClient();
+        const partner = ref();
+        const provider = ref();
+        const template = ref();
         const formatDateTime = (value) => {
             if (!value) return '';
 
@@ -91,7 +93,26 @@ export default {
 
             return new Intl.DateTimeFormat('vi-VN', {dateStyle: 'medium', timeStyle: 'short'}).format(localTime)
         };
+        async function showPartner(id) {
+            const api = await client.api(new GetPartners({ id }))
+            if (api.succeeded) {
+                partner.value = api.response.results[0]
+            }
+        }
 
+        async function showProvider(id) {
+            const api = await client.api(new GetProviders({ id }))
+            if (api.succeeded) {
+                provider.value = api.response.results[0]
+            }
+        }
+        
+        async function showMessageTemplate(id){
+            const api = await client.api(new QueryMessageTemplates({id}))
+            if(api.succeeded()){
+                template.value = api.response.results[0]
+            }
+        }
         const statusMap = {
             "Initial": "Khởi tạo",
             "Sent": "Đã gửi",
@@ -108,14 +129,21 @@ export default {
             };
         };
 
-        const close = () => importFile.value = null
-
+        const close = () => {
+            importFile.value = null;
+            partner.value = null;
+            provider.value = null;
+            template.value = null;
+        } 
         return {
             formatDateTime,
             statusMap,
             close,
             formatDateTimeLocal,
-            statusClass
+            statusClass,
+            showPartner,
+            showProvider,
+            showMessageTemplate,
         }
     }
 }

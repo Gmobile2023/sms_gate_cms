@@ -62,4 +62,15 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Blog\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Blog\Post.cshtml" />
+    <_ContentIncludedByDefault Remove="_posts\authors.json" />
+    <_ContentIncludedByDefault Remove="_posts\config.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="_pages\" />
+  </ItemGroup>
+
 </Project>

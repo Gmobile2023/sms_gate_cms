@@ -1,6 +1,8 @@
-﻿namespace SmsGateCms.ServiceInterface;
+﻿using SmsGateCms.ServiceModel;
 
-public class IMessageService
+namespace SmsGateCms.ServiceInterface;
+
+public interface IMessageService
 {
-    
+    public Task<bool> CreateSendMessage(CreateSendMessageRequest request);
 }

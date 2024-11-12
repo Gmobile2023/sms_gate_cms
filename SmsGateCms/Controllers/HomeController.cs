@@ -9,11 +9,13 @@ namespace SmsGateCms.Controllers;
 public class HomeController : ServiceStackController
 {
     [HttpGet]
-    public IActionResult Index() => View();
-
-    [HttpGet]
-    [Authorize]
-    public IActionResult Bookings() => View();
+    public IActionResult Index()
+    {
+        
+            // Chuyển hướng từ Index tới Providers
+            return RedirectToAction("Messages");
+        
+    }
 
 
     [HttpGet]

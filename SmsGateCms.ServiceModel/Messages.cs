@@ -92,9 +92,7 @@ public class CreateSendMessageRequest
     public string RequestId { get; set; }
     
 }
-[Tag("messages"), Description("Send Message to Provider")]
-[Route("/api/v1/messages/{providerId}","POST")]
-[AutoApply(Behavior.AuditCreate)]
+
 public class SendMessageToProviderRequest
 {
    public  int providerId { get; set; }

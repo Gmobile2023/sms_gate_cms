@@ -1,5 +1,5 @@
 /* Options:
-Date: 2024-11-09 11:20:16
+Date: 2024-11-12 15:13:01
 Version: 8.40
 Tip: To override a DTO option, remove "//" prefix before updating
 BaseUrl: https://localhost:5001
@@ -13,6 +13,14 @@ BaseUrl: https://localhost:5001
 */
 
 "use strict";
+/** @typedef {'Initial'|'Sent'|'Delivered'|'Failed'} */
+export var MessageStatus;
+(function (MessageStatus) {
+    MessageStatus["Initial"] = "Initial"
+    MessageStatus["Sent"] = "Sent"
+    MessageStatus["Delivered"] = "Delivered"
+    MessageStatus["Failed"] = "Failed"
+})(MessageStatus || (MessageStatus = {}));
 export class QueryBase {
     /** @param {{skip?:number,take?:number,orderBy?:string,orderByDesc?:string,include?:string,fields?:string,meta?:{ [index: string]: string; }}} [init] */
     constructor(init) { Object.assign(this, init) }
@@ -52,61 +60,6 @@ export class AuditBase {
     /** @type {string} */
     deletedBy;
 }
-/** @typedef {'Single'|'Double'|'Queen'|'Twin'|'Suite'} */
-export var RoomType;
-(function (RoomType) {
-    RoomType["Single"] = "Single"
-    RoomType["Double"] = "Double"
-    RoomType["Queen"] = "Queen"
-    RoomType["Twin"] = "Twin"
-    RoomType["Suite"] = "Suite"
-})(RoomType || (RoomType = {}));
-export class Coupon {
-    /** @param {{id?:string,description?:string,discount?:number,expiryDate?:string}} [init] */
-    constructor(init) { Object.assign(this, init) }
-    /** @type {string} */
-    id;
-    /** @type {string} */
-    description;
-    /** @type {number} */
-    discount;
-    /** @type {string} */
-    expiryDate;
-}
-export class Booking extends AuditBase {
-    /** @param {{id?:number,name?:string,roomType?:RoomType,roomNumber?:number,bookingStartDate?:string,bookingEndDate?:string,cost?:number,couponId?:string,discount?:Coupon,notes?:string,cancelled?:boolean,createdDate?:string,createdBy?:string,modifiedDate?:string,modifiedBy?:string,deletedDate?:string,deletedBy?:string}} [init] */
-    constructor(init) { super(init); Object.assign(this, init) }
-    /** @type {number} */
-    id;
-    /** @type {string} */
-    name;
-    /** @type {RoomType} */
-    roomType;
-    /** @type {number} */
-    roomNumber;
-    /** @type {string} */
-    bookingStartDate;
-    /** @type {?string} */
-    bookingEndDate;
-    /** @type {number} */
-    cost;
-    /** @type {?string} */
-    couponId;
-    /** @type {Coupon} */
-    discount;
-    /** @type {?string} */
-    notes;
-    /** @type {?boolean} */
-    cancelled;
-}
-/** @typedef {'Initial'|'Sent'|'Delivered'|'Failed'} */
-export var MessageStatus;
-(function (MessageStatus) {
-    MessageStatus["Initial"] = "Initial"
-    MessageStatus["Sent"] = "Sent"
-    MessageStatus["Delivered"] = "Delivered"
-    MessageStatus["Failed"] = "Failed"
-})(MessageStatus || (MessageStatus = {}));
 /** @typedef {'Initial'|'Active'|'Cancel'|'Locked'} */
 export var MessageTemplateStatus;
 (function (MessageTemplateStatus) {
@@ -190,7 +143,7 @@ export class Provider extends AuditBase {
     status;
 }
 export class Message extends AuditBase {
-    /** @param {{id?:number,sms?:string,status?:MessageStatus,receiver?:string,messageTemplate?:MessageTemplate,messageTemplateId?:number,partnerId?:number,partner?:Partner,providerId?:number,provider?:Provider,requestDate?:string,sentDate?:string,responseDate?:string,telco?:string,responseMassage?:string,messageId?:string,createdDate?:string,createdBy?:string,modifiedDate?:string,modifiedBy?:string,deletedDate?:string,deletedBy?:string}} [init] */
+    /** @param {{id?:number,sms?:string,status?:MessageStatus,receiver?:string,messageTemplate?:MessageTemplate,messageTemplateId?:number,partnerId?:number,requestId?:string,partner?:Partner,providerId?:number,provider?:Provider,requestDate?:string,sentDate?:string,responseDate?:string,telco?:string,responseMassage?:string,messageId?:string,createdDate?:string,createdBy?:string,modifiedDate?:string,modifiedBy?:string,deletedDate?:string,deletedBy?:string}} [init] */
     constructor(init) { super(init); Object.assign(this, init) }
     /** @type {number} */
     id;
@@ -206,6 +159,8 @@ export class Message extends AuditBase {
     messageTemplateId;
     /** @type {number} */
     partnerId;
+    /** @type {string} */
+    requestId;
     /** @type {Partner} */
     partner;
     /** @type {number} */
@@ -263,12 +218,6 @@ export class ResponseStatus {
     /** @type {{ [index: string]: string; }} */
     meta;
 }
-export class HelloResponse {
-    /** @param {{result?:string}} [init] */
-    constructor(init) { Object.assign(this, init) }
-    /** @type {string} */
-    result;
-}
 export class AuthenticateResponse {
     /** @param {{userId?:string,sessionId?:string,userName?:string,displayName?:string,referrerUrl?:string,bearerToken?:string,refreshToken?:string,refreshTokenExpiry?:string,profileUrl?:string,roles?:string[],permissions?:string[],responseStatus?:ResponseStatus,meta?:{ [index: string]: string; }}} [init] */
     constructor(init) { Object.assign(this, init) }
@@ -322,14 +271,26 @@ export class IdResponse {
     /** @type {ResponseStatus} */
     responseStatus;
 }
-export class Hello {
-    /** @param {{name?:string}} [init] */
+export class CreateSendMessageRequest {
+    /** @param {{id?:number,sms?:string,receiver?:string,telco?:string,providerId?:number,partnerCode?:string,requestId?:string}} [init] */
     constructor(init) { Object.assign(this, init) }
-    /** @type {?string} */
-    name;
-    getTypeName() { return 'Hello' }
+    /** @type {number} */
+    id;
+    /** @type {string} */
+    sms;
+    /** @type {string} */
+    receiver;
+    /** @type {string} */
+    telco;
+    /** @type {number} */
+    providerId;
+    /** @type {string} */
+    partnerCode;
+    /** @type {string} */
+    requestId;
+    getTypeName() { return 'CreateSendMessageRequest' }
     getMethod() { return 'POST' }
-    createResponse() { return new HelloResponse() }
+    createResponse () { };
 }
 export class Authenticate {
     /** @param {{provider?:string,userName?:string,password?:string,rememberMe?:boolean,accessToken?:string,accessTokenSecret?:string,returnUrl?:string,errorView?:string,meta?:{ [index: string]: string; }}} [init] */
@@ -357,24 +318,6 @@ export class Authenticate {
     getTypeName() { return 'Authenticate' }
     getMethod() { return 'POST' }
     createResponse() { return new AuthenticateResponse() }
-}
-export class QueryBookings extends QueryDb {
-    /** @param {{id?:number,skip?:number,take?:number,orderBy?:string,orderByDesc?:string,include?:string,fields?:string,meta?:{ [index: string]: string; }}} [init] */
-    constructor(init) { super(init); Object.assign(this, init) }
-    /** @type {?number} */
-    id;
-    getTypeName() { return 'QueryBookings' }
-    getMethod() { return 'GET' }
-    createResponse() { return new QueryResponse() }
-}
-export class QueryCoupons extends QueryDb {
-    /** @param {{id?:string,skip?:number,take?:number,orderBy?:string,orderByDesc?:string,include?:string,fields?:string,meta?:{ [index: string]: string; }}} [init] */
-    constructor(init) { super(init); Object.assign(this, init) }
-    /** @type {?string} */
-    id;
-    getTypeName() { return 'QueryCoupons' }
-    getMethod() { return 'GET' }
-    createResponse() { return new QueryResponse() }
 }
 export class QueryMessages extends QueryDb {
     /** @param {{id?:number,status?:MessageStatus,receiver?:string,telco?:string,fromDate?:string,toDate?:string,skip?:number,take?:number,orderBy?:string,orderByDesc?:string,include?:string,fields?:string,meta?:{ [index: string]: string; }}} [init] */
@@ -440,106 +383,8 @@ export class GetProviders extends QueryDb {
     getMethod() { return 'GET' }
     createResponse() { return new QueryResponse() }
 }
-export class CreateBooking {
-    /** @param {{name?:string,roomType?:RoomType,roomNumber?:number,cost?:number,bookingStartDate?:string,bookingEndDate?:string,notes?:string,couponId?:string}} [init] */
-    constructor(init) { Object.assign(this, init) }
-    /**
-     * @type {string}
-     * @description Name this Booking is for */
-    name;
-    /** @type {RoomType} */
-    roomType;
-    /** @type {number} */
-    roomNumber;
-    /** @type {number} */
-    cost;
-    /** @type {string} */
-    bookingStartDate;
-    /** @type {?string} */
-    bookingEndDate;
-    /** @type {?string} */
-    notes;
-    /** @type {?string} */
-    couponId;
-    getTypeName() { return 'CreateBooking' }
-    getMethod() { return 'POST' }
-    createResponse() { return new IdResponse() }
-}
-export class UpdateBooking {
-    /** @param {{id?:number,name?:string,roomType?:RoomType,roomNumber?:number,cost?:number,bookingStartDate?:string,bookingEndDate?:string,notes?:string,couponId?:string,cancelled?:boolean}} [init] */
-    constructor(init) { Object.assign(this, init) }
-    /** @type {number} */
-    id;
-    /** @type {?string} */
-    name;
-    /** @type {?RoomType} */
-    roomType;
-    /** @type {?number} */
-    roomNumber;
-    /** @type {?number} */
-    cost;
-    /** @type {?string} */
-    bookingStartDate;
-    /** @type {?string} */
-    bookingEndDate;
-    /** @type {?string} */
-    notes;
-    /** @type {?string} */
-    couponId;
-    /** @type {?boolean} */
-    cancelled;
-    getTypeName() { return 'UpdateBooking' }
-    getMethod() { return 'PATCH' }
-    createResponse() { return new IdResponse() }
-}
-export class DeleteBooking {
-    /** @param {{id?:number}} [init] */
-    constructor(init) { Object.assign(this, init) }
-    /** @type {number} */
-    id;
-    getTypeName() { return 'DeleteBooking' }
-    getMethod() { return 'DELETE' }
-    createResponse() { }
-}
-export class CreateCoupon {
-    /** @param {{description?:string,discount?:number,expiryDate?:string}} [init] */
-    constructor(init) { Object.assign(this, init) }
-    /** @type {string} */
-    description;
-    /** @type {number} */
-    discount;
-    /** @type {string} */
-    expiryDate;
-    getTypeName() { return 'CreateCoupon' }
-    getMethod() { return 'POST' }
-    createResponse() { return new IdResponse() }
-}
-export class UpdateCoupon {
-    /** @param {{id?:string,description?:string,discount?:number,expiryDate?:string}} [init] */
-    constructor(init) { Object.assign(this, init) }
-    /** @type {string} */
-    id;
-    /** @type {string} */
-    description;
-    /** @type {number} */
-    discount;
-    /** @type {string} */
-    expiryDate;
-    getTypeName() { return 'UpdateCoupon' }
-    getMethod() { return 'PATCH' }
-    createResponse() { return new IdResponse() }
-}
-export class DeleteCoupon {
-    /** @param {{id?:string}} [init] */
-    constructor(init) { Object.assign(this, init) }
-    /** @type {string} */
-    id;
-    getTypeName() { return 'DeleteCoupon' }
-    getMethod() { return 'DELETE' }
-    createResponse() { }
-}
 export class CreateMessageTemplate {
-    /** @param {{content?:string,status?:MessageTemplateStatus,parnerId?:number}} [init] */
+    /** @param {{content?:string,status?:MessageTemplateStatus,partnerName?:number}} [init] */
     constructor(init) { Object.assign(this, init) }
     /**
      * @type {string}
@@ -548,7 +393,7 @@ export class CreateMessageTemplate {
     /** @type {MessageTemplateStatus} */
     status;
     /** @type {?number} */
-    parnerId;
+    partnerName;
     getTypeName() { return 'CreateMessageTemplate' }
     getMethod() { return 'POST' }
     createResponse() { return new IdResponse() }

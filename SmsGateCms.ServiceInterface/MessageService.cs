@@ -24,11 +24,10 @@ public class MessageService : IMessageService
     public async Task<bool> CreateSendMessage(CreateSendMessageRequest request)
     {
         using var db = _connectionFactory.OpenDbConnection();
-        using var trans = db.OpenTransaction();
         try
         {
             _logger.LogInformation($"Create Send Message Request {request.ToJson()}");
-            var checkMessageTemplate = await db.SingleAsync<MessageTemplate>(x => request.Sms.Contains(x.Content));
+            var checkMessageTemplate = await db.SingleAsync<MessageTemplate>(x => request.Sms == x.Content);
            
             if (!(checkMessageTemplate != null && checkMessageTemplate.Status == MessageTemplateStatus.Active))
             {
@@ -38,11 +37,7 @@ public class MessageService : IMessageService
             {
                 return false;
             }
-            var subtractMoney = await SubtractMoney(10,1);
-            if (subtractMoney.Equals(-1))
-            {
-                return false;
-            }
+           
             _logger.LogInformation("Send Request To Provider");
             var sendMessageToProvider = request.ConvertTo<SendMessageToProviderRequest>();
             await _baseConnector.SendSmsAsync(sendMessageToProvider);
@@ -52,7 +47,6 @@ public class MessageService : IMessageService
             newMessage.RequestDate = new DateTime();
             newMessage.ResponseMassage = "";
             await db.InsertAsync<Message>(newMessage);
-            trans.Commit();
             
             
             return true;
@@ -60,7 +54,6 @@ public class MessageService : IMessageService
         }
         catch(Exception ex)
         {
-            trans.Rollback();
             return false;
         }
     }

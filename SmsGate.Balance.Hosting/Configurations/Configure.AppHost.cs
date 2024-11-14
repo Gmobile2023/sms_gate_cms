@@ -70,6 +70,7 @@ public class AppHost : AppHostBase, IHostingStartup
         });
 
         ConfigurePlugin<PredefinedRoutesFeature>(feature => feature.JsonApiRoute = null);
+        Plugins.Add(new AutoQueryFeature { MaxLimit = 100 });
         Plugins.Add(new GrpcFeature(App));
         Plugins.Add(new OpenApiFeature());
 

@@ -1,5 +1,5 @@
 /* Options:
-Date: 2024-11-12 15:13:01
+Date: 2024-11-14 14:02:10
 Version: 8.40
 Tip: To override a DTO option, remove "//" prefix before updating
 BaseUrl: https://localhost:5001
@@ -218,6 +218,21 @@ export class ResponseStatus {
     /** @type {{ [index: string]: string; }} */
     meta;
 }
+/** @typedef T {any} */
+export class QueryResponse {
+    /** @param {{offset?:number,total?:number,results?:T[],meta?:{ [index: string]: string; },responseStatus?:ResponseStatus}} [init] */
+    constructor(init) { Object.assign(this, init) }
+    /** @type {number} */
+    offset;
+    /** @type {number} */
+    total;
+    /** @type {T[]} */
+    results;
+    /** @type {{ [index: string]: string; }} */
+    meta;
+    /** @type {ResponseStatus} */
+    responseStatus;
+}
 export class AuthenticateResponse {
     /** @param {{userId?:string,sessionId?:string,userName?:string,displayName?:string,referrerUrl?:string,bearerToken?:string,refreshToken?:string,refreshTokenExpiry?:string,profileUrl?:string,roles?:string[],permissions?:string[],responseStatus?:ResponseStatus,meta?:{ [index: string]: string; }}} [init] */
     constructor(init) { Object.assign(this, init) }
@@ -248,21 +263,6 @@ export class AuthenticateResponse {
     /** @type {{ [index: string]: string; }} */
     meta;
 }
-/** @typedef T {any} */
-export class QueryResponse {
-    /** @param {{offset?:number,total?:number,results?:T[],meta?:{ [index: string]: string; },responseStatus?:ResponseStatus}} [init] */
-    constructor(init) { Object.assign(this, init) }
-    /** @type {number} */
-    offset;
-    /** @type {number} */
-    total;
-    /** @type {T[]} */
-    results;
-    /** @type {{ [index: string]: string; }} */
-    meta;
-    /** @type {ResponseStatus} */
-    responseStatus;
-}
 export class IdResponse {
     /** @param {{id?:string,responseStatus?:ResponseStatus}} [init] */
     constructor(init) { Object.assign(this, init) }
@@ -292,6 +292,27 @@ export class CreateSendMessageRequest {
     getMethod() { return 'POST' }
     createResponse () { };
 }
+export class QueryMessages extends QueryDb {
+    /** @param {{id?:number,status?:MessageStatus,receiver?:string,telco?:string,fromDate?:string,toDate?:string,createdBy?:string,skip?:number,take?:number,orderBy?:string,orderByDesc?:string,include?:string,fields?:string,meta?:{ [index: string]: string; }}} [init] */
+    constructor(init) { super(init); Object.assign(this, init) }
+    /** @type {?number} */
+    id;
+    /** @type {?MessageStatus} */
+    status;
+    /** @type {string} */
+    receiver;
+    /** @type {string} */
+    telco;
+    /** @type {?string} */
+    fromDate;
+    /** @type {?string} */
+    toDate;
+    /** @type {string} */
+    createdBy;
+    getTypeName() { return 'QueryMessages' }
+    getMethod() { return 'GET' }
+    createResponse() { return new QueryResponse() }
+}
 export class Authenticate {
     /** @param {{provider?:string,userName?:string,password?:string,rememberMe?:boolean,accessToken?:string,accessTokenSecret?:string,returnUrl?:string,errorView?:string,meta?:{ [index: string]: string; }}} [init] */
     constructor(init) { Object.assign(this, init) }
@@ -318,25 +339,6 @@ export class Authenticate {
     getTypeName() { return 'Authenticate' }
     getMethod() { return 'POST' }
     createResponse() { return new AuthenticateResponse() }
-}
-export class QueryMessages extends QueryDb {
-    /** @param {{id?:number,status?:MessageStatus,receiver?:string,telco?:string,fromDate?:string,toDate?:string,skip?:number,take?:number,orderBy?:string,orderByDesc?:string,include?:string,fields?:string,meta?:{ [index: string]: string; }}} [init] */
-    constructor(init) { super(init); Object.assign(this, init) }
-    /** @type {?number} */
-    id;
-    /** @type {?MessageStatus} */
-    status;
-    /** @type {string} */
-    receiver;
-    /** @type {string} */
-    telco;
-    /** @type {?string} */
-    fromDate;
-    /** @type {?string} */
-    toDate;
-    getTypeName() { return 'QueryMessages' }
-    getMethod() { return 'GET' }
-    createResponse() { return new QueryResponse() }
 }
 export class QueryMessageTemplates extends QueryDb {
     /** @param {{id?:number,skip?:number,take?:number,orderBy?:string,orderByDesc?:string,include?:string,fields?:string,meta?:{ [index: string]: string; }}} [init] */

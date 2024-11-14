@@ -1,33 +1,29 @@
-import { createApp, reactive, ref, computed } from "vue"
+import { createApp, reactive } from "vue"
 import { JsonServiceClient, $1, $$ } from "@servicestack/client"
 import ServiceStackVue from "@servicestack/vue"
-import HelloApi from "./components/HelloApi.mjs"
 
 let client = null, Apps = []
 let AppData = {
-    init:false
+    init: false
 }
 export { client, Apps }
 
-/** Shared Global Components */
-const Components = {
-    HelloApi,
-}
+/** Custom Elements - nếu cần thêm các thẻ tùy chỉnh */
 const CustomElements = [
     'lite-youtube'
 ]
 
 const alreadyMounted = el => el.__vue_app__
 
-const mockArgs = { attrs:{}, slots:{}, emit:() => {}, expose: () => {} }
-function hasTemplate(el,component) {
+const mockArgs = { attrs: {}, slots: {}, emit: () => {}, expose: () => {} }
+function hasTemplate(el, component) {
     return !!(el.firstElementChild
         || component.template
         || (component.setup && typeof component.setup({}, mockArgs) == 'function'))
 }
 
 /** Mount Vue3 Component
- * @param sel {string|Element} - Element or Selector where component should be mounted
+ * @param sel {string|Element} - Element or Selector nơi cần mount component
  * @param component
  * @param [props] {any} */
 export function mount(sel, component, props) {
@@ -38,33 +34,21 @@ export function mount(sel, component, props) {
     if (alreadyMounted(el)) return
 
     if (!hasTemplate(el, component)) {
-        // Fallback for enhanced navigation clearing HTML DOM template of Vue App, requiring a force reload
-        // Avoid by disabling enhanced navigation to page, e.g. by adding data-enhance-nav="false" to element
-        console.warn('Vue Compontent template is missing, force reloading...', el, component)
+        console.warn('Vue Component template is missing, force reloading...', el, component)
         location.reload()
         return
     }
 
     const app = createApp(component, props)
     app.provide('client', client)
-    Object.keys(Components).forEach(name => {
-        app.component(name, Components[name])
-    })
     app.use(ServiceStackVue)
     app.component('RouterLink', ServiceStackVue.component('RouterLink'))
     app.directive('hash', (el, binding) => {
-        /** @param {Event} e */
         el.onclick = (e) => {
             e.preventDefault()
             location.hash = binding.value
         }
     })
-    if (component.install) {
-        component.install(app)
-    }
-    if (client && !app._context.provides.client) {
-        app.provide('client', client)
-    }
     app.config.errorHandler = error => { console.log(error) }
     app.config.compilerOptions.isCustomElement = tag => CustomElements.includes(tag)
     app.mount(el)
@@ -91,7 +75,7 @@ export async function remount() {
     }
 }
 
-//Default Vue App that gets created with [data-component] is empty, e.g. Blog Posts without Vue components
+// Default Vue App
 const DefaultApp = {
     setup() {
         function nav(url) {
@@ -101,13 +85,13 @@ const DefaultApp = {
     }
 }
 
+/** Tự động mount tất cả các thành phần có [data-component] */
 export function mountAll(opt) {
     $$('[data-component]').forEach(el => {
-
         if (opt && opt.force) {
             unmount(el)
-        } else {
-            if (alreadyMounted(el)) return
+        } else if (alreadyMounted(el)) {
+            return
         }
 
         let componentName = el.getAttribute('data-component')
@@ -124,7 +108,7 @@ export function mountAll(opt) {
             return
         }
 
-        let component = Components[componentName] || ServiceStackVue.component(componentName)
+        let component = ServiceStackVue.component(componentName)
         if (!component) {
             console.error(`Component ${componentName} does not exist`)
             return
@@ -143,7 +127,7 @@ export function mountAll(opt) {
             if (typeof module.default?.load == 'function') {
                 module.default.load()
             }
-        } catch(e) {
+        } catch (e) {
             console.error(`Couldn't load module ${el.getAttribute('data-module')}`, e)
         }
     })
@@ -176,8 +160,7 @@ function unmount(el) {
     }
 }
 
-
-/* used in :::sh and :::nuget CopyContainerRenderer */
+/* Sao chép nội dung cho các nút copy */
 globalThis.copy = function (e) {
     e.classList.add('copying')
     let $el = document.createElement("textarea")

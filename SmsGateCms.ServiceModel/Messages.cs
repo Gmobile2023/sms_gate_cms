@@ -69,6 +69,7 @@ public class QueryMessages : QueryDb<Message>
     public string Telco { get; set; }
     public DateTime? FromDate { get; set; }
     public DateTime? ToDate { get; set; }
+    public string CreatedBy { get; set; }
 }
 
 #endregion

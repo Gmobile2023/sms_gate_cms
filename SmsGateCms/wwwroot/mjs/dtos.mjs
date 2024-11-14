@@ -1,5 +1,5 @@
 /* Options:
-Date: 2024-11-13 15:09:42
+Date: 2024-11-14 14:02:10
 Version: 8.40
 Tip: To override a DTO option, remove "//" prefix before updating
 BaseUrl: https://localhost:5001
@@ -271,27 +271,6 @@ export class IdResponse {
     /** @type {ResponseStatus} */
     responseStatus;
 }
-export class QueryMessages extends QueryDb {
-    /** @param {{id?:number,status?:MessageStatus,receiver?:string,telco?:string,fromDate?:string,toDate?:string,createdBy?:string,skip?:number,take?:number,orderBy?:string,orderByDesc?:string,include?:string,fields?:string,meta?:{ [index: string]: string; }}} [init] */
-    constructor(init) { super(init); Object.assign(this, init) }
-    /** @type {?number} */
-    id;
-    /** @type {?MessageStatus} */
-    status;
-    /** @type {string} */
-    receiver;
-    /** @type {string} */
-    telco;
-    /** @type {?string} */
-    fromDate;
-    /** @type {?string} */
-    toDate;
-    /** @type {string} */
-    createdBy;
-    getTypeName() { return 'QueryMessages' }
-    getMethod() { return 'GET' }
-    createResponse() { return new QueryResponse() }
-}
 export class CreateSendMessageRequest {
     /** @param {{id?:number,sms?:string,receiver?:string,telco?:string,providerId?:number,partnerCode?:string,requestId?:string}} [init] */
     constructor(init) { Object.assign(this, init) }
@@ -312,6 +291,27 @@ export class CreateSendMessageRequest {
     getTypeName() { return 'CreateSendMessageRequest' }
     getMethod() { return 'POST' }
     createResponse () { };
+}
+export class QueryMessages extends QueryDb {
+    /** @param {{id?:number,status?:MessageStatus,receiver?:string,telco?:string,fromDate?:string,toDate?:string,createdBy?:string,skip?:number,take?:number,orderBy?:string,orderByDesc?:string,include?:string,fields?:string,meta?:{ [index: string]: string; }}} [init] */
+    constructor(init) { super(init); Object.assign(this, init) }
+    /** @type {?number} */
+    id;
+    /** @type {?MessageStatus} */
+    status;
+    /** @type {string} */
+    receiver;
+    /** @type {string} */
+    telco;
+    /** @type {?string} */
+    fromDate;
+    /** @type {?string} */
+    toDate;
+    /** @type {string} */
+    createdBy;
+    getTypeName() { return 'QueryMessages' }
+    getMethod() { return 'GET' }
+    createResponse() { return new QueryResponse() }
 }
 export class Authenticate {
     /** @param {{provider?:string,userName?:string,password?:string,rememberMe?:boolean,accessToken?:string,accessTokenSecret?:string,returnUrl?:string,errorView?:string,meta?:{ [index: string]: string; }}} [init] */

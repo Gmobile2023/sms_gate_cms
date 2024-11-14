@@ -8,7 +8,7 @@
     <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
     <PublishProfile>DefaultContainer</PublishProfile>
     <UserSecretsId>fc66461b-07f5-4833-a56b-a044f794631d</UserSecretsId>
-<!--    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>-->
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
   <ItemGroup>
     <Using Include="SmsGateCms" />

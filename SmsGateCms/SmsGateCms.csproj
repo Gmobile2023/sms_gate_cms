@@ -7,6 +7,8 @@
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
     <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
     <PublishProfile>DefaultContainer</PublishProfile>
+    <UserSecretsId>fc66461b-07f5-4833-a56b-a044f794631d</UserSecretsId>
+<!--    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>-->
   </PropertyGroup>
   <ItemGroup>
     <Using Include="SmsGateCms" />
@@ -30,10 +32,11 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.*" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.*" />
     <PackageReference Include="ServiceStack.AspNetCore.OpenApi" Version="8.*" />
-    <PackageReference Include="MassTransit" Version="8.2.2" />
-    <PackageReference Include="MassTransit.RabbitMQ" Version="8.2.2" />
+    <PackageReference Include="MassTransit" Version="8.3.1" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.3.1" />
     <PackageReference Include="MassTransit.Grpc" Version="8.1.3" />
   </ItemGroup>
   

@@ -1,12 +1,4 @@
 {
-  "iisSettings": {
-    "windowsAuthentication": false, 
-    "anonymousAuthentication": true, 
-    "iisExpress": {
-      "applicationUrl": "http://localhost:53486",
-      "sslPort": 0
-    }
-  },
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
@@ -18,22 +10,40 @@
     "SmsGateCms": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://10.105.20.202:7000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "applicationUrl": "https://localhost:5000"
     },
     "Watch": {
       "commandName": "Executable",
       "executablePath": "dotnet",
-      "workingDirectory": "$(ProjectDir)",
-      "hotReloadEnabled": true,
-      "hotReloadProfile" : "aspnetcore",
       "commandLineArgs": "watch run",
+      "workingDirectory": "$(ProjectDir)",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "hotReloadEnabled": true,
+      "hotReloadProfile": "aspnetcore"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "environmentVariables": {
+        "ASPNETCORE_HTTP_PORTS": "8080"
+      },
+      "publishAllPorts": true,
+      "useSSL": false
+    }
+  },
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:53486",
+      "sslPort": 0
     }
   }
 }

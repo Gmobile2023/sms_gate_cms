@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Server.Kestrel.Https;
 using ServiceStack;
 using ServiceStack.IO;
 
@@ -13,6 +14,7 @@ public class AppHost() : AppHostBase("SmsGateCms"), IHostingStartup
             // Configure ASP.NET Core IOC Dependencies
             context.Configuration.GetSection(nameof(AppConfig)).Bind(AppConfig.Instance);
             services.AddSingleton(AppConfig.Instance);
+            //ConfigureKestrel(services);
         });
 
     // Configure your AppHost with the necessary configuration and dependencies your App needs
@@ -43,6 +45,24 @@ public class AppHost() : AppHostBase("SmsGateCms"), IHostingStartup
         }
         return null;
     }
+    private void ConfigureKestrel(IServiceCollection services)
+    {
+        services.Configure<Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions>(options =>
+        {
+            options.Listen(new System.Net.IPEndPoint(System.Net.IPAddress.Any, 443),
+                listenOptions =>
+                {
+                    var certPassword = "";//_appConfiguration.GetValue<string>("Kestrel:Certificates:Default:Password");
+                    var certPath = "gmobile.pfx";//_appConfiguration.GetValue<string>("Kestrel:Certificates:Default:Path");
+                    var cert = new System.Security.Cryptography.X509Certificates.X509Certificate2(certPath,
+                        certPassword);
+                    listenOptions.UseHttps(new HttpsConnectionAdapterOptions()
+                    {
+                        ServerCertificate = cert
+                    });
+                });
+        });
+    }
 }
 
 public class AppConfig
@@ -72,3 +92,4 @@ public class AppData
 {
     public static readonly AppData Instance = new();
 }
+

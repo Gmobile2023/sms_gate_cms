@@ -10,8 +10,8 @@ public class Migration1002 : MigrationBase
         if (!Db.ColumnExists<Message>(x => x.RequestId))
         {
             Db.AddColumn<Message>(x => x.RequestId);
-          
         }
+
         Db.ExecuteSql("CREATE UNIQUE INDEX ix_request_partner ON Message(request_id, partner_id)");
     }
 
@@ -21,7 +21,6 @@ public class Migration1002 : MigrationBase
         if (Db.ColumnExists<Message>(x => x.RequestId))
         {
             Db.DropColumn<Message>(x => x.RequestId);
-            
         }
     }
 }

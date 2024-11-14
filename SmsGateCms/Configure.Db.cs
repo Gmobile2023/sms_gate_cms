@@ -4,6 +4,7 @@ using ServiceStack.OrmLite;
 using SmsGateCms.Data;
 using ServiceStack;
 using SmsGateCms.ServiceInterface;
+using SmsGateCms.ServiceInterface.BusinessService;
 using SmsGateCms.ServiceInterface.Connector;
 
 [assembly: HostingStartup(typeof(SmsGateCms.ConfigureDb))]

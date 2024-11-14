@@ -1,5 +1,6 @@
 using Microsoft.Extensions.Logging;
 using ServiceStack;
+using SmsGateCms.ServiceInterface.BusinessService;
 using SmsGateCms.ServiceModel;
 
 namespace SmsGateCms.ServiceInterface;
@@ -16,9 +17,9 @@ public class MyServices : Service
         this.AutoQuery = autoQuery;
     }
 
-    public async Task<object> PostAsync(CreateSendMessageRequest request)
+    public async Task<object> PostAsync(SendMessageRequest request)
     {
-        var result = await _messageService.CreateSendMessage(request);
+        var result = await _messageService.SendMessageRequest(request);
         return result;
     }
     public object Any(QueryMessages request)

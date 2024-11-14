@@ -40,7 +40,7 @@ public class AppHost : AppHostBase, IHostingStartup
             .ConfigureAppHost(appHost => { })
             .Configure(app =>
             {
-                app.UseAuthentication();
+                //app.UseAuthentication();
                 // Configure ASP .NET Core App
                 if (!HasInit)
                     app.UseServiceStack(new AppHost());
@@ -77,25 +77,5 @@ public class AppHost : AppHostBase, IHostingStartup
         {
             ExcludeTypeInfo = true
         });
-    }
-
-    public void OnExceptionTypeFilter1(Exception ex, ResponseStatus responseStatus)
-    {
-        var argEx = ex as ArgumentException;
-        var isValidationSummaryEx = argEx is ValidationException;
-        if (argEx != null && !isValidationSummaryEx && argEx.ParamName != null)
-        {
-            var paramMsgIndex = argEx.Message.LastIndexOf("Parameter name:");
-            var errorMsg = paramMsgIndex > 0
-                ? argEx.Message.Substring(0, paramMsgIndex)
-                : argEx.Message;
-
-            responseStatus.Errors.Add(new ResponseError
-            {
-                ErrorCode = ex.GetType().Name,
-                FieldName = argEx.ParamName,
-                Message = errorMsg,
-            });
-        }
     }
 }

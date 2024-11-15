@@ -15,7 +15,6 @@ public class ConfigureAuth : IHostingStartup
         .ConfigureServices(services => {
             services.AddSingleton<IAuthHttpGateway, AuthHttpGateway>();
             services.AddTransient<IExternalLoginAuthInfoProvider, ExternalLoginAuthInfoProvider>();
-            
             services.AddPlugin(new AuthFeature(IdentityAuth.For<ApplicationUser>(options => {
                 options.SessionFactory = () => new CustomUserSession();
                 options.CredentialsAuth();

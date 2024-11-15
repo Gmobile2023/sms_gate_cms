@@ -12,7 +12,7 @@ public class Migration1002 : MigrationBase
             Db.AddColumn<Message>(x => x.RequestId);
           
         }
-        Db.ExecuteSql("CREATE UNIQUE INDEX ix_request_partner ON Message(request_id, partner_id)");
+        Db.ExecuteSql("CREATE UNIQUE INDEX ix_request_partner ON Message(_id, partner_id)");
     }
 
     public override void Down()

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Server.IISIntegration;
@@ -46,7 +47,19 @@ services.AddAuthentication(IISDefaults.AuthenticationScheme)
         options.ClientId = config["oauth.microsoft.AppId"]!;
         options.ClientSecret = config["oauth.microsoft.AppSecret"]!;
         options.SaveTokens = true;
-    });
+    })
+    .AddJwtBearer(options =>
+{
+    options.Events = new JwtBearerEvents
+    {
+        OnChallenge = context =>
+        {
+            context.HandleResponse();  // Không redirect, chỉ trả về 401 Unauthorized
+            context.Response.StatusCode = 401;
+            return Task.CompletedTask;
+        }
+    };
+});
     
 services.Configure<ForwardedHeadersOptions>(options => {
     //https://github.com/aspnet/IISIntegration/issues/140#issuecomment-215135928

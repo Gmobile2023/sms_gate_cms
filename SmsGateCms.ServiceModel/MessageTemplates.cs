@@ -148,6 +148,7 @@ public class QueryMessageTemplateDetails : QueryDb<MessageTemplateDetail>
 [Notes("Chỉnh sửa mẫu tin nhắn chi tiết của bạn")]
 [Route("/message-templates-detail/{Id}", "PATCH")]
 // [ValidateHasRole(Roles.Partner)]
+[AutoApply(Behavior.AuditModify)]
 public class UpdateMessageTemplateDetail : IPatchDb<MessageTemplateDetail>, IReturn<IdResponse>
 {
     public int Id { get; set; }

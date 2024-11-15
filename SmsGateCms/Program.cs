@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Server.IISIntegration;
@@ -43,6 +44,7 @@ services.AddIdentity<ApplicationUser, IdentityRole>(options =>
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
 
+
 services.AddAuthentication(IISDefaults.AuthenticationScheme);
 // .AddFacebook(options => { /* Create App https://developers.facebook.com/apps */
 //     options.AppId = config["oauth.facebook.AppId"]!;
@@ -65,6 +67,7 @@ services.AddAuthentication(IISDefaults.AuthenticationScheme);
 
 services.Configure<ForwardedHeadersOptions>(options =>
 {
+
     //https://github.com/aspnet/IISIntegration/issues/140#issuecomment-215135928
     options.ForwardedHeaders = ForwardedHeaders.XForwardedProto;
 });

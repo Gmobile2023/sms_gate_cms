@@ -37,6 +37,7 @@ public class GetProviders : QueryDb<Provider>
 [Tag("provider"), Description("Tạo mới nhà cung cấp")]
 [Route("/provider", "POST")]
 [ValidateHasRole(Roles.Manager)]
+[AutoApply(Behavior.AuditCreate)]
 public class CreateProvider : ICreateDb<Provider>, IReturn<IdResponse>
 {
     [StringLength(50)] public string ProviderCode { get; set; }
@@ -57,6 +58,7 @@ public class CreateProvider : ICreateDb<Provider>, IReturn<IdResponse>
 [Tag("provider"), Description("Cập nhật nhà cung cấp")]
 [Route("/provider/{Id}", "PATCH")]
 [ValidateHasRole(Roles.Manager)]
+[AutoApply(Behavior.AuditModify)]
 public class UpdateProvider : IPatchDb<Provider>, IReturn<IdResponse>
 {
     public int Id { get; set; }

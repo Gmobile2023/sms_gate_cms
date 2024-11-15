@@ -11,9 +11,11 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.*" />
     <PackageReference Include="ServiceStack" Version="8.*" />
     <PackageReference Include="ServiceStack.Ormlite" Version="8.*" />
+    <PackageReference Include="ServiceStack.Server" Version="8.*" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SmsGate.Shared\SmsGate.Shared.csproj" />
     <ProjectReference Include="..\SmsGateCms.ServiceModel\SmsGateCms.ServiceModel.csproj" />
   </ItemGroup>
 

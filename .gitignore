@@ -299,3 +299,4 @@ __pycache__/
 # Ignore build output directories
 **/bin/
 **/obj/
+*.pfx

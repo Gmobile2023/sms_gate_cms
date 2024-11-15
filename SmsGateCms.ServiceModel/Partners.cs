@@ -29,6 +29,7 @@ public enum PartnerStatus : byte
 [Route("/partners", "GET")]
 [Route("/partner/{Id}", "GET")]
 [ValidateHasRole(Roles.Manager)]
+[AutoApply(Behavior.AuditQuery)]
 public class GetPartners : QueryDb<Partner>
 {
     public int? Id { get; set; }

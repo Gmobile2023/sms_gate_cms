@@ -20,6 +20,8 @@ public class MessageTemplate : AuditBase
     [Ref(Model = nameof(Partner), RefId = nameof(Partner.Id), RefLabel = nameof(Partner.PartnerCode))]
     [References(typeof(Partner))]
     public int PartnerId { get; set; }
+
+    [Reference] public Partner PartnerName { get; set; }
 }
 
 [EnumAsInt]
@@ -74,12 +76,14 @@ public class CreateMessageTemplate : ICreateDb<MessageTemplate>, IReturn<IdRespo
     public required string? Content { get; set; }
     [AutoDefault(Value = MessageTemplateStatus.Initial)]
     public MessageTemplateStatus Status { get; set; }
+    [Reference]
+    public int? PartnerName { get; set; }
 }
 
 [Tag("messages"), Description("Chỉnh sửa mẫu tin nhắn")]
 [Notes("Chỉnh sửa mẫu tin nhắn của bạn")]
 [Route("/message-templates/{Id}", "PATCH")]
-[ValidateHasRole(Roles.Partner)]
+// [ValidateHasRole(Roles.Partner)]
 [AutoApply(Behavior.AuditModify)]
 public class UpdateMessageTemplate : IPatchDb<MessageTemplate>, IReturn<IdResponse>
 {
@@ -88,6 +92,7 @@ public class UpdateMessageTemplate : IPatchDb<MessageTemplate>, IReturn<IdRespon
     [Description("Missing template"), ValidateNotEmpty]
     public string Content { get; set; }
     public MessageTemplateStatus Status { get; set; }
+    // public Partner Partner { get; set; }
 }
 
 [Tag("messages"), Description("Delete a Message")]
@@ -127,24 +132,26 @@ public class QueryMessageTemplateDetails : QueryDb<MessageTemplateDetail>
     public int? Id { get; set; }
 }
 
-[Tag("messages"), Description("Tạo mới mẫu tin nhắn chi tiết")]
-[Notes("Tạo mới mẫu tin nhắn chi tiết của bạn")]
-[Route("/message-templates-detail", "POST")]
-[ValidateHasRole(Roles.Partner)]
-public class CreateMessageTemplateDetail : ICreateDb<MessageTemplateDetail>, IReturn<IdResponse>
-{
-    public int MessageTemplateId { get; set; }
-    public string Content { get; set; }
-}
+// [Tag("messages"), Description("Tạo mới mẫu tin nhắn chi tiết")]
+// [Notes("Tạo mới mẫu tin nhắn chi tiết của bạn")]
+// [Route("/message-templates-detail", "POST")]
+// [ValidateHasRole(Roles.Partner)]
+// public class CreateMessageTemplateDetail : ICreateDb<MessageTemplateDetail>, IReturn<IdResponse>
+// {
+//     public int MessageTemplateId { get; set; }
+//     [Reference]
+//     public Partner Provider { get; set; }
+//     public string Content { get; set; }
+// }
 
 [Tag("messages"), Description("Chỉnh sửa mẫu tin nhắn chi tiết")]
 [Notes("Chỉnh sửa mẫu tin nhắn chi tiết của bạn")]
 [Route("/message-templates-detail/{Id}", "PATCH")]
-[ValidateHasRole(Roles.Partner)]
+// [ValidateHasRole(Roles.Partner)]
 public class UpdateMessageTemplateDetail : IPatchDb<MessageTemplateDetail>, IReturn<IdResponse>
 {
     public int Id { get; set; }
-    public int MessageTemplateId { get; set; }
+    public int ProviderId { get; set; }
     public string Content { get; set; }
 }
 

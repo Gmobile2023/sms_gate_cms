@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <LangVersion>default</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MassTransit" Version="8.3.1" />
+<!--        <PackageReference Include="MassTransit.MongoDb" Version="8.2.2" />-->
+        <PackageReference Include="Quartz" Version="3.8.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\SmsGate.Balance.Domain\SmsGate.Balance.Domain.csproj" />
+        <ProjectReference Include="..\SmsGate.Balance.Models\SmsGate.Balance.Models.csproj" />
+        <ProjectReference Include="..\SmsGate.Shared\SmsGate.Shared.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Remove="Grains\**" />
+        <Compile Remove="Consumers\CollectDiscountConsumer.cs" />
+        <Compile Remove="StateMachines\BalanceTransState.cs" />
+        <Compile Remove="Consumers\BalanceConsumer.cs" />
+        <Compile Remove="Consumers\PaymentConsumer.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Remove="Grains\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="Grains\**" />
+    </ItemGroup>
+</Project>

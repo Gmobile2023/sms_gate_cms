@@ -11,8 +11,8 @@
 @if (!SignInManager.IsSignedIn(User))
 {
     <div class="max-w-xl mx-auto">
-        <h1 class="mb-4 text-2xl font-semibold text-gray-900 dark:text-gray-100">
-            Sign In
+        <h1 class="mb-2 text-2xl text-center font-semibold text-gray-900 dark:text-gray-100">
+            ĐĂNG NHẬP HỆ THỐNG
         </h1>    
         <div class="sm:shadow overflow-hidden sm:rounded-md">
             <form method="post">
@@ -26,15 +26,15 @@
                             <div>
                                 <label for="UserName" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
                                 <div class="mt-1 relative rounded-md shadow-sm">
-                                    <input type="text" class="@Css.InputText" id="Email" name="Email" placeholder="Email" spellcheck="false" value="@Html.GetFormData("Email")">
+                                    <input type="text" class="@Css.InputText" id="Email" name="Email" placeholder="Nhập email" spellcheck="false" value="@Html.GetFormData("Email")">
                                 </div>
                             </div>                            
                         </div>
                         <div>
                             <div>
-                                <label for="UserName" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Password</label>
+                                <label for="UserName" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Mật khẩu</label>
                                 <div class="mt-1 relative rounded-md shadow-sm">
-                                    <input class="@Css.InputText" id="Password" name="Password" type="Password" placeholder="Password" value="">
+                                    <input class="@Css.InputText" id="Password" name="Password" type="Password" placeholder="Nhập mật khẩu" value="">
                                 </div>
                             </div>                            
                         </div>
@@ -43,77 +43,35 @@
                             <div class="flex items-center">
                                 <input type="checkbox" id="chkRememberMe" name="rememberMe" value="true" checked="checked"
                                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                <label for="chkRememberMe" class="ml-2 block text-sm text-gray-900">Remember Me</label>
+                                <label for="chkRememberMe" class="ml-2 block text-sm text-gray-900">Nhớ mật khẩu</label>
                             </div>
                             <div class="text-sm">
-                                <a asp-controller="Account" asp-action="ForgotPassword" class="font-medium text-indigo-600 hover:text-indigo-500">Forgot your password?</a>
+                                <a asp-controller="Account" asp-action="ForgotPassword" class="font-medium text-indigo-600 hover:text-indigo-500">Quên mật khẩu?</a>
                             </div>
                         </div>
                         
                     </div>
                 </div>
 
-                <div class="px-4 py-3 text-right sm:px-6">
+                <div class="px-4 py-3 mb-4 text-right sm:px-6">
                     <div class="flex justify-end">
-                        <a class="@Css.SecondaryButton w-1/2" asp-area="" asp-controller="Account" asp-action="Register" asp-route-ReturnUrl="@ViewData["ReturnUrl"]">Register New User</a>
-                        <button type="submit" class="@Css.PrimaryButton w-1/2 ml-2">Sign In</button>
+                        <a class="@Css.SecondaryButton w-1/2" asp-area="" asp-controller="Account" asp-action="Register" asp-route-ReturnUrl="@ViewData["ReturnUrl"]">Đăng ký</a>
+                        <button type="submit" class="@Css.PrimaryButton w-1/2 ml-2">Đăng nhập</button>
                     </div>
                 </div>            
             </form>        
-            
-            <div class="m-6">
-                <div class="relative">
-                    <div class="absolute inset-0 flex items-center">
-                        <div class="w-full border-t border-gray-300 dark:border-gray-700"></div>
-                    </div>
-                    <div class="relative flex justify-center text-sm">
-                        <span class="bg-white dark:bg-black px-2 text-gray-500">Or continue with</span>
-                    </div>
-                </div>
-                <div>
-                    @{
-                        var loginProviders = (await SignInManager.GetExternalAuthenticationSchemesAsync()).ToList();
-                        if (loginProviders.Count == 0)
-                        {
-                            <div>
-                                <p>
-                                    There are no external authentication services configured. See <a class="@Css.Link" href="https://go.microsoft.com/fwlink/?LinkID=532715">this article</a>
-                                    for details on setting up this ASP.NET application to support logging in via external services.
-                                </p>
-                            </div>
-                        }
-                        else
-                        {
-                            <form asp-action="ExternalLogin" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" 
-                                  class="mt-6 grid grid-cols-4 gap-3">
-                                @foreach (var provider in loginProviders)
-                                {
-                                    <div>
-                                        <button type="submit" class="inline-flex w-full justify-center rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-black py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50" 
-                                                name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">
-                                            <span class="sr-only">Sign in with @provider.Name</span>
-                                            <i class="text-gray-700 dark:text-gray-300 text-lg fab fa-@provider.Name.ToLower()"></i>
-                                        </button>
-                                    </div>
-                                }
-                            </form>
-                        }
-                    }
-                </div>
-            </div>
-        
             </div>
 
-        <div class="mt-8">
-            <b>Quick Login</b>
-            <div class="mt-2">
-                <span class="@Css.SecondaryButton px-3 mb-1" data-click="switchUser:test@@email.com">test@@email.com</span>
-                <span class="@Css.SecondaryButton px-3 mb-1" data-click="switchUser:employee@@email.com">employee@@email.com</span>
-                <span class="@Css.SecondaryButton px-3 mb-1" data-click="switchUser:manager@@email.com">manager@@email.com</span>
-                <span class="@Css.SecondaryButton px-3 mb-1" data-click="switchUser:admin@@email.com">admin@@email.com</span>
-                <span class="@Css.SecondaryButton px-3 mb-1" data-click="switchUser:new@@user.com">new@@user.com</span>
-            </div>
-        </div>
+        @* <div class="mt-8"> *@
+        @*     <b>Quick Login</b> *@
+        @*     <div class="mt-2"> *@
+        @*         <span class="@Css.SecondaryButton px-3 mb-1" data-click="switchUser:test@@email.com">test@@email.com</span> *@
+        @*         <span class="@Css.SecondaryButton px-3 mb-1" data-click="switchUser:employee@@email.com">employee@@email.com</span> *@
+        @*         <span class="@Css.SecondaryButton px-3 mb-1" data-click="switchUser:manager@@email.com">manager@@email.com</span> *@
+        @*         <span class="@Css.SecondaryButton px-3 mb-1" data-click="switchUser:admin@@email.com">admin@@email.com</span> *@
+        @*         <span class="@Css.SecondaryButton px-3 mb-1" data-click="switchUser:new@@user.com">new@@user.com</span> *@
+        @*     </div> *@
+        @* </div> *@
     </div>    
 }
 else

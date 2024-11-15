@@ -80,11 +80,11 @@
                             </li>
                         }
                         
-                        await RenderNavLink("Home", "Messages", "Messages");
-                        await RenderNavLink("Home", "Partners", "Partners");
-                        await RenderNavLink("Home", "Providers", "Providers");
-                        await RenderNavLink("Home", "MessageTemplates", "MessageTemplates");
-                        await RenderNavLink("Home", "AuthExamples", "Auth <span class=\"ml-1 hidden sm:block\">Examples</span>");
+                        await RenderNavLink("Home", "Messages", "Quản lý tin nhắn");
+                        await RenderNavLink("Home", "Partners", "Quản lý đối tác");
+                        await RenderNavLink("Home", "Providers", "Quản lý NCC");
+                        await RenderNavLink("Home", "MessageTemplates", "Tin nhắn mẫu");
+                        // await RenderNavLink("Home", "AuthExamples", "Auth <span class=\"ml-1 hidden sm:block\">Examples</span>");
                         if (isAdmin)
                         {
                             <li class="relative flex flex-wrap just-fu-start m-0">
@@ -93,11 +93,11 @@
                                 </a>
                             </li>
                         }
-                        await RenderNavLink("Manage", "Index", "Account");
+                        // await RenderNavLink("Manage", "Index", "Account");
 
                         if (!isAuthenticated)
                         {
-                            await RenderLinkButton("Account", "Login", "Sign In");
+                            await RenderLinkButton("Account", "Login", "Đăng nhập");
                         }
                         else
                         {
@@ -117,7 +117,7 @@
                             </li>
                             <li class="relative flex flex-wrap just-fu-start mr-2">
                                 <form asp-area="" asp-controller="Account" asp-action="Logout" method="post">
-                                    <button type="submit" class="@Css.SecondaryButton">Sign Out</button>
+                                    <button type="submit" class="@Css.SecondaryButton">Đăng ký</button>
                                 </form>
                             </li>
                         }

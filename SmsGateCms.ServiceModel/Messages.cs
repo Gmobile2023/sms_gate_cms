@@ -57,10 +57,11 @@ public enum MessageStatus : byte
 }
 
 [Tag("messages"), Description("Find Message")]
-[Route("/messages", "GET")]
+[Route("/api/v1/messages", "GET")]
 [Route("/messages/{Id}", "GET")]
 [ValidateHasRole(Roles.Manager)]
 [AutoApply(Behavior.AuditQuery)]
+// [ValidateApiKey("todo:read")]
 public class QueryMessages : QueryDb<Message>
 {
     public long? Id { get; set; }
@@ -77,6 +78,7 @@ public class QueryMessages : QueryDb<Message>
 #region api cho đối tác
 [Tag("messages"), Description("Create Message")]
 [Route("/api/v1/messages","POST")]
+// [ValidateApiKey("todo:read")]
 [AutoApply(Behavior.AuditCreate)]
 public class CreateSendMessageRequest
 {

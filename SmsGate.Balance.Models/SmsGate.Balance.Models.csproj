@@ -8,8 +8,8 @@
     <ItemGroup>
         <PackageReference Include="Microsoft.Orleans.Sdk" Version="8.1.0" />
         <PackageReference Include="Microsoft.Orleans.Transactions" Version="8.1.0" />
-        <PackageReference Include="ServiceStack.Text" Version="8.2.2" />
-        <PackageReference Include="ServiceStack" Version="8.2.2" />
+        <PackageReference Include="ServiceStack.Text" Version="8.4.0" />
+        <PackageReference Include="ServiceStack" Version="8.4.0" />
     </ItemGroup>
 
     <ItemGroup>

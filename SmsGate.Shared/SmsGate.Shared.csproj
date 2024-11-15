@@ -7,10 +7,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="MassTransit.Abstractions" Version="8.2.2"/>
-        <PackageReference Include="ServiceStack" Version="8.2.2"/>
-        <PackageReference Include="ServiceStack.Text" Version="8.2.2"/>
-        <PackageReference Include="ServiceStack.HttpClient" Version="8.2.2"/>
+        <PackageReference Include="MassTransit.Abstractions" Version="8.3.1"/>
+        <PackageReference Include="ServiceStack" Version="8.4.0"/>
+        <PackageReference Include="ServiceStack.Text" Version="8.4.0"/>
+        <PackageReference Include="ServiceStack.HttpClient" Version="8.4.0"/>
     </ItemGroup>
 
     <ItemGroup>

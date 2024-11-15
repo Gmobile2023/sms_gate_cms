@@ -9,10 +9,24 @@ using SmsGateCms.Data;
 using SmsGateCms.ServiceInterface;
 
 ServiceStackHelper.SetLicense();
+
+
 var builder = WebApplication.CreateBuilder(args);
+var config = builder.Configuration;
+
+// Configure Kestrel
+if (bool.Parse(config["KestrelServer:IsEnabled"]))
+{
+    var certPath = config["Kestrel:Certificates:Default:Path"];
+    var certPassword = config["Kestrel:Certificates:Default:Password"];
+    builder.WebHost.ConfigureKestrel(options =>
+    {
+        options.ListenAnyIP(int.Parse(config["Kestrel:Certificates:Default:Port"]), listenOptions => { listenOptions.UseHttps(certPath, certPassword); });
+        options.Limits.MaxRequestBodySize = 104857600; // 100 MB
+    });
+}
 
 var services = builder.Services;
-var config = builder.Configuration;
 services.AddMvc(options => options.EnableEndpointRouting = false);
 
 services.Configure<CookiePolicyOptions>(options =>
@@ -22,50 +36,42 @@ services.Configure<CookiePolicyOptions>(options =>
     options.MinimumSameSitePolicy = SameSiteMode.Strict;
 });
 
-services.AddIdentity<ApplicationUser, IdentityRole>(options => {
+services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+    {
         //options.User.AllowedUserNameCharacters = null;
         //options.SignIn.RequireConfirmedAccount = true;
     })
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
-    
-services.AddAuthentication(IISDefaults.AuthenticationScheme)
-    .AddFacebook(options => { /* Create App https://developers.facebook.com/apps */
-        options.AppId = config["oauth.facebook.AppId"]!;
-        options.AppSecret = config["oauth.facebook.AppSecret"]!;
-        options.SaveTokens = true;
-        options.Scope.Clear();
-        config.GetSection("oauth.facebook.Permissions").GetChildren()
-            .Each(x => options.Scope.Add(x.Value!));
-    })
-    .AddGoogle(options => { /* Create App https://console.developers.google.com/apis/credentials */
-        options.ClientId = config["oauth.google.ConsumerKey"]!;
-        options.ClientSecret = config["oauth.google.ConsumerSecret"]!;
-        options.SaveTokens = true;
-    })
-    .AddMicrosoftAccount(options => { /* Create App https://apps.dev.microsoft.com */
-        options.ClientId = config["oauth.microsoft.AppId"]!;
-        options.ClientSecret = config["oauth.microsoft.AppSecret"]!;
-        options.SaveTokens = true;
-    })
-    .AddJwtBearer(options =>
+
+
+services.AddAuthentication(IISDefaults.AuthenticationScheme);
+// .AddFacebook(options => { /* Create App https://developers.facebook.com/apps */
+//     options.AppId = config["oauth.facebook.AppId"]!;
+//     options.AppSecret = config["oauth.facebook.AppSecret"]!;
+//     options.SaveTokens = true;
+//     options.Scope.Clear();
+//     config.GetSection("oauth.facebook.Permissions").GetChildren()
+//         .Each(x => options.Scope.Add(x.Value!));
+// })
+// .AddGoogle(options => { /* Create App https://console.developers.google.com/apis/credentials */
+//     options.ClientId = config["oauth.google.ConsumerKey"]!;
+//     options.ClientSecret = config["oauth.google.ConsumerSecret"]!;
+//     options.SaveTokens = true;
+// })
+// .AddMicrosoftAccount(options => { /* Create App https://apps.dev.microsoft.com */
+//     options.ClientId = config["oauth.microsoft.AppId"]!;
+//     options.ClientSecret = config["oauth.microsoft.AppSecret"]!;
+//     options.SaveTokens = true;
+// });
+
+services.Configure<ForwardedHeadersOptions>(options =>
 {
-    options.Events = new JwtBearerEvents
-    {
-        OnChallenge = context =>
-        {
-            context.HandleResponse();  // Không redirect, chỉ trả về 401 Unauthorized
-            context.Response.StatusCode = 401;
-            return Task.CompletedTask;
-        }
-    };
-});
-    
-services.Configure<ForwardedHeadersOptions>(options => {
+
     //https://github.com/aspnet/IISIntegration/issues/140#issuecomment-215135928
     options.ForwardedHeaders = ForwardedHeaders.XForwardedProto;
 });
-    
+
 services.Configure<IdentityOptions>(options =>
 {
     options.Password.RequireDigit = true;
@@ -132,8 +138,6 @@ app.UseMvc(routes =>
         template: "{controller=Home}/{action=Index}/{id?}");
 });
 
-app.UseServiceStack(new AppHost(), options => {
-    options.MapEndpoints();
-});
+app.UseServiceStack(new AppHost(), options => { options.MapEndpoints(); });
 
 app.Run();

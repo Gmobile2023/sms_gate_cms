@@ -53,7 +53,6 @@ public class ConfigureMassTransit : IHostingStartup
                                         p.Node(server);
                                 });
                             });
-                        cfg.UseInMemoryOutbox();
                         cfg.ConfigureEndpoints(c);
                     });
             });

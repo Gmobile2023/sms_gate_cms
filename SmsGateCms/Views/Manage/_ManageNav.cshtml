@@ -7,10 +7,10 @@
 
 <ul>
     <li class="@ManageNavPages.IndexNavClass(ViewContext)">
-        <a class="@navItemCss" asp-action="Index">Profile</a>
+        <a class="@navItemCss" asp-action="Index">Cá nhân</a>
     </li>
     <li class="@ManageNavPages.ChangePasswordNavClass(ViewContext)">
-        <a class="@navItemCss" asp-action="ChangePassword">Password</a>
+        <a class="@navItemCss" asp-action="ChangePassword">Đổi mật khẩu</a>
     </li>
     @if (hasExternalLogins)
     {
@@ -19,7 +19,7 @@
         </li>
     }
     <li class="@ManageNavPages.TwoFactorAuthenticationNavClass(ViewContext)">
-        <a class="@navItemCss" asp-action="TwoFactorAuthentication">Two-factor authentication</a>
+        <a class="@navItemCss" asp-action="TwoFactorAuthentication">Xác thực hai yếu tố</a>
     </li>
     @if (HostContext.AppHost.HasPlugin<ApiKeysFeature>())
     {

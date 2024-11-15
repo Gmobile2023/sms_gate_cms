@@ -1,6 +1,6 @@
 @model TwoFactorAuthenticationViewModel
 @{
-    ViewData["Title"] = "Two-factor authentication";
+    ViewData["Title"] = "Xác thực hai yếu tố";
     ViewData.AddActivePage(ManageNavPages.TwoFactorAuthentication);
 }
 
@@ -48,10 +48,10 @@
     <a asp-action="GenerateRecoveryCodesWarning" class="@Css.PrimaryButton">Reset recovery codes</a>
 }
 
-<h5 class="font-semibold text-lg my-2">Authenticator app</h5>
+<h5 class="font-semibold text-lg my-2">Ứng dụng xác thực</h5>
 @if (!Model.HasAuthenticator)
 {
-    <a asp-action="EnableAuthenticator" class="@Css.SecondaryButton">Add authenticator app</a>
+    <a asp-action="EnableAuthenticator" class="@Css.SecondaryButton">Thêm ứng dụng xác thực</a>
 }
 else
 {

@@ -33,6 +33,22 @@ body {
 
 }
 
+.dark\:bg-black:is(.dark *) { 
+  background-color: rgb(0 0 0 / 1) !important;
+}
+
+.dark\:hover\:text-white:hover:is(.dark *) {
+  color: #9ca3af !important;
+}
+
+.navbar-brand:hover {
+  color: #1AA090 !important;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #1AA090 !important;
+}
+
 h1,
 .h1,
 h2,

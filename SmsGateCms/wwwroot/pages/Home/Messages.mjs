@@ -7,6 +7,17 @@ import messageTemplates from "./MessageTemplates.mjs";
 export default {
     template: /*html*/`
     <auto-query-grid type="Message" :visible-from="{ id:'sm', sms:'lg', status:'md', receiver:'sm', messageTemplateId:'md', partnerId:'lg', providerId:'lg', requestDate:'sm', sentDate:'md', responseDate:'md', telco:'lg', responseMassage:'lg', messageId:'sm' }">
+        <template #sms-header>Tin nhắn</template>
+        <template #status-header>Trạng thái</template>
+        <template #receiver-header>Nguời nhận</template>
+        <template #messageTemplate-header>Mẫu tin nhắn</template>
+        <template #partner-header>Đối tác</template>
+        <template #provider-header>Nhà cung cấp</template>
+        <template #requestDate-header>Ngày yêu cầu</template>
+        <template #sentDate-header>Ngày gửi</template>
+        <template #responseDate-header>Ngày trả về</template>
+        <template #telco-header>Công ty viễn thông</template>
+        <template #responseMassage-header>Tin nhắn trả về</template>
         
         <template #id="{ id }">
             <span v-html="id"></span>
@@ -16,7 +27,6 @@ export default {
             <span v-html="sms"></span>
         </template>
 
-        <template #status-header>Trạng thái</template>
         <template #status="{ status }">
             <span :class="statusClass(status)">{{ statusMap[status] || status }}</span>
         </template>
